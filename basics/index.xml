@@ -5,17 +5,17 @@
     <link>https://deining.github.io/hugo-theme-relearn/basics/index.html</link>
     <description>Recent content in Basics on Hugo Relearn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://deining.github.io/hugo-theme-relearn/basics/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://deining.github.io/hugo-theme-relearn/basics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What&#39;s New</title>
       <link>https://deining.github.io/hugo-theme-relearn/basics/migration/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/basics/migration/index.html</guid>
-      <description>This document shows you what&amp;rsquo;s new in the latest release. For a detailed list of changes, see the history page.
+      <description>This document shows you what&amp;rsquo;s new in the latest release and flags it with one of the following badges. For a detailed list of changes, see the history page.
 0.95.0 The minimum required Hugo version.
 Breaking A change that requires action by you after upgrading to assure the site is still functional.
-Change A change in default behavior that may requires action by you if you want to revert it.
-New Marks new behavior you might find interesting or comes configurable.</description>
+Change A change in default behavior that may requires action by you if you want to revert it.</description>
     </item>
     <item>
       <title>Requirements</title>
@@ -32,8 +32,8 @@ Just download at least version 0.95.0 of the Hugo binary for your OS (Windows, L
       <guid>https://deining.github.io/hugo-theme-relearn/basics/installation/index.html</guid>
       <description>The following steps are here to help you initialize your new website. If you don&amp;rsquo;t know Hugo at all, we strongly suggest you learn more about it by following this great documentation for beginners.
 Create your project Hugo provides a new command to create a new website.
-hugo new site &amp;lt;new_project&amp;gt; Install the theme Install the Relearn theme by following this documentation using Hugo&amp;rsquo;s module system.
-This theme&amp;rsquo;s repository is: https://github.</description>
+hugo new site &amp;lt;new_project&amp;gt;Install the theme Install the Relearn theme by following this documentation using Hugo&amp;rsquo;s module system.
+This theme&amp;rsquo;s repository is: https://github.com/McShelby/hugo-theme-relearn.git</description>
     </item>
     <item>
       <title>Configuration</title>
@@ -64,11 +64,21 @@ Show usage instructions To get started, first select a color variant from the va
 The graph is interactive and reflect the current colors. You can click on any of the colored boxes to adjust the respective color. The graph and the page will update accordingly.</description>
     </item>
     <item>
+      <title>Topbar Modification</title>
+      <link>https://deining.github.io/hugo-theme-relearn/basics/topbar/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://deining.github.io/hugo-theme-relearn/basics/topbar/index.html</guid>
+      <description>The theme comes with a reasonably configured topbar.
+Nevertheless, your requirements may differ from this configuration. Luckily the theme got you covered as the themebar, its buttons and the functionality behind these buttons is fully configurable by you.
+Tip All mentioned file names below can be clicked and show you the implementation for a better understanding.
+Areas The default configuration comes with three predefined areas that may contain an arbitrary set of buttons.</description>
+    </item>
+    <item>
       <title>History</title>
       <link>https://deining.github.io/hugo-theme-relearn/basics/history/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/basics/history/index.html</guid>
-      <description>Changelog 5.15.2 (2023-05-29) Enhancements [feature] taxonomy: add support for category default taxonomy #541 Fixes [bug] attachments: work for Hugo &amp;lt; 0.112 #546 5.15.1 (2023-05-25) Fixes [bug] shortcodes: intermediately use random ids instead of .Ordinal #543 5.15.0 (2023-05-25) Enhancements [feature] tab: new shortcode to display single tab #538 [feature][change] tabs: treat groupid as unique if not set #537 [feature] expand: indent expanded content #536 [feature] notice: make boxes more prominent #535 Fixes [bug] attachments: fix build error since Hugo 0.</description>
+      <description>Changelog 5.23.2 (2023-11-03) Enhancements [feature] taxonomy: improve taxonomy page #712 [feature] taxonomy: warn on missing term title #709 Fixes [bug] taxonomy: fix sorting of terms on content pages #710 5.23.1 (2023-10-30) Enhancements [feature] taxonomy: improve term page #705 Fixes [bug] variant: fix typo in chroma-learn.css #708 [bug] links: ignore local markdown links linking to files with extension #707 5.23.0 (2023-10-29) Enhancements [feature] taxonomy: allow for content on term pages #701 [feature] theme: write full file path on warnings #699 [feature] theme: show anchor link and copy to clipboard button on mobile #697 [feature][change] config: adjust to changes in Hugo 0.</description>
     </item>
   </channel>
 </rss>
