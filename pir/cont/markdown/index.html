@@ -30,38 +30,39 @@ Marrrkdown be simple t&#39; learn, wit&#39; minimal extra characters so it&rsquo
     <link href="https://deining.github.io/hugo-theme-relearn/pir/cont/markdown/index.html" rel="alternate" hreflang="pir">
     <link href="../../../pir/cont/markdown/index.xml" rel="alternate" type="application/rss+xml" title="Marrrkdown rules :: Cap&#39;n Hugo Relearrrn Theme">
     <link href="../../../pir/cont/markdown/index.print.html" rel="alternate" type="text/html" title="Marrrkdown rules :: Cap&#39;n Hugo Relearrrn Theme">
-    <link href="../../../images/logo.svg?1699472664" rel="icon" type="image/svg+xml">
+    <link href="../../../images/logo.svg?1700601385" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../../css/fontawesome-all.min.css?1699472664" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1699472664" rel="stylesheet"></noscript>
-    <link href="../../../css/nucleus.css?1699472664" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1699472664" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1699472664" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar.min.css?1699472664" rel="stylesheet">
-    <link href="../../../css/fonts.css?1699472664" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1699472664" rel="stylesheet"></noscript>
-    <link href="../../../css/theme.css?1699472664" rel="stylesheet">
-    <link href="../../../css/theme-auto.css?1699472664" rel="stylesheet" id="R-variant-style">
-    <link href="../../../css/variant.css?1699472664" rel="stylesheet">
-    <link href="../../../css/print.css?1699472664" rel="stylesheet" media="print">
-    <link href="../../../css/ie.css?1699472664" rel="stylesheet">
-    <script src="../../../js/url.js?1699472664"></script>
-    <script src="../../../js/variant.js?1699472664"></script>
+    <link href="../../../css/fontawesome-all.min.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1700601385" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1700601385" rel="stylesheet">
+    <link href="../../../css/fonts.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1700601385" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1700601385" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1700601385" rel="stylesheet">
+    <link href="../../../css/print.css?1700601385" rel="stylesheet" media="print">
+    <link href="../../../css/ie.css?1700601385" rel="stylesheet">
+    <script src="../../../js/url.js?1700601385"></script>
+    <script src="../../../js/variant.js?1700601385"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
       window.index_js_url="../../../pir/index.search.js";
       var root_url="../../../";
       var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
-      window.T_Copy_to_clipboard = 'Copy t\u0027 clipboard';
-      window.T_Copied_to_clipboard = 'Copied t\u0027 clipboard!';
-      window.T_Copy_link_to_clipboard = 'Copy link t\u0027 clipboard';
-      window.T_Link_copied_to_clipboard = 'Copied link t\u0027 clipboard!';
-      window.T_Reset_view = 'Rrreset view';
-      window.T_View_reset = 'View rrreset!';
-      window.T_No_results_found = 'No rrresults found fer \u0022{0}\u0022';
-      window.T_N_results_found = '{1} rrresults found fer \u0022{0}\u0022';
-      // some further base stuff
-      var baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
-      window.variants && variants.init( [ 'auto', 'relearn-bright', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.T_Copy_to_clipboard = `Copy t' clipboard`;
+      window.T_Copied_to_clipboard = `Copied t' clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link t' clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link t' clipboard!`;
+      window.T_Reset_view = `Rrreset view`;
+      window.T_View_reset = `View rrreset!`;
+      window.T_No_results_found = `No rrresults found fer "{0}"`;
+      window.T_N_results_found = `{1} rrresults found fer "{0}"`;
     </script>
     <style>
       #R-body img.bg-white {
@@ -711,8 +712,8 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-d7be9afbc89af00513423f618caf21ef" class="lightbox-link"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d7be9afbc89af00513423f618caf21ef"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-12aa2dd86657d30a354aae80707e3cae" class="lightbox-link"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-12aa2dd86657d30a354aae80707e3cae"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-with-tooltip">Image wit' Tooltip</h3>
@@ -722,8 +723,8 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-4befed11c9b5880a267197b337585e7b" class="lightbox-link"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4befed11c9b5880a267197b337585e7b"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-f98de4f0d5ff729e65ea12030e793d1f" class="lightbox-link"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f98de4f0d5ff729e65ea12030e793d1f"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-references">Image References</h3>
@@ -735,8 +736,8 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-efa0f357ad4b6a4e072c1d131703175d" class="lightbox-link"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-efa0f357ad4b6a4e072c1d131703175d"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-40188fc9fa230f685eec7f1ec34453a5" class="lightbox-link"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-40188fc9fa230f685eec7f1ec34453a5"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-effects">Image Effects</h3>
@@ -748,8 +749,8 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-50e9dcc88c1bbe12affc9a1cbf6a62db" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-50e9dcc88c1bbe12affc9a1cbf6a62db"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-11a74f23c5d0cb3daf8f5069d1f47c20" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-11a74f23c5d0cb3daf8f5069d1f47c20"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?height=50px</span>)</span></span></code></pre></div>
@@ -757,8 +758,8 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-bab9cd6e0aeb1ac34a1cb9846a9d7b91" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bab9cd6e0aeb1ac34a1cb9846a9d7b91"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-d3c1cca0c26cd980d720efcf66635c14" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d3c1cca0c26cd980d720efcf66635c14"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw</span>)</span></span></code></pre></div>
@@ -766,8 +767,8 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-cfab56d33d70b54cca3418677de4590f" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: 40vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cfab56d33d70b54cca3418677de4590f"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-da653ecce90444e4882dc8fe64d6d11a" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-da653ecce90444e4882dc8fe64d6d11a"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h4 id="css-classes">CSS Classes</h4>
@@ -778,8 +779,8 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-447b51958b37a31300402dbb971f5e88" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="figure-image bg-white border lightbox noborder shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-447b51958b37a31300402dbb971f5e88"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="lightbox-image bg-white border lightbox noborder shadow" loading="lazy"></a></p>
+<p><a href="#R-image-c54f54ba946e91cbd02e438f29297364" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="figure-image bg-white border lightbox noborder shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c54f54ba946e91cbd02e438f29297364"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="lightbox-image bg-white border lightbox noborder shadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="border">Border</h5>
@@ -788,8 +789,8 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-dea89e94dbfbc46ff2e69f06302f8b19" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="figure-image bg-white border lightbox noshadow noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-dea89e94dbfbc46ff2e69f06302f8b19"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="lightbox-image bg-white border lightbox noshadow noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-f51d503704c4b6e18433693ed4997bdb" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="figure-image bg-white border lightbox noshadow noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f51d503704c4b6e18433693ed4997bdb"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="lightbox-image bg-white border lightbox noshadow noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="left">Left</h5>
@@ -798,8 +799,8 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-eeda3f39e08206163b17c38377bdcaf4" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="figure-image bg-white border left lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-eeda3f39e08206163b17c38377bdcaf4"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="lightbox-image bg-white border left lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-61c489e1ec2840a2949cead42108cb27" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="figure-image bg-white border left lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-61c489e1ec2840a2949cead42108cb27"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="lightbox-image bg-white border left lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="right">Right</h5>
@@ -808,8 +809,8 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-61fc1d4e4fec4ab95eb711cfa481fe6b" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="figure-image bg-white border lightbox right noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-61fc1d4e4fec4ab95eb711cfa481fe6b"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="lightbox-image bg-white border lightbox right noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-cb84e23caa19ceb38447ba909a75735b" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="figure-image bg-white border lightbox right noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb84e23caa19ceb38447ba909a75735b"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="lightbox-image bg-white border lightbox right noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="inline">Inline</h5>
@@ -821,14 +822,14 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-07e3651a493887809736de48129d416b" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-07e3651a493887809736de48129d416b"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-393f53490ba0b10978d263b6d81af2be" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-393f53490ba0b10978d263b6d81af2be"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-b37a74be469e8232241f12aca2aa7272" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b37a74be469e8232241f12aca2aa7272"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-352a6b4420964c96f22fd53e187b06de" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-352a6b4420964c96f22fd53e187b06de"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-c24875e1b39bb309779decec8a07ea3d" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c24875e1b39bb309779decec8a07ea3d"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-618ebcfabc8a1ae62c8fa40094b69dd7" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-618ebcfabc8a1ae62c8fa40094b69dd7"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-ef80ecb752054537bf65e25f185c2d4d" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ef80ecb752054537bf65e25f185c2d4d"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-221d6c1c5eedc595f4cbe8e3642f50cd" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-221d6c1c5eedc595f4cbe8e3642f50cd"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="combination">Combinat'n</h5>
@@ -837,8 +838,8 @@ line 3 o' code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-41ca8fba70e94e98af3c4d228ab4b858" class="lightbox-link"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="figure-image bg-white border left lightbox shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-41ca8fba70e94e98af3c4d228ab4b858"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="lightbox-image bg-white border left lightbox shadow" loading="lazy"></a></p>
+<p><a href="#R-image-68568733b92113e4a275c3f4881c7ccd" class="lightbox-link"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="figure-image bg-white border left lightbox shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-68568733b92113e4a275c3f4881c7ccd"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="lightbox-image bg-white border left lightbox shadow" loading="lazy"></a></p>
 </div>
 </div>
 <h4 id="lightbox">Lightbox</h4>
@@ -950,12 +951,12 @@ line 3 o' code
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="../../../js/auto-complete.js?1699472664" defer></script>
-        <script src="../../../js/lunr/lunr.min.js?1699472664" defer></script>
-        <script src="../../../js/lunr/lunr.stemmer.support.min.js?1699472664" defer></script>
-        <script src="../../../js/lunr/lunr.multi.min.js?1699472664" defer></script>
-        <script src="../../../js/lunr/lunr.en.min.js?1699472664" defer></script>
-        <script src="../../../js/search.js?1699472664" defer></script>
+        <script src="../../../js/auto-complete.js?1700601386" defer></script>
+        <script src="../../../js/lunr/lunr.min.js?1700601386" defer></script>
+        <script src="../../../js/lunr/lunr.stemmer.support.min.js?1700601386" defer></script>
+        <script src="../../../js/lunr/lunr.multi.min.js?1700601386" defer></script>
+        <script src="../../../js/lunr/lunr.en.min.js?1700601386" defer></script>
+        <script src="../../../js/search.js?1700601386" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation">
         <hr class="padding">
@@ -968,6 +969,7 @@ line 3 o' code
           <li data-nav-id="/pir/basics/requirements/index.html" class=""><a class="padding" href="../../../pir/basics/requirements/index.html">Requirrrements<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/basics/installation/index.html" class=""><a class="padding" href="../../../pir/basics/installation/index.html">Installat&#39;n<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/basics/configuration/index.html" class=""><a class="padding" href="../../../pir/basics/configuration/index.html">Configurrrat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/basics/branding/index.html" class=""><a class="padding" href="../../../pir/basics/branding/index.html">Brrrand&#39;n<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/basics/customization/index.html" class=""><a class="padding" href="../../../pir/basics/customization/index.html">Customizat&#39;n<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/basics/generator/index.html" class=""><a class="padding" href="../../../pir/basics/generator/index.html">Stylesheet generrrat&#39;r<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/basics/topbar/index.html" class=""><a class="padding" href="../../../pir/basics/topbar/index.html">Topbarrr Modificat&#39;n<i class="fas fa-check read-icon"></i></a></li>
@@ -1045,7 +1047,6 @@ line 3 o' code
                     <label class="a11y-only" for="R-select-variant">Theme</label>
                     <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
                       <option id="R-auto" value="auto" selected>Auto</option>
-                      <option id="R-relearn-bright" value="relearn-bright">Relearn Bright</option>
                       <option id="R-relearn-light" value="relearn-light">Relearn Light</option>
                       <option id="R-relearn-dark" value="relearn-dark">Relearn Dark</option>
                       <option id="R-zen-light" value="zen-light">Zen Light</option>
@@ -1112,13 +1113,13 @@ line 3 o' code
               setTimeout( githubButtonsInit, 400 );
             });
           </script>
-          <script async src="../../../js/github-buttons.js?1699472664"></script>
+          <script async src="../../../js/github-buttons.js?1700601386"></script>
           </div>
         </div>
       </div>
     </aside>
-    <script src="../../../js/clipboard.min.js?1699472664" defer></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1699472664" defer></script>
-    <script src="../../../js/theme.js?1699472664" defer></script>
+    <script src="../../../js/clipboard.min.js?1700601386" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1700601386" defer></script>
+    <script src="../../../js/theme.js?1700601386" defer></script>
   </body>
 </html>

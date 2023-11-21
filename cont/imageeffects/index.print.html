@@ -32,39 +32,40 @@ Without any settings in your config.toml this defaults to">
     <link href="https://deining.github.io/hugo-theme-relearn/pir/cont/imageeffects/index.html" rel="alternate" hreflang="pir">
     <link href="https://deining.github.io/hugo-theme-relearn/cont/imageeffects/index.html" rel="canonical" type="text/html" title="Image Effects :: Hugo Relearn Theme">
     <link href="../../cont/imageeffects/index.xml" rel="alternate" type="application/rss+xml" title="Image Effects :: Hugo Relearn Theme">
-    <link href="../../images/logo.svg?1699472662" rel="icon" type="image/svg+xml">
+    <link href="../../images/logo.svg?1700601384" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../css/fontawesome-all.min.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../../css/nucleus.css?1699472663" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../../css/perfect-scrollbar.min.css?1699472663" rel="stylesheet">
-    <link href="../../css/fonts.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../../css/theme.css?1699472663" rel="stylesheet">
-    <link href="../../css/theme-auto.css?1699472663" rel="stylesheet" id="R-variant-style">
-    <link href="../../css/variant.css?1699472663" rel="stylesheet">
-    <link href="../../css/print.css?1699472663" rel="stylesheet" media="print">
-    <link href="../../css/format-print.css?1699472663" rel="stylesheet">
-    <link href="../../css/ie.css?1699472663" rel="stylesheet">
-    <script src="../../js/url.js?1699472663"></script>
-    <script src="../../js/variant.js?1699472663"></script>
+    <link href="../../css/fontawesome-all.min.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../../css/nucleus.css?1700601385" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar.min.css?1700601385" rel="stylesheet">
+    <link href="../../css/fonts.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../../css/theme.css?1700601385" rel="stylesheet">
+    <link href="../../css/theme-auto.css?1700601385" rel="stylesheet" id="R-variant-style">
+    <link href="../../css/variant.css?1700601385" rel="stylesheet">
+    <link href="../../css/print.css?1700601385" rel="stylesheet" media="print">
+    <link href="../../css/format-print.css?1700601385" rel="stylesheet">
+    <link href="../../css/ie.css?1700601385" rel="stylesheet">
+    <script src="../../js/url.js?1700601385"></script>
+    <script src="../../js/variant.js?1700601385"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
       window.index_js_url="../../index.search.js";
       var root_url="../../";
       var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
-      window.T_Copy_to_clipboard = 'Copy to clipboard';
-      window.T_Copied_to_clipboard = 'Copied to clipboard!';
-      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
-      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
-      window.T_Reset_view = 'Reset view';
-      window.T_View_reset = 'View reset!';
-      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
-      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
-      // some further base stuff
-      var baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
-      window.variants && variants.init( [ 'auto', 'relearn-bright', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
     <style>
       #R-body img.bg-white {
@@ -108,13 +109,13 @@ Without any settings in your config.toml this defaults to">
 <p>Without any settings in your <code>config.toml</code> this defaults to</p>
 
   
-<div class="tab-panel" data-tab-group="2cb523af3ffe01b63a7f6329bacfc108">
+<div class="tab-panel" data-tab-group="02a0ce4988e764c1675e0ff27ae7fe64">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="configtoml"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('2cb523af3ffe01b63a7f6329bacfc108','configtoml')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('02a0ce4988e764c1675e0ff27ae7fe64','configtoml')"
     >
       <span class="tab-nav-text">config.toml</span>
     </button>
@@ -135,13 +136,13 @@ Without any settings in your config.toml this defaults to">
 </div><p>This can be overridden in a pages frontmatter by eg.</p>
 
   
-<div class="tab-panel" data-tab-group="fa79def710aa9277bdcf6c8317a8b92c">
+<div class="tab-panel" data-tab-group="928213b4cf1d1c12d50bfd2c2c491f1a">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="frontmatter"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('fa79def710aa9277bdcf6c8317a8b92c','frontmatter')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('928213b4cf1d1c12d50bfd2c2c491f1a','frontmatter')"
     >
       <span class="tab-nav-text">frontmatter</span>
     </button>
@@ -161,13 +162,13 @@ Without any settings in your config.toml this defaults to">
 </div><p>Or by explicitly override settings by URL query parameter</p>
 
   
-<div class="tab-panel" data-tab-group="7471bbbc21019535dac2ffe4d6f9b874">
+<div class="tab-panel" data-tab-group="e34d9829a9c085ae60b6d59e787a9919">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="url"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('7471bbbc21019535dac2ffe4d6f9b874','url')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('e34d9829a9c085ae60b6d59e787a9919','url')"
     >
       <span class="tab-nav-text">URL</span>
     </button>
@@ -184,13 +185,13 @@ Without any settings in your config.toml this defaults to">
 </div><p>The settings applied to the above image would be</p>
 
   
-<div class="tab-panel" data-tab-group="5513cc097818066f067e57b000206ead">
+<div class="tab-panel" data-tab-group="2b0a3c912022f143bfc573cb87014d98">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="result"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('5513cc097818066f067e57b000206ead','result')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('2b0a3c912022f143bfc573cb87014d98','result')"
     >
       <span class="tab-nav-text">Result</span>
     </button>
@@ -210,13 +211,13 @@ Without any settings in your config.toml this defaults to">
 </div><p>This ends up in the following HTML where the parameter are converted to CSS classes.</p>
 
   
-<div class="tab-panel" data-tab-group="c010fa7c15457a9b1702c301e57d513d">
+<div class="tab-panel" data-tab-group="280cb13c3dfb90ec14f534e5fa4c9850">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="html"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('c010fa7c15457a9b1702c301e57d513d','html')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('280cb13c3dfb90ec14f534e5fa4c9850','html')"
     >
       <span class="tab-nav-text">HTML</span>
     </button>
@@ -248,8 +249,8 @@ Without any settings in your config.toml this defaults to">
         </div>
       </main>
     </div>
-    <script src="../../js/clipboard.min.js?1699472663" defer></script>
-    <script src="../../js/perfect-scrollbar.min.js?1699472663" defer></script>
-    <script src="../../js/theme.js?1699472663" defer></script>
+    <script src="../../js/clipboard.min.js?1700601385" defer></script>
+    <script src="../../js/perfect-scrollbar.min.js?1700601385" defer></script>
+    <script src="../../js/theme.js?1700601385" defer></script>
   </body>
 </html>

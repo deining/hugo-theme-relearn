@@ -23,39 +23,40 @@
     <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/index.html" rel="alternate" hreflang="pir">
     <link href="https://deining.github.io/hugo-theme-relearn/shortcodes/index.html" rel="canonical" type="text/html" title="Shortcodes :: Hugo Relearn Theme">
     <link href="../shortcodes/index.xml" rel="alternate" type="application/rss+xml" title="Shortcodes :: Hugo Relearn Theme">
-    <link href="../images/logo.svg?1699472662" rel="icon" type="image/svg+xml">
+    <link href="../images/logo.svg?1700601384" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../css/fontawesome-all.min.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fontawesome-all.min.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../css/nucleus.css?1699472663" rel="stylesheet">
-    <link href="../css/auto-complete.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/auto-complete.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../css/perfect-scrollbar.min.css?1699472663" rel="stylesheet">
-    <link href="../css/fonts.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fonts.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../css/theme.css?1699472663" rel="stylesheet">
-    <link href="../css/theme-auto.css?1699472663" rel="stylesheet" id="R-variant-style">
-    <link href="../css/variant.css?1699472663" rel="stylesheet">
-    <link href="../css/print.css?1699472663" rel="stylesheet" media="print">
-    <link href="../css/format-print.css?1699472663" rel="stylesheet">
-    <link href="../css/ie.css?1699472663" rel="stylesheet">
-    <script src="../js/url.js?1699472663"></script>
-    <script src="../js/variant.js?1699472663"></script>
+    <link href="../css/fontawesome-all.min.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fontawesome-all.min.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../css/nucleus.css?1700601385" rel="stylesheet">
+    <link href="../css/auto-complete.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/auto-complete.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../css/perfect-scrollbar.min.css?1700601385" rel="stylesheet">
+    <link href="../css/fonts.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fonts.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../css/theme.css?1700601385" rel="stylesheet">
+    <link href="../css/theme-auto.css?1700601385" rel="stylesheet" id="R-variant-style">
+    <link href="../css/variant.css?1700601385" rel="stylesheet">
+    <link href="../css/print.css?1700601385" rel="stylesheet" media="print">
+    <link href="../css/format-print.css?1700601385" rel="stylesheet">
+    <link href="../css/ie.css?1700601385" rel="stylesheet">
+    <script src="../js/url.js?1700601385"></script>
+    <script src="../js/variant.js?1700601385"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
       window.index_js_url="../index.search.js";
       var root_url="../";
       var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
-      window.T_Copy_to_clipboard = 'Copy to clipboard';
-      window.T_Copied_to_clipboard = 'Copied to clipboard!';
-      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
-      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
-      window.T_Reset_view = 'Reset view';
-      window.T_View_reset = 'View reset!';
-      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
-      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
-      // some further base stuff
-      var baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
-      window.variants && variants.init( [ 'auto', 'relearn-bright', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
     <style>
       #R-body img.bg-white {
@@ -156,7 +157,7 @@
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -392,7 +393,7 @@
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -597,7 +598,7 @@
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -928,7 +929,7 @@
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -999,7 +1000,7 @@
 <tr>
 <td><strong>sort</strong></td>
 <td><code>auto</code></td>
-<td>The sort criteria of the displayed list.<br><br>- <code>auto</code> defaults to <a href="../cont/pages/index.html#frontmatter-configuration"><code>ordersectionsby</code> of the pages frontmatter</a><br>    or to <a href="../basics/configuration/index.html#global-site-parameters"><code>ordersectionsby</code> of the site configuration</a><br>    or to <code>weight</code><br>- <code>weight</code><br>- <code>title</code><br>- <code>linktitle</code><br>- <code>modifieddate</code><br>- <code>expirydate</code><br>- <code>publishdate</code><br>- <code>date</code><br>- <code>length</code><br>- <code>default</code> adhering to Hugo&rsquo;s default sort criteria</td>
+<td>The sort criteria of the displayed list.<br><br>- <code>auto</code> defaults to <a href="../cont/pages/index.html#frontmatter-configuration"><code>ordersectionsby</code> of the pages frontmatter</a><br>    or to <a href="../basics/configuration/index.html"><code>ordersectionsby</code> of the site configuration</a><br>    or to <code>weight</code><br>- <code>weight</code><br>- <code>title</code><br>- <code>linktitle</code><br>- <code>modifieddate</code><br>- <code>expirydate</code><br>- <code>publishdate</code><br>- <code>date</code><br>- <code>length</code><br>- <code>default</code> adhering to Hugo&rsquo;s default sort criteria</td>
 </tr>
 </tbody>
 </table>
@@ -1317,13 +1318,13 @@ So its content is used as description.</p>
 <p>The <code>expand</code> shortcode displays an expandable/collapsible section of text.</p>
 
 <div class="expand">
-    <input type="checkbox" id="R-expand-8deddbe5a27333693e671788b2874726" aria-controls="R-expandcontent-8deddbe5a27333693e671788b2874726" >
-    <label class="expand-label" for="R-expand-8deddbe5a27333693e671788b2874726" >
+    <input type="checkbox" id="R-expand-5dded8ae6975573d883138b2e4f914d7" aria-controls="R-expandcontent-5dded8ae6975573d883138b2e4f914d7" >
+    <label class="expand-label" for="R-expand-5dded8ae6975573d883138b2e4f914d7" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-8deddbe5a27333693e671788b2874726" class="expand-content">
+    <div id="R-expandcontent-5dded8ae6975573d883138b2e4f914d7" class="expand-content">
 
 <p>Thank you!</p>
 <p>That&rsquo;s some text with a footnote<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
@@ -1358,7 +1359,7 @@ So its content is used as description.</p>
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -1441,26 +1442,26 @@ So its content is used as description.</p>
 <h3 id="all-defaults">All Defaults</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Yes</span><span class="p">,</span> <span class="nx">you</span> <span class="nx">did</span> <span class="nx">it</span><span class="p">!{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-a3f8cc92a51d86f4c8a35ffe37df0ead" aria-controls="R-expandcontent-a3f8cc92a51d86f4c8a35ffe37df0ead" >
-    <label class="expand-label" for="R-expand-a3f8cc92a51d86f4c8a35ffe37df0ead" >
+    <input type="checkbox" id="R-expand-cc835aab2f2d0bb41205177169e44686" aria-controls="R-expandcontent-cc835aab2f2d0bb41205177169e44686" >
+    <label class="expand-label" for="R-expand-cc835aab2f2d0bb41205177169e44686" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-a3f8cc92a51d86f4c8a35ffe37df0ead" class="expand-content">
+    <div id="R-expandcontent-cc835aab2f2d0bb41205177169e44686" class="expand-content">
 <p>
 Yes, you did it!</div>
 </div>
 <h3 id="initially-expanded">Initially Expanded</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="nx">title</span><span class="p">=</span><span class="s">&#34;Expand me...&#34;</span> <span class="nx">open</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">No</span> <span class="nx">need</span> <span class="nx">to</span> <span class="nx">press</span> <span class="nx">you</span><span class="p">!{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-c04e485ad5f08e37092b506eb3670e48" aria-controls="R-expandcontent-c04e485ad5f08e37092b506eb3670e48"  checked>
-    <label class="expand-label" for="R-expand-c04e485ad5f08e37092b506eb3670e48" >
+    <input type="checkbox" id="R-expand-f40e14b692ec761671167a31f0e9a58f" aria-controls="R-expandcontent-f40e14b692ec761671167a31f0e9a58f"  checked>
+    <label class="expand-label" for="R-expand-f40e14b692ec761671167a31f0e9a58f" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-c04e485ad5f08e37092b506eb3670e48" class="expand-content">
+    <div id="R-expandcontent-f40e14b692ec761671167a31f0e9a58f" class="expand-content">
 <p>
 No need to press you!</div>
 </div>
@@ -1481,13 +1482,13 @@ No need to press you!</div>
 </span></span><span class="line"><span class="cl"><span class="p">&gt;</span> <span class="nx">the</span> <span class="nx">possibilities</span> <span class="nx">are</span> <span class="nf">endless</span> <span class="p">(</span><span class="nx">almost</span> <span class="o">-</span> <span class="nx">including</span> <span class="nx">other</span> <span class="nx">shortcodes</span> <span class="nx">may</span> <span class="nx">or</span> <span class="nx">may</span> <span class="nx">not</span> <span class="nx">work</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-dc37343fe07a0275cbf4451df9117374" aria-controls="R-expandcontent-dc37343fe07a0275cbf4451df9117374" >
-    <label class="expand-label" for="R-expand-dc37343fe07a0275cbf4451df9117374" >
+    <input type="checkbox" id="R-expand-c8d78b7f369e883e618459b80f300296" aria-controls="R-expandcontent-c8d78b7f369e883e618459b80f300296" >
+    <label class="expand-label" for="R-expand-c8d78b7f369e883e618459b80f300296" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Show me almost <strong>endless</strong> possibilities
     </label>
-    <div id="R-expandcontent-dc37343fe07a0275cbf4451df9117374" class="expand-content">
+    <div id="R-expandcontent-c8d78b7f369e883e618459b80f300296" class="expand-content">
 
 <p>You can add standard markdown syntax:</p>
 <ul>
@@ -1515,13 +1516,13 @@ No need to press you!</div>
 <p>The <code>highlight</code> shortcode renders your code with a syntax highlighter.</p>
 
   
-<div class="tab-panel" data-tab-group="70b06f27e286b286dccedde03281528c">
+<div class="tab-panel" data-tab-group="5372f944eead33442cedda881505740b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="python"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('70b06f27e286b286dccedde03281528c','python')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('5372f944eead33442cedda881505740b','python')"
     >
       <span class="tab-nav-text">python</span>
     </button>
@@ -1547,7 +1548,7 @@ No need to press you!</div>
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="codefence"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','codefence')"
     >
       <span class="tab-nav-text">codefence</span>
@@ -1733,13 +1734,13 @@ No need to press you!</div>
 </span></span></span><span class="line"><span class="cl"><span class="gh"></span>print(&#34;Hello World!&#34;)
 </span></span><span class="line"><span class="cl">```</span></span></code></pre></div>
   
-<div class="tab-panel" data-tab-group="cd0321ac7a2256d94a6ee53eb4b386c0">
+<div class="tab-panel" data-tab-group="e92e9645c197aa2611504389a9b7a237">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="python"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('cd0321ac7a2256d94a6ee53eb4b386c0','python')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('e92e9645c197aa2611504389a9b7a237','python')"
     >
       <span class="tab-nav-text">python</span>
     </button>
@@ -1792,7 +1793,7 @@ No need to press you!</div>
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -1909,7 +1910,7 @@ No need to press you!</div>
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -2043,7 +2044,7 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="codefence"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','codefence')"
     >
       <span class="tab-nav-text">codefence</span>
@@ -2179,7 +2180,7 @@ $$\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}$$
 
 <p>The <code>mermaid</code> shortcode generates diagrams and flowcharts from text, in a similar manner as Markdown using the <a href="https://mermaidjs.github.io/" target="_blank">Mermaid</a> library.</p>
 
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 graph LR;
     If --&gt; Then
     Then --&gt; Else
@@ -2209,7 +2210,7 @@ graph LR;
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="codefence"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','codefence')"
     >
       <span class="tab-nav-text">codefence</span>
@@ -2333,7 +2334,7 @@ graph LR;
 </span></span><span class="line"><span class="cl">    <span class="nx">C</span> <span class="o">--</span><span class="p">&gt;|</span><span class="nx">One</span><span class="p">|</span> <span class="nx">D</span><span class="p">[</span><span class="nx">Result</span> <span class="nx">one</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">C</span> <span class="o">--</span><span class="p">&gt;|</span><span class="nx">Two</span><span class="p">|</span> <span class="nx">E</span><span class="p">[</span><span class="nx">Result</span> <span class="nx">two</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 ---
 title: Example Diagram
 ---
@@ -2356,7 +2357,7 @@ graph LR;
 </span></span><span class="line"><span class="cl">    <span class="nx">John</span><span class="o">-&gt;&gt;</span><span class="nx">Bob</span><span class="p">:</span> <span class="nx">How</span> <span class="nx">about</span> <span class="nx">you</span><span class="err">?</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">Bob</span><span class="o">--&gt;&gt;</span><span class="nx">John</span><span class="p">:</span> <span class="nx">Jolly</span> <span class="nx">good</span><span class="p">!</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 %%{init:{&#34;fontFamily&#34;:&#34;monospace&#34;, &#34;sequence&#34;:{&#34;showSequenceNumbers&#34;:true}}}%%
 sequenceDiagram
     Alice-&gt;&gt;John: Hello John, how are you?
@@ -2392,7 +2393,7 @@ sequenceDiagram
 </span></span></span><span class="line"><span class="cl"><span class="s">      +run()
 </span></span></span><span class="line"><span class="cl"><span class="s">    }
 </span></span></span><span class="line"><span class="cl"><span class="s">```</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">classDiagram
+<pre class="mermaid align-center zoomable">classDiagram
     Animal &lt;|-- Duck
     Animal &lt;|-- Fish
     Animal &lt;|-- Zebra
@@ -2423,7 +2424,7 @@ sequenceDiagram
 </span></span><span class="line"><span class="cl">    <span class="nx">locked</span> <span class="o">--</span><span class="p">&gt;</span> <span class="nx">closed</span><span class="p">:</span> <span class="nx">Unlock</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">closed</span> <span class="o">--</span><span class="p">&gt;</span> <span class="nx">open</span><span class="p">:</span> <span class="nx">Open</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-right zoom">
+<pre class="mermaid align-right zoomable">
 stateDiagram-v2
   open: Open Door
   closed: Closed Door
@@ -2446,7 +2447,7 @@ stateDiagram-v2
 </span></span><span class="line"><span class="cl">    <span class="nx">PRODUCT</span><span class="o">-</span><span class="nx">CATEGORY</span> <span class="o">||--</span><span class="p">|{</span> <span class="nx">PRODUCT</span> <span class="p">:</span> <span class="nx">contains</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">PRODUCT</span> <span class="o">||--</span><span class="nx">o</span><span class="p">{</span> <span class="nx">ORDER</span><span class="o">-</span><span class="nx">ITEM</span> <span class="p">:</span> <span class="s">&#34;ordered in&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 %%{init:{&#34;theme&#34;:&#34;forest&#34;}}%%
 erDiagram
     CUSTOMER }|..|{ DELIVERY-ADDRESS : has
@@ -2470,7 +2471,7 @@ erDiagram
 </span></span><span class="line"><span class="cl">      <span class="nx">Go</span> <span class="nx">downstairs</span><span class="p">:</span> <span class="mi">5</span><span class="p">:</span> <span class="nx">Me</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">Sit</span> <span class="nx">down</span><span class="p">:</span> <span class="mi">3</span><span class="p">:</span> <span class="nx">Me</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 journey
     title My working day
     section Go to work
@@ -2499,7 +2500,7 @@ journey
 </span></span><span class="line"><span class="cl">        <span class="nx">Create</span> <span class="nx">tests</span> <span class="k">for</span> <span class="nx">renderer</span>           <span class="p">:</span><span class="mi">2</span><span class="nx">d</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">Add</span> <span class="nx">to</span> <span class="nx">Mermaid</span>                      <span class="p">:</span><span class="mi">1</span><span class="nx">d</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 gantt
         dateFormat  YYYY-MM-DD
         title Adding GANTT diagram functionality to Mermaid
@@ -2546,7 +2547,7 @@ pie title Pets adopted by volunteers
 </span></span><span class="line"><span class="cl">    <span class="nx">Campaign</span> <span class="nx">E</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.40</span><span class="p">,</span> <span class="mf">0.34</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">Campaign</span> <span class="nx">F</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 quadrantChart
     title Reach and engagement of campaigns
     x-axis Low Reach --&gt; High Reach
@@ -2579,7 +2580,7 @@ quadrantChart
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nx">test_entity</span> <span class="o">-</span> <span class="nx">satisfies</span> <span class="o">-</span><span class="p">&gt;</span> <span class="nx">test_req</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
     requirementDiagram
 
     requirement test_req {
@@ -2609,7 +2610,7 @@ quadrantChart
 </span></span><span class="line"><span class="cl">    <span class="nx">commit</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">commit</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 gitGraph
     commit
     commit
@@ -2667,7 +2668,7 @@ gitGraph
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nf">UpdateLayoutConfig</span><span class="p">(</span><span class="err">$</span><span class="nx">c4ShapeInRow</span><span class="p">=</span><span class="s">&#34;3&#34;</span><span class="p">,</span> <span class="err">$</span><span class="nx">c4BoundaryInRow</span><span class="p">=</span><span class="s">&#34;1&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 C4Context
     title System Context diagram for Internet Banking System
     Enterprise_Boundary(b0, &#34;BankBoundary0&#34;) {
@@ -2731,7 +2732,7 @@ C4Context
 </span></span><span class="line"><span class="cl">      <span class="nx">Pen</span> <span class="nx">and</span> <span class="nx">paper</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">Mermaid</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 mindmap
   root((mindmap))
     Origins
@@ -2760,7 +2761,7 @@ mindmap
 </span></span><span class="line"><span class="cl">    <span class="mi">2005</span> <span class="p">:</span> <span class="nx">Youtube</span>
 </span></span><span class="line"><span class="cl">    <span class="mi">2006</span> <span class="p">:</span> <span class="nx">Twitter</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 timeline
     title History of Social Media Platform
     2002 : LinkedIn
@@ -2778,7 +2779,7 @@ timeline
 </span></span><span class="line"><span class="cl"><span class="nx">Electricity</span> <span class="nx">grid</span><span class="p">,</span><span class="nx">Heating</span> <span class="nx">and</span> <span class="nx">cooling</span> <span class="o">-</span> <span class="nx">homes</span><span class="p">,</span><span class="mf">113.726</span>
 </span></span><span class="line"><span class="cl"><span class="nx">Electricity</span> <span class="nx">grid</span><span class="p">,</span><span class="nx">H2</span> <span class="nx">conversion</span><span class="p">,</span><span class="mf">27.14</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 sankey-beta
 
 %% source,target,value
@@ -2795,7 +2796,7 @@ Electricity grid,H2 conversion,27.14
 </span></span><span class="line"><span class="cl">    <span class="nx">bar</span> <span class="p">[</span><span class="mi">5000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">7500</span><span class="p">,</span> <span class="mi">8200</span><span class="p">,</span> <span class="mi">9500</span><span class="p">,</span> <span class="mi">10500</span><span class="p">,</span> <span class="mi">11000</span><span class="p">,</span> <span class="mi">10200</span><span class="p">,</span> <span class="mi">9200</span><span class="p">,</span> <span class="mi">8500</span><span class="p">,</span> <span class="mi">7000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">line</span> <span class="p">[</span><span class="mi">5000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">7500</span><span class="p">,</span> <span class="mi">8200</span><span class="p">,</span> <span class="mi">9500</span><span class="p">,</span> <span class="mi">10500</span><span class="p">,</span> <span class="mi">11000</span><span class="p">,</span> <span class="mi">10200</span><span class="p">,</span> <span class="mi">9200</span><span class="p">,</span> <span class="mi">8500</span><span class="p">,</span> <span class="mi">7000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<pre class="mermaid align-center zoom">
+<pre class="mermaid align-center zoomable">
 xychart-beta
     title &#34;Sales Revenue&#34;
     x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
@@ -2830,7 +2831,7 @@ xychart-beta
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -3170,7 +3171,7 @@ xychart-beta
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -3226,7 +3227,7 @@ xychart-beta
   <div class="box-content">
 
 <p>If you want to print out (or generate a PDF) from your OpenAPI documentation, don&rsquo;t initiate printing directly from the page because the elements are optimized for interactive usage in a browser.</p>
-<p>Instead, open the <a href="../basics/configuration/index.html#activate-print-support">print preview</a> in your browser and initiate printing from that page. This page is optimized for reading and expands most of the available sections.</p>
+<p>Instead, open the <a href="../basics/customization/index.html#activate-print-support">print preview</a> in your browser and initiate printing from that page. This page is optimized for reading and expands most of the available sections.</p>
 </div>
 </div>
 <h2 id="example">Example</h2>
@@ -3235,7 +3236,7 @@ xychart-beta
 <div class="sc-openapi-wrapper is-loading helper-loading-container">
   <div
     class="sc-openapi-container"
-    id="R-openapi-24d6dcd37cbbd88e015b17f8cd4c4292"
+    id="R-openapi-cf8294c8ca69a2b02c0f24b09eade1e0"
     data-openapi-url="../shortcodes/openapi/petstore.json"
   ></div>
 </div>
@@ -3258,7 +3259,7 @@ xychart-beta
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -3331,13 +3332,13 @@ xychart-beta
 <p>To use formatted parameter, add this in your <code>config.toml</code>:</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div>
-<div class="tab-panel" data-tab-group="41eec477ccb90f896a17361a7cb923fa">
+<div class="tab-panel" data-tab-group="5fb5259622098de4581e08f239c60972">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="configtoml"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('41eec477ccb90f896a17361a7cb923fa','configtoml')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('5fb5259622098de4581e08f239c60972','configtoml')"
     >
       <span class="tab-nav-text">config.toml</span>
     </button>
@@ -3354,7 +3355,7 @@ xychart-beta
     </div>
   </div>
 </div>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">Formatted</span> <span class="nx">parameter</span><span class="p">:</span> <span class="p">{{</span><span class="o">%</span> <span class="nx">siteparam</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;siteparam.test.text&#34;</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p>Formatted parameter: A <strong>nested</strong> parameter &lt;b&gt;with&lt;/b&gt; formatting</p>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">Formatted</span> <span class="nx">parameter</span><span class="p">:</span> <span class="p">{{</span><span class="o">%</span> <span class="nx">siteparam</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;siteparam.test.text&#34;</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p>Formatted parameter: A <strong>nested</strong> option &lt;b&gt;with&lt;/b&gt; formatting</p>
 
             <footer class="footline">
             </footer>
@@ -3369,13 +3370,13 @@ xychart-beta
 <p>This is especially useful if you want to flag your code example with an explicit language.</p>
 <p>If you want multiple tabs grouped together you can wrap your tabs into the <a href="../shortcodes/tabs/index.html"><code>tabs</code> shortcode</a>.</p>
 
-<div class="tab-panel" data-tab-group="26fa1c5d902261cf46e4dc11b33ce0b8">
+<div class="tab-panel" data-tab-group="0bacab412a8f7388bfb74b2e85a281a1">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="c"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('26fa1c5d902261cf46e4dc11b33ce0b8','c')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('0bacab412a8f7388bfb74b2e85a281a1','c')"
     >
       <span class="tab-nav-text">c</span>
     </button>
@@ -3398,7 +3399,7 @@ xychart-beta
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -3480,13 +3481,13 @@ xychart-beta
 </span></span></span><span class="line"><span class="cl"><span class="s">printf(&#34;Hello World!&#34;);
 </span></span></span><span class="line"><span class="cl"><span class="s">```</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<div class="tab-panel" data-tab-group="57a96a68962753de5ec382408cb9e10c">
+<div class="tab-panel" data-tab-group="9c1b0989b1b0d9953735c9032603b0f8">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="code"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('57a96a68962753de5ec382408cb9e10c','code')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('9c1b0989b1b0d9953735c9032603b0f8','code')"
     >
       <span class="tab-nav-text">Code</span>
     </button>
@@ -3508,13 +3509,13 @@ xychart-beta
 </span></span></span><span class="line"><span class="cl"><span class="s">printf(&#34;Hello World!&#34;);
 </span></span></span><span class="line"><span class="cl"><span class="s">```</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<div class="tab-panel" data-tab-group="76dfaba562044a0883f78beb4c69eaf0">
+<div class="tab-panel" data-tab-group="5ae177372a4027d39fab26caefb2731d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="mixed"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('76dfaba562044a0883f78beb4c69eaf0','mixed')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('5ae177372a4027d39fab26caefb2731d','mixed')"
     >
       <span class="tab-nav-text"><em><strong>Mixed</strong></em></span>
     </button>
@@ -3559,41 +3560,41 @@ xychart-beta
 </span></span><span class="line"><span class="cl"><span class="nx">This</span> <span class="nx">will</span> <span class="nx">set</span> <span class="nx">the</span> <span class="nx">background</span> <span class="nx">to</span> <span class="nx">a</span> <span class="nx">lighter</span> <span class="nx">version</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">chosen</span> <span class="nx">CSS</span> <span class="nx">color</span> <span class="nx">value</span> <span class="nx">and</span> <span class="nx">also</span> <span class="nx">affects</span> <span class="nx">the</span> <span class="nx">chosen</span> <span class="nx">icon</span><span class="p">.</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">tabs</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<div class="tab-panel" data-tab-group="c3358227d12615c6053dc1ff7be07745">
+<div class="tab-panel" data-tab-group="b42b5b64a9360595b2a032ad603b169d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="just-colored-style"
-      class="tab-nav-button tab-panel-style cstyle blue active"
-      onclick="switchTab('c3358227d12615c6053dc1ff7be07745','just-colored-style')"
+      class="tab-nav-button tab-panel-style cstyle blue active" tabindex="-1"
+      onclick="switchTab('b42b5b64a9360595b2a032ad603b169d','just-colored-style')"
     >
       <span class="tab-nav-text">just colored style</span>
     </button>
     <button
       data-tab-item="just-color"
       class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('c3358227d12615c6053dc1ff7be07745','just-color')"
+      onclick="switchTab('b42b5b64a9360595b2a032ad603b169d','just-color')"
     >
       <span class="tab-nav-text">just color</span>
     </button>
     <button
       data-tab-item="default-style-and-color"
       class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('c3358227d12615c6053dc1ff7be07745','default-style-and-color')"
+      onclick="switchTab('b42b5b64a9360595b2a032ad603b169d','default-style-and-color')"
     >
       <span class="tab-nav-text">default style and color</span>
     </button>
     <button
       data-tab-item="just-severity-stylefa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info"
-      onclick="switchTab('c3358227d12615c6053dc1ff7be07745','just-severity-stylefa-fw-fas-fa-info-circle')"
+      onclick="switchTab('b42b5b64a9360595b2a032ad603b169d','just-severity-stylefa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> just severity style</span>
     </button>
     <button
       data-tab-item="severity-style-and-colorfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('c3358227d12615c6053dc1ff7be07745','severity-style-and-colorfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('b42b5b64a9360595b2a032ad603b169d','severity-style-and-colorfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> severity style and color</span>
     </button>
@@ -3660,27 +3661,27 @@ xychart-beta
 <p>This comes in handy eg. for providing code snippets for multiple languages.</p>
 <p>If you just want a single tab you can instead call the <a href="../shortcodes/tab/index.html"><code>tab</code> shortcode</a> standalone.</p>
 
-<div class="tab-panel" data-tab-group="a814cedefbf693c69d6ae8924cab9b9b">
+<div class="tab-panel" data-tab-group="bc3bfa21041bff601c9b6bb7fd4f79f4">
   <div class="tab-nav">
     <div class="tab-nav-title">hello.</div>
     <button
       data-tab-item="py"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('a814cedefbf693c69d6ae8924cab9b9b','py')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('bc3bfa21041bff601c9b6bb7fd4f79f4','py')"
     >
       <span class="tab-nav-text">py</span>
     </button>
     <button
       data-tab-item="sh"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('a814cedefbf693c69d6ae8924cab9b9b','sh')"
+      onclick="switchTab('bc3bfa21041bff601c9b6bb7fd4f79f4','sh')"
     >
       <span class="tab-nav-text">sh</span>
     </button>
     <button
       data-tab-item="c"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('a814cedefbf693c69d6ae8924cab9b9b','c')"
+      onclick="switchTab('bc3bfa21041bff601c9b6bb7fd4f79f4','c')"
     >
       <span class="tab-nav-text">c</span>
     </button>
@@ -3718,7 +3719,7 @@ xychart-beta
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -3828,27 +3829,27 @@ xychart-beta
 <p>See what happens to the tab views while you select different tabs.</p>
 <p>While pressing a tab of Group A switches all tab views of Group A in sync (if the tab is available), the tabs of Group B are left untouched.</p>
 
-<div class="tab-panel" data-tab-group="cf2afee40fd5a44374050cefde532077">
+<div class="tab-panel" data-tab-group="5199ff712b51e86a1ec38a54bdeeb68d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="group-a-tab-view-1"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('cf2afee40fd5a44374050cefde532077','group-a-tab-view-1')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('5199ff712b51e86a1ec38a54bdeeb68d','group-a-tab-view-1')"
     >
       <span class="tab-nav-text">Group A, Tab View 1</span>
     </button>
     <button
       data-tab-item="group-a-tab-view-2"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('cf2afee40fd5a44374050cefde532077','group-a-tab-view-2')"
+      onclick="switchTab('5199ff712b51e86a1ec38a54bdeeb68d','group-a-tab-view-2')"
     >
       <span class="tab-nav-text">Group A, Tab View 2</span>
     </button>
     <button
       data-tab-item="group-b"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('cf2afee40fd5a44374050cefde532077','group-b')"
+      onclick="switchTab('5199ff712b51e86a1ec38a54bdeeb68d','group-b')"
     >
       <span class="tab-nav-text">Group B</span>
     </button>
@@ -3920,7 +3921,7 @@ xychart-beta
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="json"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('tab-example-a','json')"
     >
       <span class="tab-nav-text">json</span>
@@ -3974,7 +3975,7 @@ xychart-beta
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="json"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('tab-example-a','json')"
     >
       <span class="tab-nav-text">json</span>
@@ -4012,7 +4013,7 @@ xychart-beta
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="json"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('tab-example-b','json')"
     >
       <span class="tab-nav-text">json</span>
@@ -4083,7 +4084,7 @@ xychart-beta
     <div class="tab-nav-title"><i class="fa-fw fas fa-thumbtack"></i> Rationale</div>
     <button
       data-tab-item="text"
-      class="tab-nav-button tab-panel-style cstyle primary active"
+      class="tab-nav-button tab-panel-style cstyle primary active" tabindex="-1"
       onclick="switchTab('main','text')"
     >
       <span class="tab-nav-text">Text</span>
@@ -4110,7 +4111,7 @@ xychart-beta
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="python"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('tabs-example-language','python')"
     >
       <span class="tab-nav-text">python</span>
@@ -4161,7 +4162,7 @@ xychart-beta
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="python"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('tabs-example-language','python')"
     >
       <span class="tab-nav-text">python</span>
@@ -4204,8 +4205,8 @@ xychart-beta
         </div>
       </main>
     </div>
-    <script src="../js/clipboard.min.js?1699472664" defer></script>
-    <script src="../js/perfect-scrollbar.min.js?1699472664" defer></script>
+    <script src="../js/clipboard.min.js?1700601385" defer></script>
+    <script src="../js/perfect-scrollbar.min.js?1700601385" defer></script>
     <script>
       function useMathJax( config ){
         if( !Object.assign ){
@@ -4234,27 +4235,27 @@ xychart-beta
       }
       useMathJax( JSON.parse("{}") );
     </script>
-    <script id="MathJax-script" async src="../js/mathjax/tex-mml-chtml.js?1699472664"></script>
-    <script src="../js/d3/d3-color.min.js?1699472664" defer></script>
-    <script src="../js/d3/d3-dispatch.min.js?1699472664" defer></script>
-    <script src="../js/d3/d3-drag.min.js?1699472664" defer></script>
-    <script src="../js/d3/d3-ease.min.js?1699472664" defer></script>
-    <script src="../js/d3/d3-interpolate.min.js?1699472664" defer></script>
-    <script src="../js/d3/d3-selection.min.js?1699472664" defer></script>
-    <script src="../js/d3/d3-timer.min.js?1699472664" defer></script>
-    <script src="../js/d3/d3-transition.min.js?1699472664" defer></script>
-    <script src="../js/d3/d3-zoom.min.js?1699472664" defer></script>
-    <script src="../js/js-yaml.min.js?1699472664" defer></script>
-    <script src="../js/mermaid.min.js?1699472664" defer></script>
+    <script id="MathJax-script" async src="../js/mathjax/tex-mml-chtml.js?1700601385"></script>
+    <script src="../js/d3/d3-color.min.js?1700601385" defer></script>
+    <script src="../js/d3/d3-dispatch.min.js?1700601385" defer></script>
+    <script src="../js/d3/d3-drag.min.js?1700601385" defer></script>
+    <script src="../js/d3/d3-ease.min.js?1700601385" defer></script>
+    <script src="../js/d3/d3-interpolate.min.js?1700601385" defer></script>
+    <script src="../js/d3/d3-selection.min.js?1700601385" defer></script>
+    <script src="../js/d3/d3-timer.min.js?1700601385" defer></script>
+    <script src="../js/d3/d3-transition.min.js?1700601385" defer></script>
+    <script src="../js/d3/d3-zoom.min.js?1700601385" defer></script>
+    <script src="../js/js-yaml.min.js?1700601385" defer></script>
+    <script src="../js/mermaid.min.js?1700601385" defer></script>
     <script>
       window.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
     </script>
     <script>window.noZensmooth = true;</script>
-    <script src="../js/swagger-ui/swagger-ui-bundle.js?1699472664" defer></script>
-    <script src="../js/swagger-ui/swagger-ui-standalone-preset.js?1699472664" defer></script>
+    <script src="../js/swagger-ui/swagger-ui-bundle.js?1700601385" defer></script>
+    <script src="../js/swagger-ui/swagger-ui-standalone-preset.js?1700601385" defer></script>
     <script>
-      window.themeUseOpenapi = { css: "/js/swagger-ui/swagger-ui.css?1699472664", assetsBuster:  1699472664  };
+      window.themeUseOpenapi = { css: "/js/swagger-ui/swagger-ui.css?1700601385", assetsBuster:  1700601385  };
     </script>
-    <script src="../js/theme.js?1699472664" defer></script>
+    <script src="../js/theme.js?1700601385" defer></script>
   </body>
 </html>

@@ -24,39 +24,40 @@
     <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/expand/index.html" rel="alternate" hreflang="pir">
     <link href="https://deining.github.io/hugo-theme-relearn/shortcodes/expand/index.html" rel="canonical" type="text/html" title="Expand :: Hugo Relearn Theme">
     <link href="../../shortcodes/expand/index.xml" rel="alternate" type="application/rss+xml" title="Expand :: Hugo Relearn Theme">
-    <link href="../../images/logo.svg?1699472662" rel="icon" type="image/svg+xml">
+    <link href="../../images/logo.svg?1700601384" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../css/fontawesome-all.min.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../../css/nucleus.css?1699472663" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../../css/perfect-scrollbar.min.css?1699472663" rel="stylesheet">
-    <link href="../../css/fonts.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../../css/theme.css?1699472663" rel="stylesheet">
-    <link href="../../css/theme-auto.css?1699472663" rel="stylesheet" id="R-variant-style">
-    <link href="../../css/variant.css?1699472663" rel="stylesheet">
-    <link href="../../css/print.css?1699472663" rel="stylesheet" media="print">
-    <link href="../../css/format-print.css?1699472663" rel="stylesheet">
-    <link href="../../css/ie.css?1699472663" rel="stylesheet">
-    <script src="../../js/url.js?1699472663"></script>
-    <script src="../../js/variant.js?1699472663"></script>
+    <link href="../../css/fontawesome-all.min.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../../css/nucleus.css?1700601385" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar.min.css?1700601385" rel="stylesheet">
+    <link href="../../css/fonts.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../../css/theme.css?1700601385" rel="stylesheet">
+    <link href="../../css/theme-auto.css?1700601385" rel="stylesheet" id="R-variant-style">
+    <link href="../../css/variant.css?1700601385" rel="stylesheet">
+    <link href="../../css/print.css?1700601385" rel="stylesheet" media="print">
+    <link href="../../css/format-print.css?1700601385" rel="stylesheet">
+    <link href="../../css/ie.css?1700601385" rel="stylesheet">
+    <script src="../../js/url.js?1700601385"></script>
+    <script src="../../js/variant.js?1700601385"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
       window.index_js_url="../../index.search.js";
       var root_url="../../";
       var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
-      window.T_Copy_to_clipboard = 'Copy to clipboard';
-      window.T_Copied_to_clipboard = 'Copied to clipboard!';
-      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
-      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
-      window.T_Reset_view = 'Reset view';
-      window.T_View_reset = 'View reset!';
-      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
-      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
-      // some further base stuff
-      var baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
-      window.variants && variants.init( [ 'auto', 'relearn-bright', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
     <style>
       #R-body img.bg-white {
@@ -96,13 +97,13 @@
 <p>The <code>expand</code> shortcode displays an expandable/collapsible section of text.</p>
 
 <div class="expand">
-    <input type="checkbox" id="R-expand-8deddbe5a27333693e671788b2874726" aria-controls="R-expandcontent-8deddbe5a27333693e671788b2874726" >
-    <label class="expand-label" for="R-expand-8deddbe5a27333693e671788b2874726" >
+    <input type="checkbox" id="R-expand-5dded8ae6975573d883138b2e4f914d7" aria-controls="R-expandcontent-5dded8ae6975573d883138b2e4f914d7" >
+    <label class="expand-label" for="R-expand-5dded8ae6975573d883138b2e4f914d7" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-8deddbe5a27333693e671788b2874726" class="expand-content">
+    <div id="R-expandcontent-5dded8ae6975573d883138b2e4f914d7" class="expand-content">
 
 <p>Thank you!</p>
 <p>That&rsquo;s some text with a footnote<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
@@ -137,7 +138,7 @@
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -220,26 +221,26 @@
 <h3 id="all-defaults">All Defaults</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Yes</span><span class="p">,</span> <span class="nx">you</span> <span class="nx">did</span> <span class="nx">it</span><span class="p">!{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-a3f8cc92a51d86f4c8a35ffe37df0ead" aria-controls="R-expandcontent-a3f8cc92a51d86f4c8a35ffe37df0ead" >
-    <label class="expand-label" for="R-expand-a3f8cc92a51d86f4c8a35ffe37df0ead" >
+    <input type="checkbox" id="R-expand-cc835aab2f2d0bb41205177169e44686" aria-controls="R-expandcontent-cc835aab2f2d0bb41205177169e44686" >
+    <label class="expand-label" for="R-expand-cc835aab2f2d0bb41205177169e44686" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-a3f8cc92a51d86f4c8a35ffe37df0ead" class="expand-content">
+    <div id="R-expandcontent-cc835aab2f2d0bb41205177169e44686" class="expand-content">
 <p>
 Yes, you did it!</div>
 </div>
 <h3 id="initially-expanded">Initially Expanded</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="nx">title</span><span class="p">=</span><span class="s">&#34;Expand me...&#34;</span> <span class="nx">open</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">No</span> <span class="nx">need</span> <span class="nx">to</span> <span class="nx">press</span> <span class="nx">you</span><span class="p">!{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-c04e485ad5f08e37092b506eb3670e48" aria-controls="R-expandcontent-c04e485ad5f08e37092b506eb3670e48"  checked>
-    <label class="expand-label" for="R-expand-c04e485ad5f08e37092b506eb3670e48" >
+    <input type="checkbox" id="R-expand-f40e14b692ec761671167a31f0e9a58f" aria-controls="R-expandcontent-f40e14b692ec761671167a31f0e9a58f"  checked>
+    <label class="expand-label" for="R-expand-f40e14b692ec761671167a31f0e9a58f" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-c04e485ad5f08e37092b506eb3670e48" class="expand-content">
+    <div id="R-expandcontent-f40e14b692ec761671167a31f0e9a58f" class="expand-content">
 <p>
 No need to press you!</div>
 </div>
@@ -260,13 +261,13 @@ No need to press you!</div>
 </span></span><span class="line"><span class="cl"><span class="p">&gt;</span> <span class="nx">the</span> <span class="nx">possibilities</span> <span class="nx">are</span> <span class="nf">endless</span> <span class="p">(</span><span class="nx">almost</span> <span class="o">-</span> <span class="nx">including</span> <span class="nx">other</span> <span class="nx">shortcodes</span> <span class="nx">may</span> <span class="nx">or</span> <span class="nx">may</span> <span class="nx">not</span> <span class="nx">work</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-dc37343fe07a0275cbf4451df9117374" aria-controls="R-expandcontent-dc37343fe07a0275cbf4451df9117374" >
-    <label class="expand-label" for="R-expand-dc37343fe07a0275cbf4451df9117374" >
+    <input type="checkbox" id="R-expand-c8d78b7f369e883e618459b80f300296" aria-controls="R-expandcontent-c8d78b7f369e883e618459b80f300296" >
+    <label class="expand-label" for="R-expand-c8d78b7f369e883e618459b80f300296" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Show me almost <strong>endless</strong> possibilities
     </label>
-    <div id="R-expandcontent-dc37343fe07a0275cbf4451df9117374" class="expand-content">
+    <div id="R-expandcontent-c8d78b7f369e883e618459b80f300296" class="expand-content">
 
 <p>You can add standard markdown syntax:</p>
 <ul>
@@ -289,8 +290,8 @@ No need to press you!</div>
         </div>
       </main>
     </div>
-    <script src="../../js/clipboard.min.js?1699472663" defer></script>
-    <script src="../../js/perfect-scrollbar.min.js?1699472663" defer></script>
-    <script src="../../js/theme.js?1699472663" defer></script>
+    <script src="../../js/clipboard.min.js?1700601385" defer></script>
+    <script src="../../js/perfect-scrollbar.min.js?1700601385" defer></script>
+    <script src="../../js/theme.js?1700601385" defer></script>
   </body>
 </html>

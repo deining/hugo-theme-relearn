@@ -40,39 +40,40 @@ Usage While th&#39; examples be us&#39;n shorrrtcodes wit&#39; named parameter y
     <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/expand/index.html" rel="alternate" hreflang="pir">
     <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/expand/index.html" rel="canonical" type="text/html" title="Expand :: Cap&#39;n Hugo Relearrrn Theme">
     <link href="../../../pir/shortcodes/expand/index.xml" rel="alternate" type="application/rss+xml" title="Expand :: Cap&#39;n Hugo Relearrrn Theme">
-    <link href="../../../images/logo.svg?1699472664" rel="icon" type="image/svg+xml">
+    <link href="../../../images/logo.svg?1700601385" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../../css/fontawesome-all.min.css?1699472667" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1699472667" rel="stylesheet"></noscript>
-    <link href="../../../css/nucleus.css?1699472667" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1699472667" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1699472667" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar.min.css?1699472667" rel="stylesheet">
-    <link href="../../../css/fonts.css?1699472667" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1699472667" rel="stylesheet"></noscript>
-    <link href="../../../css/theme.css?1699472667" rel="stylesheet">
-    <link href="../../../css/theme-auto.css?1699472667" rel="stylesheet" id="R-variant-style">
-    <link href="../../../css/variant.css?1699472667" rel="stylesheet">
-    <link href="../../../css/print.css?1699472667" rel="stylesheet" media="print">
-    <link href="../../../css/format-print.css?1699472667" rel="stylesheet">
-    <link href="../../../css/ie.css?1699472667" rel="stylesheet">
-    <script src="../../../js/url.js?1699472667"></script>
-    <script src="../../../js/variant.js?1699472667"></script>
+    <link href="../../../css/fontawesome-all.min.css?1700601387" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1700601387" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1700601387" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1700601387" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1700601387" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1700601387" rel="stylesheet">
+    <link href="../../../css/fonts.css?1700601387" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1700601387" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1700601387" rel="stylesheet">
+    <link href="../../../css/theme-auto.css?1700601387" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/variant.css?1700601387" rel="stylesheet">
+    <link href="../../../css/print.css?1700601387" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1700601387" rel="stylesheet">
+    <link href="../../../css/ie.css?1700601387" rel="stylesheet">
+    <script src="../../../js/url.js?1700601387"></script>
+    <script src="../../../js/variant.js?1700601387"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
       window.index_js_url="../../../pir/index.search.js";
       var root_url="../../../";
       var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
-      window.T_Copy_to_clipboard = 'Copy t\u0027 clipboard';
-      window.T_Copied_to_clipboard = 'Copied t\u0027 clipboard!';
-      window.T_Copy_link_to_clipboard = 'Copy link t\u0027 clipboard';
-      window.T_Link_copied_to_clipboard = 'Copied link t\u0027 clipboard!';
-      window.T_Reset_view = 'Rrreset view';
-      window.T_View_reset = 'View rrreset!';
-      window.T_No_results_found = 'No rrresults found fer \u0022{0}\u0022';
-      window.T_N_results_found = '{1} rrresults found fer \u0022{0}\u0022';
-      // some further base stuff
-      var baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
-      window.variants && variants.init( [ 'auto', 'relearn-bright', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.T_Copy_to_clipboard = `Copy t' clipboard`;
+      window.T_Copied_to_clipboard = `Copied t' clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link t' clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link t' clipboard!`;
+      window.T_Reset_view = `Rrreset view`;
+      window.T_View_reset = `View rrreset!`;
+      window.T_No_results_found = `No rrresults found fer "{0}"`;
+      window.T_N_results_found = `{1} rrresults found fer "{0}"`;
     </script>
     <style>
       #R-body img.bg-white {
@@ -113,13 +114,13 @@ Usage While th&#39; examples be us&#39;n shorrrtcodes wit&#39; named parameter y
 <p>Th' <code>expand</code> shortcode displays an expandable/collaps'ble section o' text.</p>
 
 <div class="expand">
-    <input type="checkbox" id="R-expand-1fa75e039bdaf7fa5a8cd0ebad30b92d" aria-controls="R-expandcontent-1fa75e039bdaf7fa5a8cd0ebad30b92d" >
-    <label class="expand-label" for="R-expand-1fa75e039bdaf7fa5a8cd0ebad30b92d" >
+    <input type="checkbox" id="R-expand-51c043bc27deb63111c91f620845c708" aria-controls="R-expandcontent-51c043bc27deb63111c91f620845c708" >
+    <label class="expand-label" for="R-expand-51c043bc27deb63111c91f620845c708" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-1fa75e039bdaf7fa5a8cd0ebad30b92d" class="expand-content">
+    <div id="R-expandcontent-51c043bc27deb63111c91f620845c708" class="expand-content">
 
 <p>Thank ye!</p>
 <p>That&rsquo;s some text wit' a footnote<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
@@ -154,7 +155,7 @@ Usage While th&#39; examples be us&#39;n shorrrtcodes wit&#39; named parameter y
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="shortcode"
-      class="tab-nav-button tab-panel-style cstyle initial active"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
       onclick="switchTab('shortcode-parameter','shortcode')"
     >
       <span class="tab-nav-text">shortcode</span>
@@ -237,26 +238,26 @@ Usage While th&#39; examples be us&#39;n shorrrtcodes wit&#39; named parameter y
 <h3 id="all-defaults">All Defaults</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Yes</span><span class="p">,</span> <span class="nx">ye</span> <span class="nx">did</span> <span class="nx">it</span><span class="p">!{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-f22d76309be9aca88b852594d28484c6" aria-controls="R-expandcontent-f22d76309be9aca88b852594d28484c6" >
-    <label class="expand-label" for="R-expand-f22d76309be9aca88b852594d28484c6" >
+    <input type="checkbox" id="R-expand-6a3c7a5e265d38cdf292a0e138205cdc" aria-controls="R-expandcontent-6a3c7a5e265d38cdf292a0e138205cdc" >
+    <label class="expand-label" for="R-expand-6a3c7a5e265d38cdf292a0e138205cdc" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-f22d76309be9aca88b852594d28484c6" class="expand-content">
+    <div id="R-expandcontent-6a3c7a5e265d38cdf292a0e138205cdc" class="expand-content">
 <p>
 Yes, ye did it!</div>
 </div>
 <h3 id="initially-expanded">Initially Expanded</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="nx">title</span><span class="p">=</span><span class="s">&#34;Expand me...&#34;</span> <span class="nx">open</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">No</span> <span class="nx">need</span> <span class="nx">t'</span> <span class="nx">press</span> <span class="nx">ye</span><span class="p">!{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-ecbda82c182560dd712ccb305a9ed1e5" aria-controls="R-expandcontent-ecbda82c182560dd712ccb305a9ed1e5"  checked>
-    <label class="expand-label" for="R-expand-ecbda82c182560dd712ccb305a9ed1e5" >
+    <input type="checkbox" id="R-expand-8abe3105622d96d463004df1621926db" aria-controls="R-expandcontent-8abe3105622d96d463004df1621926db"  checked>
+    <label class="expand-label" for="R-expand-8abe3105622d96d463004df1621926db" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-ecbda82c182560dd712ccb305a9ed1e5" class="expand-content">
+    <div id="R-expandcontent-8abe3105622d96d463004df1621926db" class="expand-content">
 <p>
 No need t' press ye!</div>
 </div>
@@ -277,13 +278,13 @@ No need t' press ye!</div>
 </span></span><span class="line"><span class="cl"><span class="p">&gt;</span> <span class="nx">th'</span> <span class="nx">possibilities</span> <span class="nx">be</span> <span class="nf">endless</span> <span class="p">(</span><span class="nx">almost</span> <span class="o">-</span> <span class="nx">includ'n</span> <span class="nx">other</span> <span class="nx">shorrrtcodes</span> <span class="nx">may</span> <span class="nx">or</span> <span class="nx">may</span> <span class="nx">not</span> <span class="nx">work</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-01b535090f7084f28166cc6b04dd151c" aria-controls="R-expandcontent-01b535090f7084f28166cc6b04dd151c" >
-    <label class="expand-label" for="R-expand-01b535090f7084f28166cc6b04dd151c" >
+    <input type="checkbox" id="R-expand-1819e3d60a67daa8e8871551ae34f473" aria-controls="R-expandcontent-1819e3d60a67daa8e8871551ae34f473" >
+    <label class="expand-label" for="R-expand-1819e3d60a67daa8e8871551ae34f473" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Show me almost <strong>endless</strong> possibilities
     </label>
-    <div id="R-expandcontent-01b535090f7084f28166cc6b04dd151c" class="expand-content">
+    <div id="R-expandcontent-1819e3d60a67daa8e8871551ae34f473" class="expand-content">
 
 <p>Ye can add standard markdown rules:</p>
 <ul>
@@ -307,8 +308,8 @@ No need t' press ye!</div>
         </div>
       </main>
     </div>
-    <script src="../../../js/clipboard.min.js?1699472667" defer></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1699472667" defer></script>
-    <script src="../../../js/theme.js?1699472667" defer></script>
+    <script src="../../../js/clipboard.min.js?1700601387" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1700601387" defer></script>
+    <script src="../../../js/theme.js?1700601387" defer></script>
   </body>
 </html>

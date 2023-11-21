@@ -23,39 +23,40 @@
     <link href="https://deining.github.io/hugo-theme-relearn/pir/cont/index.html" rel="alternate" hreflang="pir">
     <link href="https://deining.github.io/hugo-theme-relearn/cont/index.html" rel="canonical" type="text/html" title="Content :: Hugo Relearn Theme">
     <link href="../cont/index.xml" rel="alternate" type="application/rss+xml" title="Content :: Hugo Relearn Theme">
-    <link href="../images/logo.svg?1699472662" rel="icon" type="image/svg+xml">
+    <link href="../images/logo.svg?1700601384" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../css/fontawesome-all.min.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fontawesome-all.min.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../css/nucleus.css?1699472663" rel="stylesheet">
-    <link href="../css/auto-complete.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/auto-complete.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../css/perfect-scrollbar.min.css?1699472663" rel="stylesheet">
-    <link href="../css/fonts.css?1699472663" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fonts.css?1699472663" rel="stylesheet"></noscript>
-    <link href="../css/theme.css?1699472663" rel="stylesheet">
-    <link href="../css/theme-auto.css?1699472663" rel="stylesheet" id="R-variant-style">
-    <link href="../css/variant.css?1699472663" rel="stylesheet">
-    <link href="../css/print.css?1699472663" rel="stylesheet" media="print">
-    <link href="../css/format-print.css?1699472663" rel="stylesheet">
-    <link href="../css/ie.css?1699472663" rel="stylesheet">
-    <script src="../js/url.js?1699472663"></script>
-    <script src="../js/variant.js?1699472663"></script>
+    <link href="../css/fontawesome-all.min.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fontawesome-all.min.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../css/nucleus.css?1700601385" rel="stylesheet">
+    <link href="../css/auto-complete.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/auto-complete.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../css/perfect-scrollbar.min.css?1700601385" rel="stylesheet">
+    <link href="../css/fonts.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fonts.css?1700601385" rel="stylesheet"></noscript>
+    <link href="../css/theme.css?1700601385" rel="stylesheet">
+    <link href="../css/theme-auto.css?1700601385" rel="stylesheet" id="R-variant-style">
+    <link href="../css/variant.css?1700601385" rel="stylesheet">
+    <link href="../css/print.css?1700601385" rel="stylesheet" media="print">
+    <link href="../css/format-print.css?1700601385" rel="stylesheet">
+    <link href="../css/ie.css?1700601385" rel="stylesheet">
+    <script src="../js/url.js?1700601385"></script>
+    <script src="../js/variant.js?1700601385"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
       window.index_js_url="../index.search.js";
       var root_url="../";
       var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
+      // variant stuff
+      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
-      window.T_Copy_to_clipboard = 'Copy to clipboard';
-      window.T_Copied_to_clipboard = 'Copied to clipboard!';
-      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
-      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
-      window.T_Reset_view = 'Reset view';
-      window.T_View_reset = 'View reset!';
-      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
-      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
-      // some further base stuff
-      var baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
-      window.variants && variants.init( [ 'auto', 'relearn-bright', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
     <style>
       #R-body img.bg-white {
@@ -181,8 +182,8 @@
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
 </span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;GitHub repo&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">menuPre</span> <span class="p">=</span> <span class="s2">&#34;&lt;i class=&#39;fab fa-github&#39;&gt;&lt;/i&gt; &#34;</span>
-</span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><p><a href="#R-image-f7e4f589471c6acc92eaadefa4f3aa7b" class="lightbox-link"><img src="../cont/pages/frontmatter-icon.png?width=18.75rem" alt="Title with icon" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 18.75rem;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f7e4f589471c6acc92eaadefa4f3aa7b"><img src="../cont/pages/frontmatter-icon.png?width=18.75rem" alt="Title with icon" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><p><a href="#R-image-f8e67737f0a90c98e6c2060e2965c6ac" class="lightbox-link"><img src="../cont/pages/frontmatter-icon.png?width=18.75rem" alt="Title with icon" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 18.75rem;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f8e67737f0a90c98e6c2060e2965c6ac"><img src="../cont/pages/frontmatter-icon.png?width=18.75rem" alt="Title with icon" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 <h3 id="ordering-sibling-menupage-entries">Ordering sibling menu/page entries</h3>
 <p>Hugo provides a <a href="https://gohugo.io/content/ordering/" target="_blank">flexible way</a> to handle order for your pages.</p>
 <p>The simplest way is to set <code>weight</code> parameter to a number.</p>
@@ -230,8 +231,8 @@ We&rsquo;ve added the <code>menuTitle</code> parameter for that purpose:</p>
 <h2 id="predefined-archetypes">Predefined Archetypes</h2>
 <h3 id="archetypes-home">Home</h3>
 <p>A <strong>Home</strong> page is the starting page of your project. It&rsquo;s best to have only one page of this kind in your project.</p>
-<p><a href="#R-image-8f032549e689a9a3e8895167d1e7beaf" class="lightbox-link"><img src="../cont/archetypes/pages-home.png?width=60pc" alt="Home page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8f032549e689a9a3e8895167d1e7beaf"><img src="../cont/archetypes/pages-home.png?width=60pc" alt="Home page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-1250afe9ed29ec45e548ced9fff7c7bf" class="lightbox-link"><img src="../cont/archetypes/pages-home.png?width=60pc" alt="Home page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1250afe9ed29ec45e548ced9fff7c7bf"><img src="../cont/archetypes/pages-home.png?width=60pc" alt="Home page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 <p>To create a home page, run the following command</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new --kind home _index.md</span></span></code></pre></div><p>This leads to a file with the following content</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+++
@@ -241,8 +242,8 @@ We&rsquo;ve added the <code>menuTitle</code> parameter for that purpose:</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Lorem Ipsum.</span></span></code></pre></div><h3 id="archetypes-chapter">Chapter</h3>
 <p>A <strong>Chapter</strong> displays a page meant to be used as introduction for a set of child pages. Commonly, it contains a simple title and a catch line to define content that can be found below it.</p>
-<p><a href="#R-image-b94520ff43201d0f215cea0cb96a1815" class="lightbox-link"><img src="../cont/archetypes/pages-chapter.png?width=60pc" alt="Chapter page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b94520ff43201d0f215cea0cb96a1815"><img src="../cont/archetypes/pages-chapter.png?width=60pc" alt="Chapter page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-0a78fe909bff266281d8780fe514eb4b" class="lightbox-link"><img src="../cont/archetypes/pages-chapter.png?width=60pc" alt="Chapter page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a78fe909bff266281d8780fe514eb4b"><img src="../cont/archetypes/pages-chapter.png?width=60pc" alt="Chapter page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 <p>To create a chapter page, run the following command</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new --kind chapter &lt;name&gt;/_index.md</span></span></code></pre></div><p>This leads to a file with the following content</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+++
@@ -254,8 +255,8 @@ We&rsquo;ve added the <code>menuTitle</code> parameter for that purpose:</p>
 </span></span><span class="line"><span class="cl">Lorem Ipsum.</span></span></code></pre></div><p>Replace the <code>X</code> with a number. Because this number will be used to generate the subtitle of the chapter page, set the number to a consecutive value starting at 1 for each new chapter level.</p>
 <h3 id="archetypes-default">Default</h3>
 <p>A <strong>Default</strong> page is any other content page. If you set an unknown archetype in your frontmatter, this archetype will be used to generate the page.</p>
-<p><a href="#R-image-32f45a568c058a1b577a825f827956a9" class="lightbox-link"><img src="../cont/archetypes/pages-default.png?width=60pc" alt="Default page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-32f45a568c058a1b577a825f827956a9"><img src="../cont/archetypes/pages-default.png?width=60pc" alt="Default page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-101c4479b11cbb72e7ba8a38b0c6b67c" class="lightbox-link"><img src="../cont/archetypes/pages-default.png?width=60pc" alt="Default page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-101c4479b11cbb72e7ba8a38b0c6b67c"><img src="../cont/archetypes/pages-default.png?width=60pc" alt="Default page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 <p>To create a default page, run either one of the following commands</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new &lt;chapter&gt;/&lt;name&gt;/_index.md</span></span></code></pre></div><p>or</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new &lt;chapter&gt;/&lt;name&gt;.md</span></span></code></pre></div><p>This leads to a file with the following content</p>
@@ -827,8 +828,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-d5408ac7054c0cc89b8df6a5a01613a8" class="lightbox-link"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d5408ac7054c0cc89b8df6a5a01613a8"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-784e007291432c171fd421435cdc3e71" class="lightbox-link"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-784e007291432c171fd421435cdc3e71"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-with-tooltip">Image with Tooltip</h3>
@@ -838,8 +839,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-dc19a487462338cf20b3dc378edb805d" class="lightbox-link"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-dc19a487462338cf20b3dc378edb805d"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-e84d6637ff389f24a7472a07e74a5d25" class="lightbox-link"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e84d6637ff389f24a7472a07e74a5d25"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-references">Image References</h3>
@@ -851,8 +852,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-35081ffdb4b60181905e789f71a65532" class="lightbox-link"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-35081ffdb4b60181905e789f71a65532"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-665054a91299f7515494b158eb98ac21" class="lightbox-link"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-665054a91299f7515494b158eb98ac21"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-effects">Image Effects</h3>
@@ -864,8 +865,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-77d85cf3039116afee736ee108ddbfb5" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-77d85cf3039116afee736ee108ddbfb5"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-3a9351eb28a3118a0534a88874f74254" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a9351eb28a3118a0534a88874f74254"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?height=50px</span>)</span></span></code></pre></div>
@@ -873,8 +874,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-05a9f855e26dd45cecc70ad43ca9dfae" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-05a9f855e26dd45cecc70ad43ca9dfae"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-f1b1ce83f56c6729a6e5a3563cc08f47" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f1b1ce83f56c6729a6e5a3563cc08f47"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw</span>)</span></span></code></pre></div>
@@ -882,8 +883,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-8198f8b607627db18af959a5b996bf4b" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: 40vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8198f8b607627db18af959a5b996bf4b"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-5b4668c2882a855aae0bdda7b4c2d74b" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5b4668c2882a855aae0bdda7b4c2d74b"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h4 id="css-classes">CSS Classes</h4>
@@ -894,8 +895,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-1fdce0ba4664966997a696f4301e0cf6" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="figure-image bg-white border lightbox noborder shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1fdce0ba4664966997a696f4301e0cf6"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="lightbox-image bg-white border lightbox noborder shadow" loading="lazy"></a></p>
+<p><a href="#R-image-022c508f17873ca8cb10105713e307e3" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="figure-image bg-white border lightbox noborder shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-022c508f17873ca8cb10105713e307e3"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="lightbox-image bg-white border lightbox noborder shadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="border">Border</h5>
@@ -904,8 +905,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-8f2758f4e5d9de4d04f2a91e7bafe093" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="figure-image bg-white border lightbox noshadow noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8f2758f4e5d9de4d04f2a91e7bafe093"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="lightbox-image bg-white border lightbox noshadow noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-c6c6a9a17313265e0739fbcb510f61e1" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="figure-image bg-white border lightbox noshadow noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c6c6a9a17313265e0739fbcb510f61e1"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="lightbox-image bg-white border lightbox noshadow noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="left">Left</h5>
@@ -914,8 +915,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-d59975b736fcc4f3701bc950c6da9a29" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="figure-image bg-white border left lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d59975b736fcc4f3701bc950c6da9a29"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="lightbox-image bg-white border left lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-cb416637418d189f636e400854e62e9e" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="figure-image bg-white border left lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb416637418d189f636e400854e62e9e"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="lightbox-image bg-white border left lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="right">Right</h5>
@@ -924,8 +925,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-bcbdd9236ceb3f35ce348e5cf3e2bf2a" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="figure-image bg-white border lightbox right noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bcbdd9236ceb3f35ce348e5cf3e2bf2a"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="lightbox-image bg-white border lightbox right noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-7b5e5aba56b23684023270db9b39a529" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="figure-image bg-white border lightbox right noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7b5e5aba56b23684023270db9b39a529"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="lightbox-image bg-white border lightbox right noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="inline">Inline</h5>
@@ -937,14 +938,14 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-48e0453d52f716bc99980ee05464150a" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-48e0453d52f716bc99980ee05464150a"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-77e873cf7241bd042ca88dd113ff8e11" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-77e873cf7241bd042ca88dd113ff8e11"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-be1e7111a28126617156ee43cb00a77e" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-be1e7111a28126617156ee43cb00a77e"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-2ee90aa59cc3aa89018346b8848839d0" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2ee90aa59cc3aa89018346b8848839d0"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-646ee80f6356a8c7a3e59fd3a23bccd7" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-646ee80f6356a8c7a3e59fd3a23bccd7"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-52d306ef30e3ff3494f4d5b770e002f8" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-52d306ef30e3ff3494f4d5b770e002f8"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-982d063f796cac29774afe6f1f5b1e30" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-982d063f796cac29774afe6f1f5b1e30"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-ca69e9299f41a228c1d195a12d554db0" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ca69e9299f41a228c1d195a12d554db0"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="combination">Combination</h5>
@@ -953,8 +954,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-735375aaa38d01bdc25fe4fe2709f33f" class="lightbox-link"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="figure-image bg-white border left lightbox shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-735375aaa38d01bdc25fe4fe2709f33f"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="lightbox-image bg-white border left lightbox shadow" loading="lazy"></a></p>
+<p><a href="#R-image-440f5943b572c12146298fb7f7866543" class="lightbox-link"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="figure-image bg-white border left lightbox shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-440f5943b572c12146298fb7f7866543"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="lightbox-image bg-white border left lightbox shadow" loading="lazy"></a></p>
 </div>
 </div>
 <h4 id="lightbox">Lightbox</h4>
@@ -993,13 +994,13 @@ line 3 of code
 <p>Without any settings in your <code>config.toml</code> this defaults to</p>
 
   
-<div class="tab-panel" data-tab-group="2cb523af3ffe01b63a7f6329bacfc108">
+<div class="tab-panel" data-tab-group="02a0ce4988e764c1675e0ff27ae7fe64">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="configtoml"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('2cb523af3ffe01b63a7f6329bacfc108','configtoml')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('02a0ce4988e764c1675e0ff27ae7fe64','configtoml')"
     >
       <span class="tab-nav-text">config.toml</span>
     </button>
@@ -1020,13 +1021,13 @@ line 3 of code
 </div><p>This can be overridden in a pages frontmatter by eg.</p>
 
   
-<div class="tab-panel" data-tab-group="fa79def710aa9277bdcf6c8317a8b92c">
+<div class="tab-panel" data-tab-group="928213b4cf1d1c12d50bfd2c2c491f1a">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="frontmatter"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('fa79def710aa9277bdcf6c8317a8b92c','frontmatter')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('928213b4cf1d1c12d50bfd2c2c491f1a','frontmatter')"
     >
       <span class="tab-nav-text">frontmatter</span>
     </button>
@@ -1046,13 +1047,13 @@ line 3 of code
 </div><p>Or by explicitly override settings by URL query parameter</p>
 
   
-<div class="tab-panel" data-tab-group="7471bbbc21019535dac2ffe4d6f9b874">
+<div class="tab-panel" data-tab-group="e34d9829a9c085ae60b6d59e787a9919">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="url"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('7471bbbc21019535dac2ffe4d6f9b874','url')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('e34d9829a9c085ae60b6d59e787a9919','url')"
     >
       <span class="tab-nav-text">URL</span>
     </button>
@@ -1069,13 +1070,13 @@ line 3 of code
 </div><p>The settings applied to the above image would be</p>
 
   
-<div class="tab-panel" data-tab-group="5513cc097818066f067e57b000206ead">
+<div class="tab-panel" data-tab-group="2b0a3c912022f143bfc573cb87014d98">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="result"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('5513cc097818066f067e57b000206ead','result')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('2b0a3c912022f143bfc573cb87014d98','result')"
     >
       <span class="tab-nav-text">Result</span>
     </button>
@@ -1095,13 +1096,13 @@ line 3 of code
 </div><p>This ends up in the following HTML where the parameter are converted to CSS classes.</p>
 
   
-<div class="tab-panel" data-tab-group="c010fa7c15457a9b1702c301e57d513d">
+<div class="tab-panel" data-tab-group="280cb13c3dfb90ec14f534e5fa4c9850">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="html"
-      class="tab-nav-button tab-panel-style cstyle initial active"
-      onclick="switchTab('c010fa7c15457a9b1702c301e57d513d','html')"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('280cb13c3dfb90ec14f534e5fa4c9850','html')"
     >
       <span class="tab-nav-text">HTML</span>
     </button>
@@ -1276,8 +1277,8 @@ However, if you want to keep the title but change its value, it can be overridde
 <li>Automatic menu generation from multilingual content</li>
 <li>In-browser language switching</li>
 </ul>
-<p><a href="#R-image-22d905b64627c781b7aec0e6ffa43036" class="lightbox-link"><img src="../cont/i18n/i18n-menu.gif?width=18.75rem" alt="I18n menu" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 18.75rem;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-22d905b64627c781b7aec0e6ffa43036"><img src="../cont/i18n/i18n-menu.gif?width=18.75rem" alt="I18n menu" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-ec4ff69678b49545fb09b850503abff0" class="lightbox-link"><img src="../cont/i18n/i18n-menu.gif?width=18.75rem" alt="I18n menu" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 18.75rem;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ec4ff69678b49545fb09b850503abff0"><img src="../cont/i18n/i18n-menu.gif?width=18.75rem" alt="I18n menu" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 <h2 id="basic-configuration">Basic configuration</h2>
 <p>After learning <a href="https://gohugo.io/content-management/multilingual" target="_blank">how Hugo handle multilingual websites</a>, define your languages in your <code>config.toml</code> file.</p>
 <p>For example with current English and Piratized English website.</p>
@@ -1467,8 +1468,8 @@ You&rsquo;ll see error reports in your browsers console log for each unsupported
         </div>
       </main>
     </div>
-    <script src="../js/clipboard.min.js?1699472664" defer></script>
-    <script src="../js/perfect-scrollbar.min.js?1699472664" defer></script>
-    <script src="../js/theme.js?1699472664" defer></script>
+    <script src="../js/clipboard.min.js?1700601385" defer></script>
+    <script src="../js/perfect-scrollbar.min.js?1700601385" defer></script>
+    <script src="../js/theme.js?1700601385" defer></script>
   </body>
 </html>
