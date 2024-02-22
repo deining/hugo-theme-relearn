@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.120.4">
-    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="generator" content="Hugo 0.123.2">
+    <meta name="generator" content="Relearn 5.24.1+tip">
     <meta name="description" content="Render code with a syntax highlighter">
     <meta name="author" content="Sören Weber">
     <meta name="twitter:card" content="summary_large_image">
@@ -21,23 +21,24 @@
     <title>Highlight :: Hugo Relearn Theme</title>
     <link href="https://deining.github.io/hugo-theme-relearn/shortcodes/highlight/index.html" rel="alternate" hreflang="x-default">
     <link href="https://deining.github.io/hugo-theme-relearn/shortcodes/highlight/index.html" rel="alternate" hreflang="en">
-    <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/highlight/index.html" rel="alternate" hreflang="pir">
+    <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/highlight/index.html" rel="alternate" hreflang="art-pir">
     <link href="../../shortcodes/highlight/index.xml" rel="alternate" type="application/rss+xml" title="Highlight :: Hugo Relearn Theme">
     <link href="../../shortcodes/highlight/index.print.html" rel="alternate" type="text/html" title="Highlight :: Hugo Relearn Theme">
-    <link href="../../images/logo.svg?1700601384" rel="icon" type="image/svg+xml">
+    <link href="../../images/logo.svg?1708639393" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../css/fontawesome-all.min.css?1700601384" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1700601384" rel="stylesheet"></noscript>
-    <link href="../../css/nucleus.css?1700601384" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1700601384" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1700601384" rel="stylesheet"></noscript>
-    <link href="../../css/perfect-scrollbar.min.css?1700601384" rel="stylesheet">
-    <link href="../../css/fonts.css?1700601384" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1700601384" rel="stylesheet"></noscript>
-    <link href="../../css/theme.css?1700601384" rel="stylesheet">
-    <link href="../../css/theme-auto.css?1700601384" rel="stylesheet" id="R-variant-style">
-    <link href="../../css/variant.css?1700601384" rel="stylesheet">
-    <link href="../../css/print.css?1700601384" rel="stylesheet" media="print">
-    <link href="../../css/ie.css?1700601384" rel="stylesheet">
-    <script src="../../js/url.js?1700601384"></script>
-    <script src="../../js/variant.js?1700601384"></script>
+    <link href="../../css/fontawesome-all.min.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../../css/nucleus.css?1708639393" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar.min.css?1708639393" rel="stylesheet">
+    <link href="../../css/fonts.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../../css/theme.css?1708639393" rel="stylesheet">
+    <link href="../../css/theme-relearn-auto.css?1708639393" rel="stylesheet" id="R-variant-style">
+    <link href="../../css/chroma-relearn-auto.css?1708639393" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="../../css/variant.css?1708639393" rel="stylesheet">
+    <link href="../../css/print.css?1708639393" rel="stylesheet" media="print">
+    <link href="../../css/ie.css?1708639393" rel="stylesheet">
+    <script src="../../js/url.js?1708639393"></script>
+    <script src="../../js/variant.js?1708639393"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -47,7 +48,8 @@
       window.relearn = window.relearn || {};
       window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
       // variant stuff
-      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
       window.T_Copy_to_clipboard = `Copy to clipboard`;
       window.T_Copied_to_clipboard = `Copied to clipboard!`;
@@ -71,15 +73,9 @@
         <div class="topbar-wrapper">
           <div class="topbar-sidebar-divider"></div>
           <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
-              <button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)">
-                <i class="fa-fw fas fa-bars"></i>
-              </button>
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
             </div>
-            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
-              <button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)">
-                <i class="fa-fw fas fa-list-alt"></i>
-              </button>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
               <div class="topbar-content">
                 <div class="topbar-content-wrapper">
 <nav class="TableOfContents">
@@ -114,30 +110,15 @@
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Highlight</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/shortcodes/highlight.en.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)">
-                <i class="fa-fw fas fa-pen"></i>
-              </a>
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/shortcodes/highlight.en.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
             </div>
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="../../shortcodes/highlight/index.print.html" title="Print whole chapter (CTRL&#43;ALT&#43;p)">
-                <i class="fa-fw fas fa-print"></i>
-              </a>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../shortcodes/highlight/index.print.html" title="Print whole chapter (CTRL&#43;ALT&#43;p)"><i class="fa-fw fas fa-print"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="../../shortcodes/expand/index.html" title="Expand (🡐)">
-                <i class="fa-fw fas fa-chevron-left"></i>
-              </a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../shortcodes/expand/index.html" title="Expand (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="../../shortcodes/icon/index.html" title="Icon (🡒)">
-                <i class="fa-fw fas fa-chevron-right"></i>
-              </a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../shortcodes/icon/index.html" title="Icon (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
-            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
-              <button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More">
-                <i class="fa-fw fas fa-ellipsis-v"></i>
-              </button>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
                 <div class="topbar-content-wrapper">
                   <div class="topbar-area topbar-area-more" data-area="more">
@@ -159,13 +140,13 @@
 <p>The <code>highlight</code> shortcode renders your code with a syntax highlighter.</p>
 
   
-<div class="tab-panel" data-tab-group="5372f944eead33442cedda881505740b">
+<div class="tab-panel" data-tab-group="dfd26f01a5c2b0124e85c9b68a0ac85c">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="python"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('5372f944eead33442cedda881505740b','python')"
+      onclick="switchTab('dfd26f01a5c2b0124e85c9b68a0ac85c','python')"
     >
       <span class="tab-nav-text">python</span>
     </button>
@@ -308,7 +289,7 @@
 <td><strong>wrap</strong></td>
 <td></td>
 <td>see notes</td>
-<td><strong>Extension</strong>. When <code>true</code> the content may wrap on long lines otherwise it will be scrollable.<br><br>The default value can be set in your <code>config.toml</code> and overwritten via frontmatter. <a href="#configuration">See below</a>.</td>
+<td><strong>Extension</strong>. When <code>true</code> the content may wrap on long lines otherwise it will be scrollable.<br><br>The default value can be set in your <code>hugo.toml</code> and overwritten via frontmatter. <a href="../../shortcodes/highlight/index.html#configuration">See below</a>.</td>
 </tr>
 <tr>
 <td><strong>options</strong></td>
@@ -331,9 +312,10 @@
 </tbody>
 </table>
 <h2 id="configuration">Configuration</h2>
-<p>Default values for <a href="https://gohugo.io/functions/highlight/#options" target="_blank">Hugo&rsquo;s supported options</a> can be set via <a href="https://gohugo.io/getting-started/configuration-markup/#highlight" target="_blank">goldmark settings</a> in your <code>config.toml</code></p>
-<p>Default values for extension options can be set via params settings in your <code>config.toml</code> or be overwritten by frontmatter for each individual page.</p>
+<p>Default values for <a href="https://gohugo.io/functions/highlight/#options" target="_blank">Hugo&rsquo;s supported options</a> can be set via <a href="https://gohugo.io/getting-started/configuration-markup/#highlight" target="_blank">goldmark settings</a> in your <code>hugo.toml</code></p>
+<p>Default values for extension options can be set via params settings in your <code>hugo.toml</code> or be overwritten by frontmatter for each individual page.</p>
 <h3 id="global-configuration-file">Global Configuration File</h3>
+<p>You can configure the color style used for code blocks in your <a href="../../basics/branding/index.html#syntax-highlightning">color variants stylesheet</a> file.</p>
 <h4 id="recommended-settings">Recommended Settings</h4>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
@@ -341,16 +323,15 @@
 </span></span><span class="line"><span class="cl">    <span class="c"># use inline; besides that visually both layouts have the same look and behavior</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">lineNumbersInTable</span> <span class="p">=</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c"># if `guessSyntax = true`, there will be no unstyled code even if no language</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># was given BUT Mermaid and Math codefences will not work anymore! So this is a</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># mandatory setting for your site if you want to use Mermaid or Math codefences</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">guessSyntax</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c"># the shipped variants come with their own modified chroma syntax highlightning</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># style which is imported in theme-relearn-light.css, theme-relearn-dark.css, etc.;</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># if you want to use a predefined style instead:</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># stylesheets which are linked in your generated HTML pages; you can use Hugo to generate</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># own stylesheets to your liking and use them in your variant;</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># if you want to use Hugo&#39;s internal styles instead of the shipped stylesheets:</span>
 </span></span><span class="line"><span class="cl">    <span class="c"># - remove `noClasses` or set `noClasses = true`</span>
 </span></span><span class="line"><span class="cl">    <span class="c"># - set `style` to a predefined style name</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># note: with using the internal styles, the `--CODE-theme` setting in your variant</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># stylesheet will be ignored and the internal style is used for all variants and</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># even print</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">noClasses</span> <span class="p">=</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">    <span class="c"># style = &#34;tango&#34;</span></span></span></code></pre></div><h4 id="optional-settings">Optional Settings</h4>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
@@ -359,7 +340,7 @@
 </span></span><span class="line"><span class="cl"><span class="nx">highlightWrap</span> <span class="p">=</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><h2 id="examples">Examples</h2>
 <h3 id="line-numbers-with-starting-offset">Line Numbers with Starting Offset</h3>
-<p>As mentioned above, line numbers in a <code>table</code> layout will shift if code is wrapping, so better use <code>inline</code>. To make things easier for you, set <code>lineNumbersInTable = false</code> in your <code>config.toml</code> and add <code>lineNos = true</code> when calling the shortcode instead of the specific values <code>table</code> or <code>inline</code>.</p>
+<p>As mentioned above, line numbers in a <code>table</code> layout will shift if code is wrapping, so better use <code>inline</code>. To make things easier for you, set <code>lineNumbersInTable = false</code> in your <code>hugo.toml</code> and add <code>lineNos = true</code> when calling the shortcode instead of the specific values <code>table</code> or <code>inline</code>.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">highlight</span> <span class="nx">lineNos</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="nx">lineNoStart</span><span class="p">=</span><span class="s">&#34;666&#34;</span> <span class="kd">type</span><span class="p">=</span><span class="s">&#34;py&#34;</span> <span class="p">&gt;}}</span>
 </span></span><span class="line"><span class="cl"><span class="err">#</span> <span class="nx">the</span> <span class="nx">hardest</span> <span class="nx">part</span> <span class="nx">is</span> <span class="nx">to</span> <span class="nx">start</span> <span class="nx">writing</span> <span class="nx">code</span><span class="p">;</span> <span class="nx">here</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">a</span> <span class="nx">kickstart</span><span class="p">;</span> <span class="nx">just</span> <span class="nx">copy</span> <span class="nx">and</span> <span class="nx">paste</span> <span class="nx">this</span><span class="p">;</span> <span class="nx">it</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">free</span><span class="p">;</span> <span class="nx">the</span> <span class="nx">next</span> <span class="nx">lines</span> <span class="nx">will</span> <span class="nx">cost</span> <span class="nx">you</span> <span class="nx">serious</span> <span class="nx">credits</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">)</span>
@@ -377,13 +358,13 @@
 </span></span></span><span class="line"><span class="cl"><span class="gh"></span>print(&#34;Hello World!&#34;)
 </span></span><span class="line"><span class="cl">```</span></span></code></pre></div>
   
-<div class="tab-panel" data-tab-group="e92e9645c197aa2611504389a9b7a237">
+<div class="tab-panel" data-tab-group="f2e67cd4b75f76ca41c18ae23da5076d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="python"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('e92e9645c197aa2611504389a9b7a237','python')"
+      onclick="switchTab('f2e67cd4b75f76ca41c18ae23da5076d','python')"
     >
       <span class="tab-nav-text">python</span>
     </button>
@@ -503,12 +484,12 @@
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="../../js/auto-complete.js?1700601384" defer></script>
-        <script src="../../js/lunr/lunr.min.js?1700601384" defer></script>
-        <script src="../../js/lunr/lunr.stemmer.support.min.js?1700601384" defer></script>
-        <script src="../../js/lunr/lunr.multi.min.js?1700601384" defer></script>
-        <script src="../../js/lunr/lunr.en.min.js?1700601384" defer></script>
-        <script src="../../js/search.js?1700601384" defer></script>
+        <script src="../../js/auto-complete.js?1708639393" defer></script>
+        <script src="../../js/lunr/lunr.min.js?1708639393" defer></script>
+        <script src="../../js/lunr/lunr.stemmer.support.min.js?1708639393" defer></script>
+        <script src="../../js/lunr/lunr.multi.min.js?1708639393" defer></script>
+        <script src="../../js/lunr/lunr.en.min.js?1708639393" defer></script>
+        <script src="../../js/search.js?1708639393" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation">
         <hr class="padding">
@@ -516,7 +497,7 @@
       <div id="R-content-wrapper" class="highlightable">
         <div id="R-topics">
           <ul class="enlarge morespace collapsible-menu">
-          <li data-nav-id="/basics/index.html" class=""><input type="checkbox" id="R-section-df6aa773bd1fbc430ade79f1764e4ce7" aria-controls="R-subsections-df6aa773bd1fbc430ade79f1764e4ce7"><label for="R-section-df6aa773bd1fbc430ade79f1764e4ce7"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Basics</span></label><a class="padding" href="../../basics/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-df6aa773bd1fbc430ade79f1764e4ce7" class="morespace collapsible-menu">
+          <li data-nav-id="/basics/index.html" class=""><input type="checkbox" id="R-section-a6deabe447afe1b2e1405bfc57ca61ff" aria-controls="R-subsections-a6deabe447afe1b2e1405bfc57ca61ff"><label for="R-section-a6deabe447afe1b2e1405bfc57ca61ff"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Basics</span></label><a class="padding" href="../../basics/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-a6deabe447afe1b2e1405bfc57ca61ff" class="morespace collapsible-menu">
           <li data-nav-id="/basics/migration/index.html" class=""><a class="padding" href="../../basics/migration/index.html">What&#39;s New<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/basics/requirements/index.html" class=""><a class="padding" href="../../basics/requirements/index.html">Requirements<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/basics/installation/index.html" class=""><a class="padding" href="../../basics/installation/index.html">Installation<i class="fas fa-check read-icon"></i></a></li>
@@ -526,28 +507,29 @@
           <li data-nav-id="/basics/generator/index.html" class=""><a class="padding" href="../../basics/generator/index.html">Stylesheet generator<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/basics/topbar/index.html" class=""><a class="padding" href="../../basics/topbar/index.html">Topbar Modification<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/basics/history/index.html" class=""><a class="padding" href="../../basics/history/index.html">History<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/cont/index.html" class=""><input type="checkbox" id="R-section-2291d2894a4301fd505172f85eca0c0a" aria-controls="R-subsections-2291d2894a4301fd505172f85eca0c0a"><label for="R-section-2291d2894a4301fd505172f85eca0c0a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Content</span></label><a class="padding" href="../../cont/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">2.</b> Content<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-2291d2894a4301fd505172f85eca0c0a" class="morespace collapsible-menu">
+          <li data-nav-id="/cont/index.html" class=""><input type="checkbox" id="R-section-fa8195cb3a7fa53d39f9adae98977ba1" aria-controls="R-subsections-fa8195cb3a7fa53d39f9adae98977ba1"><label for="R-section-fa8195cb3a7fa53d39f9adae98977ba1"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Content</span></label><a class="padding" href="../../cont/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">2.</b> Content<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-fa8195cb3a7fa53d39f9adae98977ba1" class="morespace collapsible-menu">
           <li data-nav-id="/cont/pages/index.html" class=""><a class="padding" href="../../cont/pages/index.html">Pages organization<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/cont/frontmatter/index.html" class=""><a class="padding" href="../../cont/frontmatter/index.html">Frontmatter<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/archetypes/index.html" class=""><a class="padding" href="../../cont/archetypes/index.html">Archetypes<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/markdown/index.html" class=""><a class="padding" href="../../cont/markdown/index.html">Markdown syntax<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/imageeffects/index.html" class=""><a class="padding" href="../../cont/imageeffects/index.html">Image Effects<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/menushortcuts/index.html" class=""><a class="padding" href="../../cont/menushortcuts/index.html">Menu extra shortcuts<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/i18n/index.html" class=""><a class="padding" href="../../cont/i18n/index.html">Multilingual and i18n<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/taxonomy/index.html" class=""><a class="padding" href="../../cont/taxonomy/index.html">Taxonomy<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/shortcodes/index.html" class="parent "><input type="checkbox" id="R-section-c0549379138a5c256f6c0600d532453f" aria-controls="R-subsections-c0549379138a5c256f6c0600d532453f" checked><label for="R-section-c0549379138a5c256f6c0600d532453f"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Shortcodes</span></label><a class="padding" href="../../shortcodes/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">3.</b> Shortcodes<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-c0549379138a5c256f6c0600d532453f" class="morespace collapsible-menu">
+          <li data-nav-id="/shortcodes/index.html" class="parent "><input type="checkbox" id="R-section-3fd53efe5229f2c1a55795ee597d09d8" aria-controls="R-subsections-3fd53efe5229f2c1a55795ee597d09d8" checked><label for="R-section-3fd53efe5229f2c1a55795ee597d09d8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Shortcodes</span></label><a class="padding" href="../../shortcodes/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">3.</b> Shortcodes<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-3fd53efe5229f2c1a55795ee597d09d8" class="morespace collapsible-menu">
           <li data-nav-id="/shortcodes/attachments/index.html" class=""><a class="padding" href="../../shortcodes/attachments/index.html">Attachments<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/shortcodes/badge/index.html" class=""><a class="padding" href="../../shortcodes/badge/index.html">Badge<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/shortcodes/button/index.html" class=""><a class="padding" href="../../shortcodes/button/index.html">Button<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/shortcodes/children/index.html" class=""><input type="checkbox" id="R-section-efce957ff9dad000e250ff868aa3291d" aria-controls="R-subsections-efce957ff9dad000e250ff868aa3291d"><label for="R-section-efce957ff9dad000e250ff868aa3291d"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Children</span></label><a class="padding" href="../../shortcodes/children/index.html">Children<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-efce957ff9dad000e250ff868aa3291d" class="morespace collapsible-menu">
+          <li data-nav-id="/shortcodes/children/index.html" class=""><input type="checkbox" id="R-section-d7ecedf0d1b5486d6a0c132e8a234d06" aria-controls="R-subsections-d7ecedf0d1b5486d6a0c132e8a234d06"><label for="R-section-d7ecedf0d1b5486d6a0c132e8a234d06"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Children</span></label><a class="padding" href="../../shortcodes/children/index.html">Children<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d7ecedf0d1b5486d6a0c132e8a234d06" class="morespace collapsible-menu">
           <li data-nav-id="/shortcodes/children/test/index.html" class=""><a class="padding" href="../../shortcodes/children/test/index.html">page X<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/shortcodes/children/children-1/index.html" class=""><input type="checkbox" id="R-section-c27b80e9c4c5ceb911093893f4f00a2b" aria-controls="R-subsections-c27b80e9c4c5ceb911093893f4f00a2b"><label for="R-section-c27b80e9c4c5ceb911093893f4f00a2b"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1</span></label><a class="padding" href="../../shortcodes/children/children-1/index.html">page 1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-c27b80e9c4c5ceb911093893f4f00a2b" class="morespace collapsible-menu">
-          <li data-nav-id="/shortcodes/children/children-1/children-1-1/index.html" class="alwaysopen"><input type="checkbox" id="R-section-bc0c0185f32af18e77e51e4a5f0a3ba4" aria-controls="R-subsections-bc0c0185f32af18e77e51e4a5f0a3ba4" checked><label for="R-section-bc0c0185f32af18e77e51e4a5f0a3ba4"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1-1</span></label><a class="padding" href="../../shortcodes/children/children-1/children-1-1/index.html">page 1-1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-bc0c0185f32af18e77e51e4a5f0a3ba4" class="morespace collapsible-menu">
-          <li data-nav-id="" class="alwaysopen"><input type="checkbox" id="R-section-9c0a5b93d94f133c09f9cec9eec310a6" aria-controls="R-subsections-9c0a5b93d94f133c09f9cec9eec310a6" checked><label for="R-section-9c0a5b93d94f133c09f9cec9eec310a6"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1-1-2 (headless)</span></label><span class="padding">page 1-1-2 (headless)</span><ul id="R-subsections-9c0a5b93d94f133c09f9cec9eec310a6" class="morespace collapsible-menu">
+          <li data-nav-id="/shortcodes/children/children-1/index.html" class=""><input type="checkbox" id="R-section-d3cff5da0d8420d4871c516833b2f97d" aria-controls="R-subsections-d3cff5da0d8420d4871c516833b2f97d"><label for="R-section-d3cff5da0d8420d4871c516833b2f97d"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1</span></label><a class="padding" href="../../shortcodes/children/children-1/index.html">page 1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d3cff5da0d8420d4871c516833b2f97d" class="morespace collapsible-menu">
+          <li data-nav-id="/shortcodes/children/children-1/children-1-1/index.html" class="alwaysopen"><input type="checkbox" id="R-section-8c27e33b2765b18da99f6c8dc40400b8" aria-controls="R-subsections-8c27e33b2765b18da99f6c8dc40400b8" checked><label for="R-section-8c27e33b2765b18da99f6c8dc40400b8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1-1</span></label><a class="padding" href="../../shortcodes/children/children-1/children-1-1/index.html">page 1-1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-8c27e33b2765b18da99f6c8dc40400b8" class="morespace collapsible-menu">
+          <li data-nav-id="" class="alwaysopen"><input type="checkbox" id="R-section-51e1e8deb580f78714eca799da517f1d" aria-controls="R-subsections-51e1e8deb580f78714eca799da517f1d" checked><label for="R-section-51e1e8deb580f78714eca799da517f1d"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1-1-2 (headless)</span></label><span class="padding">page 1-1-2 (headless)</span><ul id="R-subsections-51e1e8deb580f78714eca799da517f1d" class="morespace collapsible-menu">
           <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/index.html" class=""><a class="padding" href="../../shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/index.html">page 1-1-2-1<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/index.html" class=""><a class="padding" href="../../shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/index.html">page 1-1-2-2<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-3/index.html" class=""><a class="padding" href="../../shortcodes/children/children-1/children-1-1/children-1-1-3/index.html">page 1-1-3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/shortcodes/children/children-2/index.html" class=""><a class="padding" href="../../shortcodes/children/children-2/index.html">page 2<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/shortcodes/children/children-3/index.html" class=""><input type="checkbox" id="R-section-801eeaaa0748a0846cc1e95f3a734fb7" aria-controls="R-subsections-801eeaaa0748a0846cc1e95f3a734fb7"><label for="R-section-801eeaaa0748a0846cc1e95f3a734fb7"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 3</span></label><a class="padding" href="../../shortcodes/children/children-3/index.html">page 3<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-801eeaaa0748a0846cc1e95f3a734fb7" class="morespace collapsible-menu">
+          <li data-nav-id="/shortcodes/children/children-3/index.html" class=""><input type="checkbox" id="R-section-c4351ae325c16fd2130d6c815bffc83f" aria-controls="R-subsections-c4351ae325c16fd2130d6c815bffc83f"><label for="R-section-c4351ae325c16fd2130d6c815bffc83f"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 3</span></label><a class="padding" href="../../shortcodes/children/children-3/index.html">page 3<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-c4351ae325c16fd2130d6c815bffc83f" class="morespace collapsible-menu">
           <li data-nav-id="/shortcodes/children/children-3/test3/index.html" class=""><a class="padding" href="../../shortcodes/children/children-3/test3/index.html">page 3-1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/shortcodes/expand/index.html" class=""><a class="padding" href="../../shortcodes/expand/index.html">Expand<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/shortcodes/highlight/index.html" class="active"><a class="padding" href="../../shortcodes/highlight/index.html">Highlight<i class="fas fa-check read-icon"></i></a></li>
@@ -585,7 +567,7 @@
                     <label class="a11y-only" for="R-select-language">Language</label>
                     <select id="R-select-language" onchange="location = baseUri + this.value;">
                       <option id="R-en" value="/shortcodes/highlight/index.html" lang="en" selected>English</option>
-                      <option id="R-pir" value="/pir/shortcodes/highlight/index.html" lang="pir">Arrr! ☠ Pirrrates ☠</option>
+                      <option id="R-pir" value="/pir/shortcodes/highlight/index.html" lang="art-pir">Arrr! ☠ Pirrrates ☠</option>
                     </select>
                   </div>
                   <div class="clear"></div>
@@ -598,9 +580,11 @@
                   <div class="control-style">
                     <label class="a11y-only" for="R-select-variant">Theme</label>
                     <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
-                      <option id="R-auto" value="auto" selected>Auto</option>
+                      <option id="R-relearn-auto" value="relearn-auto" selected>Relearn Light/Dark</option>
                       <option id="R-relearn-light" value="relearn-light">Relearn Light</option>
                       <option id="R-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                      <option id="R-relearn-bright" value="relearn-bright">Relearn Bright</option>
+                      <option id="R-zen-auto" value="zen-auto">Zen Light/Dark</option>
                       <option id="R-zen-light" value="zen-light">Zen Light</option>
                       <option id="R-zen-dark" value="zen-dark">Zen Dark</option>
                       <option id="R-neon" value="neon">Neon</option>
@@ -664,14 +648,17 @@
               
               setTimeout( githubButtonsInit, 400 );
             });
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+              setTimeout( githubButtonsInit, 400 );
+            });
           </script>
-          <script async src="../../js/github-buttons.js?1700601384"></script>
+          <script async src="../../js/github-buttons.js?1708639393"></script>
           </div>
         </div>
       </div>
     </aside>
-    <script src="../../js/clipboard.min.js?1700601384" defer></script>
-    <script src="../../js/perfect-scrollbar.min.js?1700601384" defer></script>
-    <script src="../../js/theme.js?1700601384" defer></script>
+    <script src="../../js/clipboard.min.js?1708639393" defer></script>
+    <script src="../../js/perfect-scrollbar.min.js?1708639393" defer></script>
+    <script src="../../js/theme.js?1708639393" defer></script>
   </body>
 </html>

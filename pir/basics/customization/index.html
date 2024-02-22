@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pir" dir="rtl">
+<html lang="art-pir" dir="rtl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.120.4">
-    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="generator" content="Hugo 0.123.2">
+    <meta name="generator" content="Relearn 5.24.1+tip">
     <meta name="description" content="Documentation for Hugo Relearn Theme">
     <meta name="author" content="Sören Weber">
     <meta name="twitter:card" content="summary_large_image">
@@ -20,23 +20,24 @@
     <title>Customizat&#39;n :: Cap&#39;n Hugo Relearrrn Theme</title>
     <link href="https://deining.github.io/hugo-theme-relearn/basics/customization/index.html" rel="alternate" hreflang="x-default">
     <link href="https://deining.github.io/hugo-theme-relearn/basics/customization/index.html" rel="alternate" hreflang="en">
-    <link href="https://deining.github.io/hugo-theme-relearn/pir/basics/customization/index.html" rel="alternate" hreflang="pir">
+    <link href="https://deining.github.io/hugo-theme-relearn/pir/basics/customization/index.html" rel="alternate" hreflang="art-pir">
     <link href="../../../pir/basics/customization/index.xml" rel="alternate" type="application/rss+xml" title="Customizat&#39;n :: Cap&#39;n Hugo Relearrrn Theme">
     <link href="../../../pir/basics/customization/index.print.html" rel="alternate" type="text/html" title="Customizat&#39;n :: Cap&#39;n Hugo Relearrrn Theme">
-    <link href="../../../images/logo.svg?1700601385" rel="icon" type="image/svg+xml">
+    <link href="../../../images/logo.svg?1708639394" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../../css/fontawesome-all.min.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1700601385" rel="stylesheet"></noscript>
-    <link href="../../../css/nucleus.css?1700601385" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1700601385" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar.min.css?1700601385" rel="stylesheet">
-    <link href="../../../css/fonts.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1700601385" rel="stylesheet"></noscript>
-    <link href="../../../css/theme.css?1700601385" rel="stylesheet">
-    <link href="../../../css/theme-auto.css?1700601385" rel="stylesheet" id="R-variant-style">
-    <link href="../../../css/variant.css?1700601385" rel="stylesheet">
-    <link href="../../../css/print.css?1700601385" rel="stylesheet" media="print">
-    <link href="../../../css/ie.css?1700601385" rel="stylesheet">
-    <script src="../../../js/url.js?1700601385"></script>
-    <script src="../../../js/variant.js?1700601385"></script>
+    <link href="../../../css/fontawesome-all.min.css?1708639394" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1708639394" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1708639394" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1708639394" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1708639394" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1708639394" rel="stylesheet">
+    <link href="../../../css/fonts.css?1708639394" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1708639394" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1708639394" rel="stylesheet">
+    <link href="../../../css/theme-relearn-auto.css?1708639394" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/chroma-relearn-auto.css?1708639394" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="../../../css/variant.css?1708639394" rel="stylesheet">
+    <link href="../../../css/print.css?1708639394" rel="stylesheet" media="print">
+    <link href="../../../css/ie.css?1708639394" rel="stylesheet">
+    <script src="../../../js/url.js?1708639394"></script>
+    <script src="../../../js/variant.js?1708639394"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -46,7 +47,8 @@
       window.relearn = window.relearn || {};
       window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
       // variant stuff
-      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
       window.T_Copy_to_clipboard = `Copy t' clipboard`;
       window.T_Copied_to_clipboard = `Copied t' clipboard!`;
@@ -70,15 +72,9 @@
         <div class="topbar-wrapper">
           <div class="topbar-sidebar-divider"></div>
           <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
-              <button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)">
-                <i class="fa-fw fas fa-bars"></i>
-              </button>
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
             </div>
-            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
-              <button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table o&#39; Contents (CTRL&#43;ALT&#43;t)">
-                <i class="fa-fw fas fa-list-alt"></i>
-              </button>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table o&#39; Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
               <div class="topbar-content">
                 <div class="topbar-content-wrapper">
 <nav class="TableOfContents">
@@ -109,30 +105,15 @@
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Customizat&#39;n</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/basics/customization/_index.pir.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)">
-                <i class="fa-fw fas fa-pen"></i>
-              </a>
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/basics/customization/_index.pir.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
             </div>
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="../../../pir/basics/customization/index.print.html" title="Prrrint whole chapterrr (CTRL&#43;ALT&#43;p)">
-                <i class="fa-fw fas fa-print"></i>
-              </a>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../pir/basics/customization/index.print.html" title="Prrrint whole chapterrr (CTRL&#43;ALT&#43;p)"><i class="fa-fw fas fa-print"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="../../../pir/basics/branding/index.html" title="Brrrand&#39;n (🡒)">
-                <i class="fa-fw fas fa-chevron-left"></i>
-              </a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../pir/basics/branding/index.html" title="Brrrand&#39;n (🡒)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="../../../pir/basics/generator/index.html" title="Stylesheet generrrat&#39;r (🡐)">
-                <i class="fa-fw fas fa-chevron-right"></i>
-              </a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../pir/basics/generator/index.html" title="Stylesheet generrrat&#39;r (🡐)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
-            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
-              <button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Morrre">
-                <i class="fa-fw fas fa-ellipsis-v"></i>
-              </button>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Morrre"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
                 <div class="topbar-content-wrapper">
                   <div class="topbar-area topbar-area-more" data-area="more">
@@ -153,54 +134,54 @@
 
 
 <h2 id="serving-your-page-from-a-subfolder">Serv'n yer plank from a subfolder</h2>
-<p>If yer ship be served from a subfolder, eg. <code>https://example.com/mysite/</code>, ye have t' set th' follow'n lines t' yer <code>config.toml</code></p>
+<p>If yer ship be served from a subfolder, eg. <code>https://example.com/mysite/</code>, ye have t' set th' follow'n lines t' yer <code>hugo.toml</code></p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://example.com/mysite/&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">canonifyURLs</span> <span class="p">=</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl"><span class="nx">relativeURLs</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div><p>Without <code>canonifyURLs=true</code> URLs 'n sublemental planks (like <code>sitemap.xml</code>, <code>rss.xml</code>) will be generated falsly while yer HTML files will still work. See <a href="https://github.com/gohugoio/hugo/issues/5226" target="_blank">https://github.com/gohugoio/hugo/issues/5226</a>.</p>
 <h2 id="serving-your-page-from-the-filesystem">Serv'n yer plank from th' filesystem</h2>
-<p>If ye want yer plank served from th' filesystem by us'n URLs start'n wit' <code>file://</code> you&rsquo;ll need th' follow'n configurat'n 'n yer <code>config.toml</code>:</p>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">relativeURLs</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div><p>Th' theme will append an additional <code>index.html</code> t' all plank bundle links by default t' make th' plank be serv'ble from th' file system. If ye don&rsquo;t care about th' file system an' only serve yer plank via a webserver ye can also generate th' links without this change by add'n this t' yer <code>config.toml</code></p>
+<p>If ye want yer plank served from th' filesystem by us'n URLs start'n wit' <code>file://</code> you&rsquo;ll need th' follow'n configurat'n 'n yer <code>hugo.toml</code>:</p>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">relativeURLs</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div><p>Th' theme will append an additional <code>index.html</code> t' all plank bundle links by default t' make th' plank be serv'ble from th' file system. If ye don&rsquo;t care about th' file system an' only serve yer plank via a webserver ye can also generate th' links without this change by add'n this t' yer <code>hugo.toml</code></p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">disableExplicitIndexURLs</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div>
 <div class="box notices cstyle note">
   <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Avast</div>
   <div class="box-content">
 
-<p>If ye want t' use th' search feature from th' file system us'n an older installat'n o' th' theme make sure t' change yer outputformat fer th' homepage from th' now deprecated <code>JSON</code> t' <code>SEARCH</code> <a href="#activate-search">as seen below</a>.</p>
+<p>If ye want t' use th' search feature from th' file system us'n an older installat'n o' th' theme make sure t' change yer outputformat fer th' homepage from th' now deprecated <code>json</code> t' <code>search</code> <a href="../../../pir/basics/customization/index.html#activate-search">as seen below</a>.</p>
 </div>
 </div>
 <h2 id="activate-search">Activate search</h2>
-<p>If not already present, add th' follow'n lines 'n yer <code>config.toml</code> file.</p>
+<p>If not already present, add th' follow'n lines 'n yer <code>hugo.toml</code> file.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;SEARCH&#34;</span><span class="p">]</span></span></span></code></pre></div><p>This will generate a search index file at th' root o' yer public folder ready t' be consumed by th' Lunr search library. Avast that th' <code>SEARCH</code> outputformat was named <code>JSON</code> 'n previous releases but was implemented differently. Although <code>JSON</code> still works, it be now deprecated.</p>
+</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;html&#34;</span><span class="p">,</span> <span class="s2">&#34;rss&#34;</span><span class="p">,</span> <span class="s2">&#34;search&#34;</span><span class="p">]</span></span></span></code></pre></div><p>This will generate a search index file at th' root o' yer public folder ready t' be consumed by th' Lunr search library. Avast that th' <code>search</code> outputformat was named <code>json</code> 'n previous releases but was implemented differently. Although <code>json</code> still works, it be now deprecated.</p>
 <h3 id="activate-dedicated-search-page">Activate dedicated search plank</h3>
-<p>Ye can add a dedicated search plank fer yer plank by add'n th' <code>SEARCHPAGE</code> outputformat t' yer home plank by add'n th' follow'n lines 'n yer <code>config.toml</code> file. This will cause Cap'n Hugo t' generate a new file <code>http://example.com/mysite/search.html</code>.</p>
+<p>Ye can add a dedicated search plank fer yer plank by add'n th' <code>searchpage</code> outputformat t' yer home plank by add'n th' follow'n lines 'n yer <code>hugo.toml</code> file. This will cause Cap'n Hugo t' generate a new file <code>http://example.com/mysite/search.html</code>.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;SEARCH&#34;</span><span class="p">,</span> <span class="s2">&#34;SEARCHPAGE&#34;</span><span class="p">]</span></span></span></code></pre></div><p>Ye can access this plank by either click'n on th' magnifier glass or by typ'n some search term an' press'n <code>ENTER</code> inside o' th' menu&rsquo;s search box .</p>
-<p><a href="#R-image-8a78098976ad9f42790016cf1912752f" class="lightbox-link"><img src="../../../basics/customization/search_page.png?&amp;width=60pc" alt="Screenshot o' th' dedicated search page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8a78098976ad9f42790016cf1912752f"><img src="../../../basics/customization/search_page.png?&amp;width=60pc" alt="Screenshot o' th' dedicated search page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;html&#34;</span><span class="p">,</span> <span class="s2">&#34;rss&#34;</span><span class="p">,</span> <span class="s2">&#34;search&#34;</span><span class="p">,</span> <span class="s2">&#34;searchpage&#34;</span><span class="p">]</span></span></span></code></pre></div><p>Ye can access this plank by either click'n on th' magnifier glass or by typ'n some search term an' press'n <code>ENTER</code> inside o' th' menu&rsquo;s search box .</p>
+<p><a href="#R-image-1388017d5bc2ea60660bb57dd0b6545f" class="lightbox-link"><img src="../../../hugo-theme-relearn/basics/customization/search_page.png?&amp;width=60pc" alt="Screenshot o' th' dedicated search page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1388017d5bc2ea60660bb57dd0b6545f"><img src="../../../hugo-theme-relearn/basics/customization/search_page.png?&amp;width=60pc" alt="Screenshot o' th' dedicated search page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 
 <div class="box notices cstyle note">
   <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Avast</div>
   <div class="box-content">
 
-<p>T' have Cap'n Hugo create th' dedicated search plank successfully, ye must not generate th' URL <code>http://example.com/mysite/search.html</code> from yer own rrrambl'n. This can happen if ye set <code>uglyURLs=true</code> 'n yer <code>config.toml</code> an' defin'n a Marrrkdown file <code>content/search.md</code>.</p>
+<p>T' have Cap'n Hugo create th' dedicated search plank successfully, ye must not generate th' URL <code>http://example.com/mysite/search.html</code> from yer own rrrambl'n. This can happen if ye set <code>uglyURLs=true</code> 'n yer <code>hugo.toml</code> an' defin'n a Marrrkdown file <code>content/search.md</code>.</p>
 <p>T' make sure, there be no duplicate rrrambl'n fer any given URL o' yer project, run <code>hugo --printPathWarn'ns</code>.</p>
 </div>
 </div>
 <h2 id="activate-print-support">Activate print support</h2>
-<p>Ye can activate print support t' add th' capability t' print whole chapters or even th' complete ship. Just add th' <code>PRINT</code> output format t' yer home, section an' plank 'n yer <code>config.toml</code> as seen below:</p>
+<p>Ye can activate print support t' add th' capability t' print whole chapters or even th' complete ship. Just add th' <code>print</code> output format t' yer home, section an' plank 'n yer <code>hugo.toml</code> as seen below:</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;PRINT&#34;</span><span class="p">,</span> <span class="s2">&#34;SEARCH&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">section</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;PRINT&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">plank</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;PRINT&#34;</span><span class="p">]</span></span></span></code></pre></div><p>This will add a little printer ay'con 'n th' top bar. It will switch th' plank t' print preview when clicked. Ye can then send this plank t' th' printer by us'n yer browser&rsquo;s usual print functionality.</p>
+</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;html&#34;</span><span class="p">,</span> <span class="s2">&#34;rss&#34;</span><span class="p">,</span> <span class="s2">&#34;print&#34;</span><span class="p">,</span> <span class="s2">&#34;search&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">section</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;html&#34;</span><span class="p">,</span> <span class="s2">&#34;rss&#34;</span><span class="p">,</span> <span class="s2">&#34;print&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">plank</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;html&#34;</span><span class="p">,</span> <span class="s2">&#34;rss&#34;</span><span class="p">,</span> <span class="s2">&#34;print&#34;</span><span class="p">]</span></span></span></code></pre></div><p>This will add a little printer ay'con 'n th' top bar. It will switch th' plank t' print preview when clicked. Ye can then send this plank t' th' printer by us'n yer browser&rsquo;s usual print functionality.</p>
 
 <div class="box notices cstyle note">
   <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Avast</div>
   <div class="box-content">
 
-<p>Th' result'n URL will not be <a href="https://gohugo.io/templates/output-formats/#configure-output-formats" target="_blank">configured ugly</a> 'n terms o' <a href="https://gohugo.io/content-management/urls/#ugly-urls" target="_blank">Hugo&rsquo;s URL handl'n</a> even if you&rsquo;ve set <code>uglyURLs=true</code> 'n yer <code>config.toml</code>. This be due t' th' fact that fer one mime type only one suffix can be configured.</p>
-<p>Nevertheless, if you&rsquo;re unhappy wit' th' result'n URLs ye can manually redefine <code>outputFormats.PRINT</code> 'n yer own <code>config.toml</code> t' yer lik'n.</p>
+<p>Th' result'n URL will not be <a href="https://gohugo.io/templates/output-formats/#configure-output-formats" target="_blank">configured ugly</a> 'n terms o' <a href="https://gohugo.io/content-management/urls/#ugly-urls" target="_blank">Hugo&rsquo;s URL handl'n</a> even if you&rsquo;ve set <code>uglyURLs=true</code> 'n yer <code>hugo.toml</code>. This be due t' th' fact that fer one mime type only one suffix can be configured.</p>
+<p>Nevertheless, if you&rsquo;re unhappy wit' th' result'n URLs ye can manually redefine <code>outputFormats.print</code> 'n yer own <code>hugo.toml</code> t' yer lik'n.</p>
 </div>
 </div>
 <h2 id="home-button-configuration">Home Button Configurat'n</h2>
@@ -219,8 +200,8 @@ appearance, ye will have t' configure th' <code>landingPageName</code> fer th' d
 </span></span><span class="line"><span class="cl"><span class="nx">landingPageName</span> <span class="p">=</span> <span class="s2">&#34;&lt;i class=&#39;fas fa-home&#39;&gt;&lt;/i&gt; Arrr! Homme&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">...</span></span></span></code></pre></div><p>If this opt'n be not configured fer a specific language, they will get their default values:</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">landingPageName</span> <span class="p">=</span> <span class="s2">&#34;&lt;i class=&#39;fas fa-home&#39;&gt;&lt;/i&gt; Home&#34;</span></span></span></code></pre></div><p>Th' home button be go'n t' look like this:</p>
-<p><a href="#R-image-dd0023e274532181b65f6a2f8546d462" class="lightbox-link"><img src="../../../basics/customization/home_button_defaults.png?width=18.75rem" alt="Default Home Button" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 18.75rem;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd0023e274532181b65f6a2f8546d462"><img src="../../../basics/customization/home_button_defaults.png?width=18.75rem" alt="Default Home Button" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-01a283d51110277fce20a7f5de5eeea9" class="lightbox-link"><img src="../../../hugo-theme-relearn/basics/customization/home_button_defaults.png?width=18.75rem" alt="Default Home Button" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 18.75rem;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-01a283d51110277fce20a7f5de5eeea9"><img src="../../../hugo-theme-relearn/basics/customization/home_button_defaults.png?width=18.75rem" alt="Default Home Button" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 <h2 id="social-media-meta-tags">Social Media Meta Tags</h2>
 <p>Ye can add social media meta tags fer th' <a href="https://gohugo.io/templates/internal/#open-graph" target="_blank">Open Graph</a> protocol an' <a href="https://gohugo.io/templates/internal/#twitter-cards" target="_blank">Twitter Cards</a> t' yer ship. These be configured as mentioned 'n th' Cap'n Hugo docs.</p>
 <h2 id="change-the-menu-width">Change th' Menu Width</h2>
@@ -237,7 +218,7 @@ appearance, ye will have t' configure th' <code>landingPageName</code> fer th' d
 <tr>
 <td>S</td>
 <td>&lt; 48rem</td>
-<td>0</td>
+<td>14.375rem</td>
 </tr>
 <tr>
 <td>M</td>
@@ -252,8 +233,9 @@ appearance, ye will have t' configure th' <code>landingPageName</code> fer th' d
 </tbody>
 </table>
 <p>Th' values fer th' screen width breakpoints aren&rsquo;t configur'ble.</p>
-<p>If ye want t' adjust th' menu width ye can define th' follow'n CSS variables 'n yer <code>custom-header.html</code>. Avast that <code>--MENU-WIDTH-S</code> doesn&rsquo;t exist as th' menu be always hidden fer small screen sizes.</p>
+<p>If ye want t' adjust th' menu width ye can define th' follow'n CSS variables 'n yer <code>custom-header.html</code>. Avast that <code>--MENU-WIDTH-S</code> applies t' th' menu flyout width 'n mobile mode fer small screen sizes.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--MENU-WIDTH-S</span><span class="p">:</span> <span class="mf">14.375</span><span class="kt">rem</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">--MENU-WIDTH-M</span><span class="p">:</span> <span class="mf">14.375</span><span class="kt">rem</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">--MENU-WIDTH-L</span><span class="p">:</span> <span class="mf">18.75</span><span class="kt">rem</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><h2 id="own-shortcodes-with-javascript-dependencies">Own Shorrrtcodes wit' JavaScript Dependencies</h2>
@@ -262,25 +244,25 @@ appearance, ye will have t' configure th' <code>landingPageName</code> fer th' d
 <ol>
 <li>
 <p>Write th' shortcode file <code>layouts/shortcodes/myshortcode.html</code> an' add th' follow'n line</p>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="p">.</span><span class="nx">Store</span><span class="p">.</span><span class="nx">Set</span> <span class="s">&#34;hasMyShortcode&#34;</span> <span class="kc">true</span> <span class="p">}}</span></span></span></code></pre></div></li>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="p">.</span><span class="nx">Plank</span><span class="p">.</span><span class="nx">Store</span><span class="p">.</span><span class="nx">Set</span> <span class="s">&#34;hasMyShortcode&#34;</span> <span class="kc">true</span> <span class="p">}}</span></span></span></code></pre></div></li>
 <li>
-<p>Add th' follow'n snippet t' yer <code>config.toml</code></p>
+<p>Add th' follow'n snippet t' yer <code>hugo.toml</code></p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">relearn</span><span class="p">.</span><span class="nx">dependencies</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">relearn</span><span class="p">.</span><span class="nx">dependencies</span><span class="p">.</span><span class="nx">myshortcode</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s">&#34;MyShortcode&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">locat'n</span> <span class="p">=</span> <span class="s">&#34;footer&#34;</span></span></span></code></pre></div></li>
 <li>
-<p>Add th' dependency loader file <code>layouts/partials/dependencies/myshortcode.html</code>. Th' loader file will be appended t' yer header or footer, dependend on th' <code>locat'n</code> sett'n 'n yer <code>config.toml</code>.</p>
+<p>Add th' dependency loader file <code>layouts/partials/dependencies/myshortcode.html</code>. Th' loader file will be appended t' yer header or footer, dependend on th' <code>locat'n</code> sett'n 'n yer <code>hugo.toml</code>.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.unpkg.com/jquery/dist/jquery.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></div></li>
 </ol>
 <p>Character cas'n be relevant!</p>
 <ul>
-<li>th' <code>name</code> sett'n 'n yer <code>config.toml</code> must match th' key (that needs t' be prefixed wit' a <code>has</code>) ye used fer th' store 'n yer <code>layouts/shortcodes/myshortcode.html</code>.</li>
-<li>th' key on <code>params.relearn.dependencies</code> 'n yer <code>config.toml</code> must match th' base file name o' yer loader file.</li>
+<li>th' <code>name</code> sett'n 'n yer <code>hugo.toml</code> must match th' key (that needs t' be prefixed wit' a <code>has</code>) ye used fer th' store 'n yer <code>layouts/shortcodes/myshortcode.html</code>.</li>
+<li>th' key on <code>params.relearn.dependencies</code> 'n yer <code>hugo.toml</code> must match th' base file name o' yer loader file.</li>
 </ul>
 <p>See th' <code>math</code>, <code>mermaid</code> an' <code>openapi</code> shorrrtcodes fer examples.</p>
 <h2 id="output-formats">Output Formats</h2>
-<p>Certain parts o' th' theme can be changed fer support o' yer own <a href="https://gohugo.io/templates/output-formats/" target="_blank">output formats</a>. Eg. if ye define a new output format <code>PLAINTEXT</code> 'n yer <code>config.toml</code>, ye can add a file <code>layouts/partials/header.plaintext.html</code> t' change th' way, th' plank header should look like fer that output format.</p>
+<p>Certain parts o' th' theme can be changed fer support o' yer own <a href="https://gohugo.io/templates/output-formats/" target="_blank">output formats</a>. Eg. if ye define a new output format <code>PLAINTEXT</code> 'n yer <code>hugo.toml</code>, ye can add a file <code>layouts/partials/header.plaintext.html</code> t' change th' way, th' plank header should look like fer that output format.</p>
 <h2 id="react-to-variant-switches-in-javascript">React t' Variant Switches 'n JavaScript</h2>
 <p>Once a color variant be fully boarded, either initially or by switch'n th' color variant manually wit' th' variant selector, th' custom event <code>themeVariantLoaded</code> on th' <code>document</code> will be dispatched. Ye can add an event listener an' react t' changes.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span> <span class="s1">&#39;themeVariantLoaded&#39;</span><span class="p">,</span> <span class="kd">funct'n</span><span class="p">(</span> <span class="nx">e</span> <span class="p">){</span>
@@ -290,15 +272,16 @@ appearance, ye will have t' configure th' <code>landingPageName</code> fer th' d
 <p>In <code>themes/hugo-theme-relearn/layouts/partials/</code>, ye will find all th' partials defined fer this theme. If ye need t' overwrite someth'n, don&rsquo;t change th' code directly. Instead <a href="https://gohugo.io/themes/customizing/" target="_blank">follow this plank</a>. You&rsquo;d create a new partial 'n th' <code>layouts/partials</code> folder o' yer local project. This partial will have th' priority.</p>
 <p>This theme defines th' follow'n partials :</p>
 <ul>
-<li><code>header.html</code>: th' header o' th' plank. See <a href="#output-formats">output-formats</a></li>
-<li><code>footer.html</code>: th' footer o' th' plank. See <a href="#output-formats">output-formats</a></li>
-<li><code>body.html</code>: th' body o' th' plank. Th' body may contain o' one or many articles. See <a href="#output-formats">output-formats</a></li>
-<li><code>article.html</code>: th' output fer a single article, can contain elements around yer rrrambl'n. See <a href="#output-formats">output-formats</a></li>
+<li><code>header.html</code>: th' header o' th' plank. See <a href="../../../pir/basics/customization/index.html#output-formats">output-formats</a></li>
+<li><code>footer.html</code>: th' footer o' th' plank. See <a href="../../../pir/basics/customization/index.html#output-formats">output-formats</a></li>
+<li><code>body.html</code>: th' body o' th' plank. Th' body may contain o' one or many articles. See <a href="../../../pir/basics/customization/index.html#output-formats">output-formats</a></li>
+<li><code>article.html</code>: th' output fer a single article, can contain elements around yer rrrambl'n. See <a href="../../../pir/basics/customization/index.html#output-formats">output-formats</a></li>
 <li><code>menu.html</code>: left menu. <em>Not meant t' be overwritten</em></li>
 <li><code>search.html</code>: search box. <em>Not meant t' be overwritten</em></li>
 <li><code>custom-header.html</code>: custom headers 'n plank. Meant t' be overwritten when add'n CSS imports. Don&rsquo;t forget t' include <code>style</code> HTML tag directive 'n yer file.</li>
 <li><code>custom-footer.html</code>:  custom footer 'n plank. Meant t' be overwritten when add'n JavaScript. Don&rsquo;t forget t' include <code>javascript</code> HTML tag directive 'n yer file.</li>
 <li><code>favicon.html</code>: th' favicon</li>
+<li><code>head'n.html</code>: side-wide configurat'n t' change th' planks title head'ns.</li>
 <li><code>heading-pre.html</code>: side-wide configurat'n t' prepend t' planks title head'ns. If ye override this, it be yer responsibility t' take th' page&rsquo;s <code>headingPre</code> sett'n into account.</li>
 <li><code>heading-post.html</code>: side-wide configurat'n t' append t' planks title head'ns. If ye override this, it be yer responsibility t' take th' page&rsquo;s <code>headingPost</code> sett'n into account.</li>
 <li><code>logo.html</code>: th' logo, on top left hand corner</li>
@@ -401,12 +384,12 @@ appearance, ye will have t' configure th' <code>landingPageName</code> fer th' d
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="../../../js/auto-complete.js?1700601386" defer></script>
-        <script src="../../../js/lunr/lunr.min.js?1700601386" defer></script>
-        <script src="../../../js/lunr/lunr.stemmer.support.min.js?1700601386" defer></script>
-        <script src="../../../js/lunr/lunr.multi.min.js?1700601386" defer></script>
-        <script src="../../../js/lunr/lunr.en.min.js?1700601386" defer></script>
-        <script src="../../../js/search.js?1700601386" defer></script>
+        <script src="../../../js/auto-complete.js?1708639394" defer></script>
+        <script src="../../../js/lunr/lunr.min.js?1708639394" defer></script>
+        <script src="../../../js/lunr/lunr.stemmer.support.min.js?1708639394" defer></script>
+        <script src="../../../js/lunr/lunr.multi.min.js?1708639394" defer></script>
+        <script src="../../../js/lunr/lunr.en.min.js?1708639394" defer></script>
+        <script src="../../../js/search.js?1708639394" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation">
         <hr class="padding">
@@ -414,7 +397,7 @@ appearance, ye will have t' configure th' <code>landingPageName</code> fer th' d
       <div id="R-content-wrapper" class="highlightable">
         <div id="R-topics">
           <ul class="enlarge morespace collapsible-menu">
-          <li data-nav-id="/pir/basics/index.html" class="parent "><input type="checkbox" id="R-section-182650db393a58ea8a0385f10a515d92" aria-controls="R-subsections-182650db393a58ea8a0385f10a515d92" checked><label for="R-section-182650db393a58ea8a0385f10a515d92"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Basics</span></label><a class="padding" href="../../../pir/basics/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-182650db393a58ea8a0385f10a515d92" class="morespace collapsible-menu">
+          <li data-nav-id="/pir/basics/index.html" class="parent "><input type="checkbox" id="R-section-a6deabe447afe1b2e1405bfc57ca61ff" aria-controls="R-subsections-a6deabe447afe1b2e1405bfc57ca61ff" checked><label for="R-section-a6deabe447afe1b2e1405bfc57ca61ff"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Basics</span></label><a class="padding" href="../../../pir/basics/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-a6deabe447afe1b2e1405bfc57ca61ff" class="morespace collapsible-menu">
           <li data-nav-id="/pir/basics/migration/index.html" class=""><a class="padding" href="../../../pir/basics/migration/index.html">What&#39;s New<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/basics/requirements/index.html" class=""><a class="padding" href="../../../pir/basics/requirements/index.html">Requirrrements<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/basics/installation/index.html" class=""><a class="padding" href="../../../pir/basics/installation/index.html">Installat&#39;n<i class="fas fa-check read-icon"></i></a></li>
@@ -424,28 +407,29 @@ appearance, ye will have t' configure th' <code>landingPageName</code> fer th' d
           <li data-nav-id="/pir/basics/generator/index.html" class=""><a class="padding" href="../../../pir/basics/generator/index.html">Stylesheet generrrat&#39;r<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/basics/topbar/index.html" class=""><a class="padding" href="../../../pir/basics/topbar/index.html">Topbarrr Modificat&#39;n<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/basics/history/index.html" class=""><a class="padding" href="../../../pir/basics/history/index.html">Historrry<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/pir/cont/index.html" class=""><input type="checkbox" id="R-section-4074c32ab128bf79d499f2f6ddf50674" aria-controls="R-subsections-4074c32ab128bf79d499f2f6ddf50674"><label for="R-section-4074c32ab128bf79d499f2f6ddf50674"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Rambl&#39;n</span></label><a class="padding" href="../../../pir/cont/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">2.</b> Rambl&#39;n<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-4074c32ab128bf79d499f2f6ddf50674" class="morespace collapsible-menu">
+          <li data-nav-id="/pir/cont/index.html" class=""><input type="checkbox" id="R-section-fa8195cb3a7fa53d39f9adae98977ba1" aria-controls="R-subsections-fa8195cb3a7fa53d39f9adae98977ba1"><label for="R-section-fa8195cb3a7fa53d39f9adae98977ba1"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Rambl&#39;n</span></label><a class="padding" href="../../../pir/cont/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">2.</b> Rambl&#39;n<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-fa8195cb3a7fa53d39f9adae98977ba1" class="morespace collapsible-menu">
           <li data-nav-id="/pir/cont/pages/index.html" class=""><a class="padding" href="../../../pir/cont/pages/index.html">planks orrrganizat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/cont/frontmatter/index.html" class=""><a class="padding" href="../../../pir/cont/frontmatter/index.html">Frrrontmatter<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/cont/archetypes/index.html" class=""><a class="padding" href="../../../pir/cont/archetypes/index.html">Arrrchetypes<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/cont/markdown/index.html" class=""><a class="padding" href="../../../pir/cont/markdown/index.html">Marrrkdown rules<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/cont/imageeffects/index.html" class=""><a class="padding" href="../../../pir/cont/imageeffects/index.html">Image Effects<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/cont/menushortcuts/index.html" class=""><a class="padding" href="../../../pir/cont/menushortcuts/index.html">Menu extrrra shorrrtcuts<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/cont/i18n/index.html" class=""><a class="padding" href="../../../pir/cont/i18n/index.html">Multilingual an&#39; i18n<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/cont/taxonomy/index.html" class=""><a class="padding" href="../../../pir/cont/taxonomy/index.html">Taxonomy<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/pir/shortcodes/index.html" class=""><input type="checkbox" id="R-section-215953719902243a01571a1ede64aeeb" aria-controls="R-subsections-215953719902243a01571a1ede64aeeb"><label for="R-section-215953719902243a01571a1ede64aeeb"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Shorrrtcodes</span></label><a class="padding" href="../../../pir/shortcodes/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">3.</b> Shorrrtcodes<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-215953719902243a01571a1ede64aeeb" class="morespace collapsible-menu">
+          <li data-nav-id="/pir/shortcodes/index.html" class=""><input type="checkbox" id="R-section-3fd53efe5229f2c1a55795ee597d09d8" aria-controls="R-subsections-3fd53efe5229f2c1a55795ee597d09d8"><label for="R-section-3fd53efe5229f2c1a55795ee597d09d8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Shorrrtcodes</span></label><a class="padding" href="../../../pir/shortcodes/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">3.</b> Shorrrtcodes<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-3fd53efe5229f2c1a55795ee597d09d8" class="morespace collapsible-menu">
           <li data-nav-id="/pir/shortcodes/attachments/index.html" class=""><a class="padding" href="../../../pir/shortcodes/attachments/index.html">Attachments<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/shortcodes/badge/index.html" class=""><a class="padding" href="../../../pir/shortcodes/badge/index.html">Badge<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/shortcodes/button/index.html" class=""><a class="padding" href="../../../pir/shortcodes/button/index.html">Button<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/pir/shortcodes/children/index.html" class=""><input type="checkbox" id="R-section-05de666a6804433386d9009e44fa7aa3" aria-controls="R-subsections-05de666a6804433386d9009e44fa7aa3"><label for="R-section-05de666a6804433386d9009e44fa7aa3"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Children</span></label><a class="padding" href="../../../pir/shortcodes/children/index.html">Children<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-05de666a6804433386d9009e44fa7aa3" class="morespace collapsible-menu">
+          <li data-nav-id="/pir/shortcodes/children/index.html" class=""><input type="checkbox" id="R-section-d7ecedf0d1b5486d6a0c132e8a234d06" aria-controls="R-subsections-d7ecedf0d1b5486d6a0c132e8a234d06"><label for="R-section-d7ecedf0d1b5486d6a0c132e8a234d06"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Children</span></label><a class="padding" href="../../../pir/shortcodes/children/index.html">Children<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d7ecedf0d1b5486d6a0c132e8a234d06" class="morespace collapsible-menu">
           <li data-nav-id="/pir/shortcodes/children/test/index.html" class=""><a class="padding" href="../../../pir/shortcodes/children/test/index.html">plank X<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/pir/shortcodes/children/children-1/index.html" class=""><input type="checkbox" id="R-section-5c6c78bc0635ef1f61fdb91197081411" aria-controls="R-subsections-5c6c78bc0635ef1f61fdb91197081411"><label for="R-section-5c6c78bc0635ef1f61fdb91197081411"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu plank 1</span></label><a class="padding" href="../../../pir/shortcodes/children/children-1/index.html">plank 1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-5c6c78bc0635ef1f61fdb91197081411" class="morespace collapsible-menu">
-          <li data-nav-id="/pir/shortcodes/children/children-1/children-1-1/index.html" class="alwaysopen"><input type="checkbox" id="R-section-be87ceb25a7988952eb9556a69f3cbdf" aria-controls="R-subsections-be87ceb25a7988952eb9556a69f3cbdf" checked><label for="R-section-be87ceb25a7988952eb9556a69f3cbdf"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu plank 1-1</span></label><a class="padding" href="../../../pir/shortcodes/children/children-1/children-1-1/index.html">plank 1-1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-be87ceb25a7988952eb9556a69f3cbdf" class="morespace collapsible-menu">
-          <li data-nav-id="" class="alwaysopen"><input type="checkbox" id="R-section-989ea17e090bb9681da73b58575dcced" aria-controls="R-subsections-989ea17e090bb9681da73b58575dcced" checked><label for="R-section-989ea17e090bb9681da73b58575dcced"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu plank 1-1-2 (headless)</span></label><span class="padding">plank 1-1-2 (headless)</span><ul id="R-subsections-989ea17e090bb9681da73b58575dcced" class="morespace collapsible-menu">
+          <li data-nav-id="/pir/shortcodes/children/children-1/index.html" class=""><input type="checkbox" id="R-section-d3cff5da0d8420d4871c516833b2f97d" aria-controls="R-subsections-d3cff5da0d8420d4871c516833b2f97d"><label for="R-section-d3cff5da0d8420d4871c516833b2f97d"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu plank 1</span></label><a class="padding" href="../../../pir/shortcodes/children/children-1/index.html">plank 1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d3cff5da0d8420d4871c516833b2f97d" class="morespace collapsible-menu">
+          <li data-nav-id="/pir/shortcodes/children/children-1/children-1-1/index.html" class="alwaysopen"><input type="checkbox" id="R-section-8c27e33b2765b18da99f6c8dc40400b8" aria-controls="R-subsections-8c27e33b2765b18da99f6c8dc40400b8" checked><label for="R-section-8c27e33b2765b18da99f6c8dc40400b8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu plank 1-1</span></label><a class="padding" href="../../../pir/shortcodes/children/children-1/children-1-1/index.html">plank 1-1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-8c27e33b2765b18da99f6c8dc40400b8" class="morespace collapsible-menu">
+          <li data-nav-id="" class="alwaysopen"><input type="checkbox" id="R-section-51e1e8deb580f78714eca799da517f1d" aria-controls="R-subsections-51e1e8deb580f78714eca799da517f1d" checked><label for="R-section-51e1e8deb580f78714eca799da517f1d"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu plank 1-1-2 (headless)</span></label><span class="padding">plank 1-1-2 (headless)</span><ul id="R-subsections-51e1e8deb580f78714eca799da517f1d" class="morespace collapsible-menu">
           <li data-nav-id="/pir/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/index.html" class=""><a class="padding" href="../../../pir/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/index.html">plank 1-1-2-1<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/index.html" class=""><a class="padding" href="../../../pir/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/index.html">plank 1-1-2-2<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/pir/shortcodes/children/children-1/children-1-1/children-1-1-3/index.html" class=""><a class="padding" href="../../../pir/shortcodes/children/children-1/children-1-1/children-1-1-3/index.html">plank 1-1-3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/pir/shortcodes/children/children-2/index.html" class=""><a class="padding" href="../../../pir/shortcodes/children/children-2/index.html">plank 2<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/pir/shortcodes/children/children-3/index.html" class=""><input type="checkbox" id="R-section-085f961452d7baa981ace00de789c321" aria-controls="R-subsections-085f961452d7baa981ace00de789c321"><label for="R-section-085f961452d7baa981ace00de789c321"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu plank 3</span></label><a class="padding" href="../../../pir/shortcodes/children/children-3/index.html">plank 3<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-085f961452d7baa981ace00de789c321" class="morespace collapsible-menu">
+          <li data-nav-id="/pir/shortcodes/children/children-3/index.html" class=""><input type="checkbox" id="R-section-c4351ae325c16fd2130d6c815bffc83f" aria-controls="R-subsections-c4351ae325c16fd2130d6c815bffc83f"><label for="R-section-c4351ae325c16fd2130d6c815bffc83f"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu plank 3</span></label><a class="padding" href="../../../pir/shortcodes/children/children-3/index.html">plank 3<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-c4351ae325c16fd2130d6c815bffc83f" class="morespace collapsible-menu">
           <li data-nav-id="/pir/shortcodes/children/children-3/test3/index.html" class=""><a class="padding" href="../../../pir/shortcodes/children/children-3/test3/index.html">plank 3-1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/pir/shortcodes/expand/index.html" class=""><a class="padding" href="../../../pir/shortcodes/expand/index.html">Expand<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/pir/shortcodes/highlight/index.html" class=""><a class="padding" href="../../../pir/shortcodes/highlight/index.html">Highlight<i class="fas fa-check read-icon"></i></a></li>
@@ -483,7 +467,7 @@ appearance, ye will have t' configure th' <code>landingPageName</code> fer th' d
                     <label class="a11y-only" for="R-select-language">Language</label>
                     <select id="R-select-language" onchange="location = baseUri + this.value;">
                       <option id="R-en" value="/basics/customization/index.html" lang="en">English</option>
-                      <option id="R-pir" value="/pir/basics/customization/index.html" lang="pir" selected>Arrr! ☠ Pirrrates ☠</option>
+                      <option id="R-pir" value="/pir/basics/customization/index.html" lang="art-pir" selected>Arrr! ☠ Pirrrates ☠</option>
                     </select>
                   </div>
                   <div class="clear"></div>
@@ -496,9 +480,11 @@ appearance, ye will have t' configure th' <code>landingPageName</code> fer th' d
                   <div class="control-style">
                     <label class="a11y-only" for="R-select-variant">Theme</label>
                     <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
-                      <option id="R-auto" value="auto" selected>Auto</option>
+                      <option id="R-relearn-auto" value="relearn-auto" selected>Relearn Light/Dark</option>
                       <option id="R-relearn-light" value="relearn-light">Relearn Light</option>
                       <option id="R-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                      <option id="R-relearn-bright" value="relearn-bright">Relearn Bright</option>
+                      <option id="R-zen-auto" value="zen-auto">Zen Light/Dark</option>
                       <option id="R-zen-light" value="zen-light">Zen Light</option>
                       <option id="R-zen-dark" value="zen-dark">Zen Dark</option>
                       <option id="R-neon" value="neon">Neon</option>
@@ -562,14 +548,17 @@ appearance, ye will have t' configure th' <code>landingPageName</code> fer th' d
               
               setTimeout( githubButtonsInit, 400 );
             });
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+              setTimeout( githubButtonsInit, 400 );
+            });
           </script>
-          <script async src="../../../js/github-buttons.js?1700601386"></script>
+          <script async src="../../../js/github-buttons.js?1708639394"></script>
           </div>
         </div>
       </div>
     </aside>
-    <script src="../../../js/clipboard.min.js?1700601386" defer></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1700601386" defer></script>
-    <script src="../../../js/theme.js?1700601386" defer></script>
+    <script src="../../../js/clipboard.min.js?1708639394" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1708639394" defer></script>
+    <script src="../../../js/theme.js?1708639394" defer></script>
   </body>
 </html>

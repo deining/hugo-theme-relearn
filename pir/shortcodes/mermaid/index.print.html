@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pir" dir="rtl">
+<html lang="art-pir" dir="rtl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.120.4">
-    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="generator" content="Hugo 0.123.2">
+    <meta name="generator" content="Relearn 5.24.1+tip">
     <meta name="description" content="Documentation for Hugo Relearn Theme">
     <meta name="author" content="Sören Weber">
     <meta name="twitter:card" content="summary_large_image">
@@ -27,24 +27,25 @@ Usage While th&#39; examples be us&#39;n shorrrtcodes wit&#39; named parameter i
     <title>Merrrmaid :: Cap&#39;n Hugo Relearrrn Theme</title>
     <link href="https://deining.github.io/hugo-theme-relearn/shortcodes/mermaid/index.html" rel="alternate" hreflang="x-default">
     <link href="https://deining.github.io/hugo-theme-relearn/shortcodes/mermaid/index.html" rel="alternate" hreflang="en">
-    <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/mermaid/index.html" rel="alternate" hreflang="pir">
+    <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/mermaid/index.html" rel="alternate" hreflang="art-pir">
     <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/mermaid/index.html" rel="canonical" type="text/html" title="Merrrmaid :: Cap&#39;n Hugo Relearrrn Theme">
     <link href="../../../pir/shortcodes/mermaid/index.xml" rel="alternate" type="application/rss+xml" title="Merrrmaid :: Cap&#39;n Hugo Relearrrn Theme">
-    <link href="../../../images/logo.svg?1700601385" rel="icon" type="image/svg+xml">
+    <link href="../../../images/logo.svg?1708639394" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../../css/fontawesome-all.min.css?1700601387" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1700601387" rel="stylesheet"></noscript>
-    <link href="../../../css/nucleus.css?1700601387" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1700601387" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1700601387" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar.min.css?1700601387" rel="stylesheet">
-    <link href="../../../css/fonts.css?1700601387" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1700601387" rel="stylesheet"></noscript>
-    <link href="../../../css/theme.css?1700601387" rel="stylesheet">
-    <link href="../../../css/theme-auto.css?1700601387" rel="stylesheet" id="R-variant-style">
-    <link href="../../../css/variant.css?1700601387" rel="stylesheet">
-    <link href="../../../css/print.css?1700601387" rel="stylesheet" media="print">
-    <link href="../../../css/format-print.css?1700601387" rel="stylesheet">
-    <link href="../../../css/ie.css?1700601387" rel="stylesheet">
-    <script src="../../../js/url.js?1700601387"></script>
-    <script src="../../../js/variant.js?1700601387"></script>
+    <link href="../../../css/fontawesome-all.min.css?1708639395" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fontawesome-all.min.css?1708639395" rel="stylesheet"></noscript>
+    <link href="../../../css/nucleus.css?1708639395" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1708639395" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/auto-complete.css?1708639395" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar.min.css?1708639395" rel="stylesheet">
+    <link href="../../../css/fonts.css?1708639395" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../css/fonts.css?1708639395" rel="stylesheet"></noscript>
+    <link href="../../../css/theme.css?1708639395" rel="stylesheet">
+    <link href="../../../css/theme-relearn-auto.css?1708639395" rel="stylesheet" id="R-variant-style">
+    <link href="../../../css/chroma-relearn-auto.css?1708639395" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="../../../css/variant.css?1708639395" rel="stylesheet">
+    <link href="../../../css/print.css?1708639395" rel="stylesheet" media="print">
+    <link href="../../../css/format-print.css?1708639395" rel="stylesheet">
+    <link href="../../../css/ie.css?1708639395" rel="stylesheet">
+    <script src="../../../js/url.js?1708639395"></script>
+    <script src="../../../js/variant.js?1708639395"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -54,7 +55,8 @@ Usage While th&#39; examples be us&#39;n shorrrtcodes wit&#39; named parameter i
       window.relearn = window.relearn || {};
       window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
       // variant stuff
-      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
       window.T_Copy_to_clipboard = `Copy t' clipboard`;
       window.T_Copied_to_clipboard = `Copied t' clipboard!`;
@@ -78,10 +80,7 @@ Usage While th&#39; examples be us&#39;n shorrrtcodes wit&#39; named parameter i
         <div class="topbar-wrapper">
           <div class="topbar-sidebar-divider"></div>
           <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
-              <button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)">
-                <i class="fa-fw fas fa-bars"></i>
-              </button>
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
@@ -126,14 +125,6 @@ graph LR;
 <h2 id="usage">Usage</h2>
 <p>While th' examples be us'n shorrrtcodes wit' named parameter it be recommended t' use codefences instead. This be because more an' more other software supports Merrrmaid codefences (eg. GitHub) an' so yer markdown becomes more port'ble.</p>
 <p>Ye be free t' also call this shortcode from yer own partials.</p>
-
-<div class="box notices cstyle note">
-  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Avast</div>
-  <div class="box-content">
-
-<p>T' use codefence rules ye have t' turn off <code>guessSyntax</code> fer th' <code>marrrkup.highlight</code> sett'n (<a href="#configuration">see th' configurat'n section</a>).</p>
-</div>
-</div>
 
 <div class="tab-panel" data-tab-group="shortcode-parameter">
   <div class="tab-nav">
@@ -216,7 +207,7 @@ graph LR;
 <tr>
 <td><strong>zoom</strong></td>
 <td>see notes</td>
-<td>Whether th' graph be pan- an' zoom'ble.<br><br>If not set th' value be determined by th' <code>mermaidZoom</code> sett'n o' th' <a href="#global-configuration-file">ship</a> or th' <a href="#pages-frontmatter">planks frontmatter</a> or <code>false</code> if not set at all.<br><br>- <code>false</code>: no pan or zoom<br>- <code>true</code>: pan an' zoom active</td>
+<td>Whether th' graph be pan- an' zoom'ble.<br><br>If not set th' value be determined by th' <code>mermaidZoom</code> sett'n o' th' <a href="../../../pir/shortcodes/mermaid/index.html#global-configuration-file">ship</a> or th' <a href="../../../pir/shortcodes/mermaid/index.html#pages-frontmatter">planks frontmatter</a> or <code>false</code> if not set at all.<br><br>- <code>false</code>: no pan or zoom<br>- <code>true</code>: pan an' zoom active</td>
 </tr>
 <tr>
 <td><em><strong>&lt;content&gt;</strong></em></td>
@@ -226,29 +217,14 @@ graph LR;
 </tbody>
 </table>
 <h2 id="configuration">Configurat'n</h2>
-<p>Merrrmaid be configured wit' default sett'ns. Ye can cust'mize Mermaid&rsquo;s default sett'ns fer all o' yer files thru a JSON object 'n yer <code>config.toml</code>, override these sett'ns per plank thru yer planks frontmatter or override these sett'n per diagramm thru <a href="https://mermaid-js.github.io/mermaid/#/directives?id=directives" target="_blank">diagram directives</a>.</p>
-<p>Th' JSON object o' yer <code>config.toml</code> / frontmatter be forwarded into Mermaid&rsquo;s <code>mermaid.initialize()</code> funct'n.</p>
+<p>Merrrmaid be configured wit' default sett'ns. Ye can cust'mize Mermaid&rsquo;s default sett'ns fer all o' yer files thru a JSON object 'n yer <code>hugo.toml</code>, override these sett'ns per plank thru yer planks frontmatter or override these sett'n per diagramm thru <a href="https://mermaid-js.github.io/mermaid/#/directives?id=directives" target="_blank">diagram directives</a>.</p>
+<p>Th' JSON object o' yer <code>hugo.toml</code> / frontmatter be forwarded into Mermaid&rsquo;s <code>mermaid.initialize()</code> funct'n.</p>
 <p>See <a href="https://mermaid-js.github.io/mermaid/#/Setup?id=mermaidapi-configuration-defaults" target="_blank">Merrrmaid documentat'n</a> fer all allowed sett'ns.</p>
-<p>Th' <code>theme</code> sett'n can also be set by yer used color variant. This will be th' sitewide default an' can - again - be overridden by yer sett'ns 'n <code>config.toml</code>, frontmatter or diagram directives.</p>
-
-<div class="box notices cstyle note">
-  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Avast</div>
-  <div class="box-content">
-
-<p>T' use codefence rules ye have t' turn off <code>guessSyntax</code> fer th' <code>marrrkup.highlight</code> sett'n.</p>
-</div>
-</div>
+<p>Th' <code>theme</code> sett'n can also be set by yer used color variant. This will be th' sitewide default an' can - again - be overridden by yer sett'ns 'n <code>hugo.toml</code>, frontmatter or diagram directives.</p>
 <h3 id="global-configuration-file">Global Configurat'n File</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">mermaidInitialize</span> <span class="p">=</span> <span class="s2">&#34;{ \&#34;theme\&#34;: \&#34;dark\&#34; }&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">mermaidZoom</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">marrrkup</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">marrrkup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># if `guessSyntax = true`, there will be no unstyled code even if no language</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># was given BUT Merrrmaid an' Math codefences will not work anymore! So this be a</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># mandatory sett'n fer yer ship if ye want t' use Merrrmaid codefences</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">guessSyntax</span> <span class="p">=</span> <span class="kc">false</span></span></span></code></pre></div><h3 id="pages-frontmatter">Page&rsquo;s Frontmatter</h3>
+</span></span><span class="line"><span class="cl">  <span class="nx">mermaidZoom</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div><h3 id="pages-frontmatter">Page&rsquo;s Frontmatter</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
 </span></span><span class="line"><span class="cl"><span class="nx">mermaidInitialize</span> <span class="p">=</span> <span class="s2">&#34;{ \&#34;theme\&#34;: \&#34;dark\&#34; }&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">mermaidZoom</span> <span class="p">=</span> <span class="kc">true</span>
@@ -743,22 +719,22 @@ xychart-beta
         </div>
       </main>
     </div>
-    <script src="../../../js/clipboard.min.js?1700601387" defer></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1700601387" defer></script>
-    <script src="../../../js/d3/d3-color.min.js?1700601387" defer></script>
-    <script src="../../../js/d3/d3-dispatch.min.js?1700601387" defer></script>
-    <script src="../../../js/d3/d3-drag.min.js?1700601387" defer></script>
-    <script src="../../../js/d3/d3-ease.min.js?1700601387" defer></script>
-    <script src="../../../js/d3/d3-interpolate.min.js?1700601387" defer></script>
-    <script src="../../../js/d3/d3-selection.min.js?1700601387" defer></script>
-    <script src="../../../js/d3/d3-timer.min.js?1700601387" defer></script>
-    <script src="../../../js/d3/d3-transition.min.js?1700601387" defer></script>
-    <script src="../../../js/d3/d3-zoom.min.js?1700601387" defer></script>
-    <script src="../../../js/js-yaml.min.js?1700601387" defer></script>
-    <script src="../../../js/mermaid.min.js?1700601387" defer></script>
+    <script src="../../../js/clipboard.min.js?1708639396" defer></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1708639396" defer></script>
+    <script src="../../../js/d3/d3-color.min.js?1708639396" defer></script>
+    <script src="../../../js/d3/d3-dispatch.min.js?1708639396" defer></script>
+    <script src="../../../js/d3/d3-drag.min.js?1708639396" defer></script>
+    <script src="../../../js/d3/d3-ease.min.js?1708639396" defer></script>
+    <script src="../../../js/d3/d3-interpolate.min.js?1708639396" defer></script>
+    <script src="../../../js/d3/d3-selection.min.js?1708639396" defer></script>
+    <script src="../../../js/d3/d3-timer.min.js?1708639396" defer></script>
+    <script src="../../../js/d3/d3-transition.min.js?1708639396" defer></script>
+    <script src="../../../js/d3/d3-zoom.min.js?1708639396" defer></script>
+    <script src="../../../js/js-yaml.min.js?1708639396" defer></script>
+    <script src="../../../js/mermaid.min.js?1708639396" defer></script>
     <script>
       window.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
     </script>
-    <script src="../../../js/theme.js?1700601387" defer></script>
+    <script src="../../../js/theme.js?1708639396" defer></script>
   </body>
 </html>

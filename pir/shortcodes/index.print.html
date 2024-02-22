@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pir" dir="rtl">
+<html lang="art-pir" dir="rtl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.120.4">
-    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="generator" content="Hugo 0.123.2">
+    <meta name="generator" content="Relearn 5.24.1+tip">
     <meta name="description" content="Documentation for Hugo Relearn Theme">
     <meta name="author" content="Sören Weber">
     <meta name="twitter:card" content="summary_large_image">
@@ -20,24 +20,25 @@
     <title>Shorrrtcodes :: Cap&#39;n Hugo Relearrrn Theme</title>
     <link href="https://deining.github.io/hugo-theme-relearn/shortcodes/index.html" rel="alternate" hreflang="x-default">
     <link href="https://deining.github.io/hugo-theme-relearn/shortcodes/index.html" rel="alternate" hreflang="en">
-    <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/index.html" rel="alternate" hreflang="pir">
+    <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/index.html" rel="alternate" hreflang="art-pir">
     <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/index.html" rel="canonical" type="text/html" title="Shorrrtcodes :: Cap&#39;n Hugo Relearrrn Theme">
     <link href="../../pir/shortcodes/index.xml" rel="alternate" type="application/rss+xml" title="Shorrrtcodes :: Cap&#39;n Hugo Relearrrn Theme">
-    <link href="../../images/logo.svg?1700601385" rel="icon" type="image/svg+xml">
+    <link href="../../images/logo.svg?1708639394" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../css/fontawesome-all.min.css?1700601387" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1700601387" rel="stylesheet"></noscript>
-    <link href="../../css/nucleus.css?1700601387" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1700601387" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1700601387" rel="stylesheet"></noscript>
-    <link href="../../css/perfect-scrollbar.min.css?1700601387" rel="stylesheet">
-    <link href="../../css/fonts.css?1700601387" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1700601387" rel="stylesheet"></noscript>
-    <link href="../../css/theme.css?1700601387" rel="stylesheet">
-    <link href="../../css/theme-auto.css?1700601387" rel="stylesheet" id="R-variant-style">
-    <link href="../../css/variant.css?1700601387" rel="stylesheet">
-    <link href="../../css/print.css?1700601387" rel="stylesheet" media="print">
-    <link href="../../css/format-print.css?1700601387" rel="stylesheet">
-    <link href="../../css/ie.css?1700601387" rel="stylesheet">
-    <script src="../../js/url.js?1700601387"></script>
-    <script src="../../js/variant.js?1700601387"></script>
+    <link href="../../css/fontawesome-all.min.css?1708639395" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1708639395" rel="stylesheet"></noscript>
+    <link href="../../css/nucleus.css?1708639395" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1708639395" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1708639395" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar.min.css?1708639395" rel="stylesheet">
+    <link href="../../css/fonts.css?1708639395" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1708639395" rel="stylesheet"></noscript>
+    <link href="../../css/theme.css?1708639395" rel="stylesheet">
+    <link href="../../css/theme-relearn-auto.css?1708639395" rel="stylesheet" id="R-variant-style">
+    <link href="../../css/chroma-relearn-auto.css?1708639395" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="../../css/variant.css?1708639395" rel="stylesheet">
+    <link href="../../css/print.css?1708639395" rel="stylesheet" media="print">
+    <link href="../../css/format-print.css?1708639395" rel="stylesheet">
+    <link href="../../css/ie.css?1708639395" rel="stylesheet">
+    <script src="../../js/url.js?1708639395"></script>
+    <script src="../../js/variant.js?1708639395"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -47,7 +48,8 @@
       window.relearn = window.relearn || {};
       window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
       // variant stuff
-      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
       window.T_Copy_to_clipboard = `Copy t' clipboard`;
       window.T_Copied_to_clipboard = `Copied t' clipboard!`;
@@ -71,10 +73,7 @@
         <div class="topbar-wrapper">
           <div class="topbar-sidebar-divider"></div>
           <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
-              <button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)">
-                <i class="fa-fw fas fa-bars"></i>
-              </button>
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
@@ -101,21 +100,21 @@
 
 <div class="children children-h2 children-sort-">
 	
-<h2><a href="../../shortcodes/attachments/index.html">Attachments</a></h2><p>List o' files attached t' a plank</p>
-<h2><a href="../../shortcodes/badge/index.html">Badge</a></h2><p>Marker badges t' display 'n yer text</p>
-<h2><a href="../../shortcodes/button/index.html">Button</a></h2><p>Click'ble buttons</p>
-<h2><a href="../../shortcodes/children/index.html">Children</a></h2><p>List th' child planks o' a plank</p>
-<h2><a href="../../shortcodes/expand/index.html">Expand</a></h2><p>Expandable/collaps'ble sections o' text</p>
-<h2><a href="../../shortcodes/highlight/index.html">Highlight</a></h2><p>Render code wit' a rules highlighter</p>
-<h2><a href="../../shortcodes/icon/index.html">Ay'con</a></h2><p>Nice ay'cons fer yer plank</p>
-<h2><a href="../../shortcodes/include/index.html">Include</a></h2><p>Displays rrrambl'n from other files</p>
-<h2><a href="../../shortcodes/math/index.html">Math</a></h2><p>Beautiful math an' chemical formulae</p>
-<h2><a href="../../shortcodes/mermaid/index.html">Merrrmaid</a></h2><p>Generate diagrams an' flowcharts from text</p>
-<h2><a href="../../shortcodes/notice/index.html">Notice</a></h2><p>Disclaimers t' help ye structure yer plank</p>
-<h2><a href="../../shortcodes/openapi/index.html">OpenAPI</a></h2><p>UI fer yer OpenAPI / Swagger specificat'ns</p>
-<h2><a href="../../shortcodes/siteparam/index.html">SiteParam</a></h2><p>Get value o' ship params</p>
-<h2><a href="../../shortcodes/tab/index.html">Tab</a></h2><p>Show rrrambl'n 'n a single tab</p>
-<h2><a href="../../shortcodes/tabs/index.html">Tabs</a></h2><p>Show rrrambl'n 'n tabbed views</p>
+<h2><a href="../../pir/shortcodes/attachments/index.html">Attachments</a></h2><p>List o' files attached t' a plank</p>
+<h2><a href="../../pir/shortcodes/badge/index.html">Badge</a></h2><p>Marker badges t' display 'n yer text</p>
+<h2><a href="../../pir/shortcodes/button/index.html">Button</a></h2><p>Click'ble buttons</p>
+<h2><a href="../../pir/shortcodes/children/index.html">Children</a></h2><p>List th' child planks o' a plank</p>
+<h2><a href="../../pir/shortcodes/expand/index.html">Expand</a></h2><p>Expandable/collaps'ble sections o' text</p>
+<h2><a href="../../pir/shortcodes/highlight/index.html">Highlight</a></h2><p>Render code wit' a rules highlighter</p>
+<h2><a href="../../pir/shortcodes/icon/index.html">Ay'con</a></h2><p>Nice ay'cons fer yer plank</p>
+<h2><a href="../../pir/shortcodes/include/index.html">Include</a></h2><p>Displays rrrambl'n from other files</p>
+<h2><a href="../../pir/shortcodes/math/index.html">Math</a></h2><p>Beautiful math an' chemical formulae</p>
+<h2><a href="../../pir/shortcodes/mermaid/index.html">Merrrmaid</a></h2><p>Generate diagrams an' flowcharts from text</p>
+<h2><a href="../../pir/shortcodes/notice/index.html">Notice</a></h2><p>Disclaimers t' help ye structure yer plank</p>
+<h2><a href="../../pir/shortcodes/openapi/index.html">OpenAPI</a></h2><p>UI fer yer OpenAPI / Swagger specificat'ns</p>
+<h2><a href="../../pir/shortcodes/siteparam/index.html">SiteParam</a></h2><p>Get value o' ship params</p>
+<h2><a href="../../pir/shortcodes/tab/index.html">Tab</a></h2><p>Show rrrambl'n 'n a single tab</p>
+<h2><a href="../../pir/shortcodes/tabs/index.html">Tabs</a></h2><p>Show rrrambl'n 'n tabbed views</p>
 </div>
 
 
@@ -143,12 +142,12 @@
 <div class="box attachments cstyle transparent">
   <div class="box-label"><i class="fa-fw fas fa-paperclip"></i> Attachments</div>
   <ul class="box-content attachments-files">
-      <li><a href="../../shortcodes/attachments/index.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/BachGavotteShort.mp3">BachGavotteShort.mp3</a> (357 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/hugo.png">hugo.png</a> (17 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/hugo.txt">hugo.txt</a> (20 B)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/BachGavotteShort.mp3">BachGavotteShort.mp3</a> (357 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/hugo.png">hugo.png</a> (17 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/hugo.txt">hugo.txt</a> (20 B)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
   </ul>
 </div>
 
@@ -228,7 +227,7 @@
 <tr>
 <td><strong>ay'con</strong></td>
 <td>see notes</td>
-<td><a href="../../shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title. Depend'n on th' <strong>style</strong> there may be a default ay'con. Any given value will overwrite th' default.<br><br>- fer severity styles: a nice match'n ay'con fer th' severity<br>- fer all other styles: <code>paperclip</code><br><br>If ye want no ay'con, ye have t' set this parameter t' <code>&quot; &quot;</code> (a non empty d wit' spaces)</td>
+<td><a href="../../pir/shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title. Depend'n on th' <strong>style</strong> there may be a default ay'con. Any given value will overwrite th' default.<br><br>- fer severity styles: a nice match'n ay'con fer th' severity<br>- fer all other styles: <code>paperclip</code><br><br>If ye want no ay'con, ye have t' set this parameter t' <code>&quot; &quot;</code> (a non empty d wit' spaces)</td>
 </tr>
 <tr>
 <td><strong>sort</strong></td>
@@ -346,9 +345,9 @@
 <div class="box attachments cstyle transparent">
   <div class="box-label"><i class="fa-fw fas fa-paperclip"></i> Related <strong>files</strong></div>
   <ul class="box-content attachments-files">
-      <li><a href="../../shortcodes/attachments/index.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
   </ul>
 </div>
 <h3 id="info-styled-box-descending-sort-order">Ahoi Styled Box, Descend'n Sort Order</h3>
@@ -356,12 +355,12 @@
 <div class="box attachments cstyle info">
   <div class="box-label"><i class="fa-fw fas fa-info-circle"></i> Ahoi</div>
   <ul class="box-content attachments-files">
-      <li><a href="../../shortcodes/attachments/index.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/hugo.txt">hugo.txt</a> (20 B)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/hugo.png">hugo.png</a> (17 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/BachGavotteShort.mp3">BachGavotteShort.mp3</a> (357 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/hugo.txt">hugo.txt</a> (20 B)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/hugo.png">hugo.png</a> (17 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/BachGavotteShort.mp3">BachGavotteShort.mp3</a> (357 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
   </ul>
 </div>
 <h3 id="with-user-defined-color-and-font-awesome-brand-icon">Wit' User-Defined Color an' Font Awesome Brand Ay'con</h3>
@@ -369,16 +368,16 @@
 <div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
   <div class="box-label"><i class="fab fa-hackerrank"></i> Attachments</div>
   <ul class="box-content attachments-files">
-      <li><a href="../../shortcodes/attachments/index.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/BachGavotteShort.mp3">BachGavotteShort.mp3</a> (357 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/hugo.png">hugo.png</a> (17 KB)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/hugo.txt">hugo.txt</a> (20 B)</li>
-      <li><a href="../../shortcodes/attachments/index.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/BachGavotteShort.mp3">BachGavotteShort.mp3</a> (357 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/hugo.png">hugo.png</a> (17 KB)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/hugo.txt">hugo.txt</a> (20 B)</li>
+      <li><a href="../../pir/shortcodes/attachments/index.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
   </ul>
 </div>
 <h3 id="style-color-title-and-icons">Style, Color, Title an' Ay'cons</h3>
-<p>For further examples fer <strong>style</strong>, <strong>color</strong>, <strong>title</strong> an' <strong>ay'con</strong>, see th' <a href="../../shortcodes/notice/index.html"><code>notice</code> shortcode</a> documentat'n. Th' parameter be work'n th' same way fer both shorrrtcodes, besides hav'n different defaults.</p>
+<p>For further examples fer <strong>style</strong>, <strong>color</strong>, <strong>title</strong> an' <strong>ay'con</strong>, see th' <a href="../../pir/shortcodes/notice/index.html"><code>notice</code> shortcode</a> documentat'n. Th' parameter be work'n th' same way fer both shorrrtcodes, besides hav'n different defaults.</p>
 
 
             <footer class="footline">
@@ -493,7 +492,7 @@
 <tr>
 <td><strong>ay'con</strong></td>
 <td>see notes</td>
-<td><a href="../../shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title. Depend'n on th' <strong>style</strong> there may be a default ay'con. Any given value will overwrite th' default.<br><br>- fer severity styles: a nice match'n ay'con fer th' severity<br>- fer all other styles: <em>&lt;empty&gt;</em><br><br>If ye want no ay'con fer a severity style, ye have t' set this parameter t' <code>&quot; &quot;</code> (a non empty str'n filled wit' spaces)</td>
+<td><a href="../../pir/shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title. Depend'n on th' <strong>style</strong> there may be a default ay'con. Any given value will overwrite th' default.<br><br>- fer severity styles: a nice match'n ay'con fer th' severity<br>- fer all other styles: <em>&lt;empty&gt;</em><br><br>If ye want no ay'con fer a severity style, ye have t' set this parameter t' <code>&quot; &quot;</code> (a non empty str'n filled wit' spaces)</td>
 </tr>
 <tr>
 <td><em><strong>&lt;content&gt;</strong></em></td>
@@ -563,7 +562,7 @@
 <h4 id="with-user-defined-color-font-awesome-brand-icon-and-markdown-title-and-content">Wit' User-Defined Color, Font Awesome Brand Ay'con an' Marrrkdown Title an' Rrrambl'n</h4>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">badge</span> <span class="nx">color</span><span class="p">=</span><span class="s">&#34;fuchsia&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;fab fa-hackerrank&#34;</span> <span class="nx">title</span><span class="p">=</span><span class="s">&#34;**Font**&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="o">**</span><span class="nx">Awesome</span><span class="o">**</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">badge</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><span class="badge cstyle default badge-with-title"><span class="badge-title"><i class="fab fa-hackerrank"></i> <strong>Font</strong></span><span class="badge-content" style="background-color: fuchsia;"><strong>Awesome</strong></span></span>
 <h4 id="with-icon-content">Wit' Ay'con Rrrambl'n</h4>
-<p>Ye can combine th' badge wit' th' <a href="../../shortcodes/icon/index.html"><code>ay'con</code> shortcode</a> t' create even more stunn'n visuals.</p>
+<p>Ye can combine th' badge wit' th' <a href="../../pir/shortcodes/icon/index.html"><code>ay'con</code> shortcode</a> t' create even more stunn'n visuals.</p>
 <p>In this case ye need t' declare <code>{{&lt; badge &gt;}}</code> instead o' <code>{{% badge %}}</code>. Avast, that 'n this case it be not poss'ble t' put markdown 'n th' rrrambl'n.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">badge</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;primary&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;angle-double-up&#34;</span> <span class="p">&gt;}}{{</span><span class="o">%</span> <span class="nx">ay'con</span> <span class="nx">skull</span><span class="o">-</span><span class="nx">crossbones</span> <span class="o">%</span><span class="p">}}{{&lt;</span> <span class="o">/</span><span class="nx">badge</span> <span class="p">&gt;}}</span>  
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">badge</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;primary&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;angle-double-up&#34;</span> <span class="p">&gt;}}{{</span><span class="o">%</span> <span class="nx">ay'con</span> <span class="nx">skull</span><span class="o">-</span><span class="nx">crossbones</span> <span class="o">%</span><span class="p">}}</span> <span class="nx">Pirate</span><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">badge</span> <span class="p">&gt;}}</span>  
@@ -591,19 +590,8 @@
 
 
 <p>Th' <code>button</code> shortcode displays a click'ble button wit' adjust'ble color, title an' ay'con.</p>
-<p>
-<span class="btn cstyle transparent">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-  </a>
-</span>
-
-<span class="btn cstyle warning">
-  <a href="https://gohugo.io/" target="_blank">
-    <i class="fa-fw fas fa-dragon"></i>
-    Get Cap'n Hugo
-  </a>
-</span></p>
+<p><span class="btn cstyle interactive transparent"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span></a></span>
+<span class="btn cstyle interactive warning"><a href="https://gohugo.io/" target="_blank"><i class="fa-fw fas fa-dragon"></i> <span class="title">Get Cap'n Hugo</span></a></span></p>
 <h2 id="usage">Usage</h2>
 <p>While th' examples be us'n shorrrtcodes wit' named parameter ye be free t' also call this shortcode from yer own partials.</p>
 
@@ -683,7 +671,7 @@
 <tr>
 <td><strong>ay'con</strong></td>
 <td>see notes</td>
-<td><a href="../../shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title. Depend'n on th' <strong>style</strong> there may be a default ay'con. Any given value will overwrite th' default.<br><br>- fer severity styles: a nice match'n ay'con fer th' severity<br>- fer all other styles: <em>&lt;empty&gt;</em><br><br>If ye want no ay'con fer a severity style, ye have t' set this parameter t' <code>&quot; &quot;</code> (a non empty str'n filled wit' spaces)</td>
+<td><a href="../../pir/shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title. Depend'n on th' <strong>style</strong> there may be a default ay'con. Any given value will overwrite th' default.<br><br>- fer severity styles: a nice match'n ay'con fer th' severity<br>- fer all other styles: <em>&lt;empty&gt;</em><br><br>If ye want no ay'con fer a severity style, ye have t' set this parameter t' <code>&quot; &quot;</code> (a non empty str'n filled wit' spaces)</td>
 </tr>
 <tr>
 <td><strong>iconposit'n</strong></td>
@@ -713,193 +701,57 @@
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;info&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;note&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;tip&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;warning&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p>
-<span class="btn cstyle info">
-  <a href="https://gohugo.io/" target="_blank">
-    <i class="fa-fw fas fa-info-circle"></i>
-    Get Cap'n Hugo
-  </a>
-</span>
-
-<span class="btn cstyle note">
-  <a href="https://gohugo.io/" target="_blank">
-    <i class="fa-fw fas fa-exclamation-circle"></i>
-    Get Cap'n Hugo
-  </a>
-</span>
-
-<span class="btn cstyle tip">
-  <a href="https://gohugo.io/" target="_blank">
-    <i class="fa-fw fas fa-lightbulb"></i>
-    Get Cap'n Hugo
-  </a>
-</span>
-
-<span class="btn cstyle warning">
-  <a href="https://gohugo.io/" target="_blank">
-    <i class="fa-fw fas fa-exclamation-triangle"></i>
-    Get Cap'n Hugo
-  </a>
-</span></p>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;warning&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p><span class="btn cstyle interactive info"><a href="https://gohugo.io/" target="_blank"><i class="fa-fw fas fa-info-circle"></i> <span class="title">Get Cap'n Hugo</span></a></span>
+<span class="btn cstyle interactive note"><a href="https://gohugo.io/" target="_blank"><i class="fa-fw fas fa-exclamation-circle"></i> <span class="title">Get Cap'n Hugo</span></a></span>
+<span class="btn cstyle interactive tip"><a href="https://gohugo.io/" target="_blank"><i class="fa-fw fas fa-lightbulb"></i> <span class="title">Get Cap'n Hugo</span></a></span>
+<span class="btn cstyle interactive warning"><a href="https://gohugo.io/" target="_blank"><i class="fa-fw fas fa-exclamation-triangle"></i> <span class="title">Get Cap'n Hugo</span></a></span></p>
 <h4 id="by-brand-colors">By Brand Colors</h4>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;primary&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;secondary&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;accent&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p>
-<span class="btn cstyle primary">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-  </a>
-</span>
-
-<span class="btn cstyle secondary">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-  </a>
-</span>
-
-<span class="btn cstyle accent">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-  </a>
-</span></p>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;accent&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p><span class="btn cstyle interactive primary"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span></a></span>
+<span class="btn cstyle interactive secondary"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span></a></span>
+<span class="btn cstyle interactive accent"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span></a></span></p>
 <h4 id="by-color">By Color</h4>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;blue&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;green&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;grey&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;orange&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;red&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p>
-<span class="btn cstyle blue">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-  </a>
-</span>
-
-<span class="btn cstyle green">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-  </a>
-</span>
-
-<span class="btn cstyle grey">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-  </a>
-</span>
-
-<span class="btn cstyle orange">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-  </a>
-</span>
-
-<span class="btn cstyle red">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-  </a>
-</span></p>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;red&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p><span class="btn cstyle interactive blue"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span></a></span>
+<span class="btn cstyle interactive green"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span></a></span>
+<span class="btn cstyle interactive grey"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span></a></span>
+<span class="btn cstyle interactive orange"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span></a></span>
+<span class="btn cstyle interactive red"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span></a></span></p>
 <h4 id="by-special-color">By Special Color</h4>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;default&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;transparent&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p>
-<span class="btn cstyle default">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-  </a>
-</span>
-
-<span class="btn cstyle transparent">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-  </a>
-</span></p>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;transparent&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p><span class="btn cstyle interactive default"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span></a></span>
+<span class="btn cstyle interactive transparent"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span></a></span></p>
 <h3 id="icon">Ay'con</h3>
 <h4 id="empty">Empty</h4>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34; &#34;</span> <span class="o">%</span><span class="p">}}{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<span class="btn cstyle transparent">
-  <a href="https://gohugo.io/" target="_blank">
-    
-  </a>
-</span>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34; &#34;</span> <span class="o">%</span><span class="p">}}{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><span class="btn cstyle interactive transparent"><a href="https://gohugo.io/" target="_blank"></a></span>
 <h4 id="only">Only</h4>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;download&#34;</span> <span class="o">%</span><span class="p">}}{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<span class="btn cstyle transparent">
-  <a href="https://gohugo.io/" target="_blank">
-    <i class="fa-fw fas fa-download"></i>
-    
-  </a>
-</span>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;download&#34;</span> <span class="o">%</span><span class="p">}}{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><span class="btn cstyle interactive transparent"><a href="https://gohugo.io/" target="_blank"><i class="fa-fw fas fa-download"></i></a></span>
 <h4 id="to-the-left">T' th' Left</h4>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;download&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<span class="btn cstyle transparent">
-  <a href="https://gohugo.io/" target="_blank">
-    <i class="fa-fw fas fa-download"></i>
-    Get Cap'n Hugo
-  </a>
-</span>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;download&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><span class="btn cstyle interactive transparent"><a href="https://gohugo.io/" target="_blank"><i class="fa-fw fas fa-download"></i> <span class="title">Get Cap'n Hugo</span></a></span>
 <h4 id="to-the-right">T' th' Right</h4>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;download&#34;</span> <span class="nx">iconposit'n</span><span class="p">=</span><span class="s">&#34;right&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<span class="btn cstyle transparent">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo
-    <i class="fa-fw fas fa-download"></i>
-  </a>
-</span>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;download&#34;</span> <span class="nx">iconposit'n</span><span class="p">=</span><span class="s">&#34;right&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><span class="btn cstyle interactive transparent"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo</span> <i class="fa-fw fas fa-download"></i></a></span>
 <h4 id="override-for-severity">Override fer Severity</h4>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;dragon&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;warning&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<span class="btn cstyle warning">
-  <a href="https://gohugo.io/" target="_blank">
-    <i class="fa-fw fas fa-dragon"></i>
-    Get Cap'n Hugo
-  </a>
-</span>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;dragon&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;warning&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><span class="btn cstyle interactive warning"><a href="https://gohugo.io/" target="_blank"><i class="fa-fw fas fa-dragon"></i> <span class="title">Get Cap'n Hugo</span></a></span>
 <h3 id="target">Target</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">target</span><span class="p">=</span><span class="s">&#34;_self&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span> <span class="nx">'n</span> <span class="nx">same</span> <span class="nx">window</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
-</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span> <span class="nx">'n</span> <span class="nx">new</span> <span class="nx">Window</span><span class="o">/</span><span class="nf">Frame</span> <span class="p">(</span><span class="k">default</span><span class="p">){{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p>
-<span class="btn cstyle transparent">
-  <a href="https://gohugo.io/" target="_self">
-    Get Cap'n Hugo 'n same Window/Frame
-  </a>
-</span>
-
-<span class="btn cstyle transparent">
-  <a href="https://gohugo.io/" target="_blank">
-    Get Cap'n Hugo 'n new Window/Frame (default)
-  </a>
-</span></p>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Cap'n Hugo</span> <span class="nx">'n</span> <span class="nx">new</span> <span class="nx">Window</span><span class="o">/</span><span class="nf">Frame</span> <span class="p">(</span><span class="k">default</span><span class="p">){{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p><span class="btn cstyle interactive transparent"><a href="https://gohugo.io/" target="_self"><span class="title">Get Cap'n Hugo 'n same Window/Frame</span></a></span>
+<span class="btn cstyle interactive transparent"><a href="https://gohugo.io/" target="_blank"><span class="title">Get Cap'n Hugo 'n new Window/Frame (default)</span></a></span></p>
 <h3 id="other">Other</h3>
 <h4 id="with-user-defined-color-font-awesome-brand-icon-and-markdown-title">Wit' User-Defined Color, Font Awesome Brand Ay'con an' Marrrkdown Title</h4>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">color</span><span class="p">=</span><span class="s">&#34;fuchsia&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;fab fa-hackerrank&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="o">**</span><span class="nx">Cap'n Hugo</span><span class="o">**</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<span class="btn cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
-  <a href="https://gohugo.io/" target="_blank">
-    <i class="fab fa-hackerrank"></i>
-    Get <strong>Cap'n Hugo</strong>
-  </a>
-</span>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">color</span><span class="p">=</span><span class="s">&#34;fuchsia&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;fab fa-hackerrank&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="o">**</span><span class="nx">Cap'n Hugo</span><span class="o">**</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><span class="btn cstyle interactive default" style="--VARIABLE-BOX-color: fuchsia;"><a href="https://gohugo.io/" target="_blank"><i class="fab fa-hackerrank"></i> <span class="title">Get <strong>Cap'n Hugo</strong></span></a></span>
 <h4 id="severity-style-with-all-defaults">Severity Style wit' All Defaults</h4>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;tip&#34;</span> <span class="o">%</span><span class="p">}}{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<span class="btn cstyle tip">
-  <a href="https://gohugo.io/" target="_blank">
-    <i class="fa-fw fas fa-lightbulb"></i>
-    Smarrrt Arrrse
-  </a>
-</span>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;tip&#34;</span> <span class="o">%</span><span class="p">}}{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><span class="btn cstyle interactive tip"><a href="https://gohugo.io/" target="_blank"><i class="fa-fw fas fa-lightbulb"></i> <span class="title">Smarrrt Arrrse</span></a></span>
 <h4 id="button-to-internal-page">Button t' Internal Plank</h4>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;/index.html&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Home</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<span class="btn cstyle transparent">
-  <a href="../../index.html">
-    Home
-  </a>
-</span>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;/index.html&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Home</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><span class="btn cstyle interactive transparent"><a href="../../pir/index.html"><span class="title">Home</span></a></span>
 <h4 id="button-with-javascript-action">Button wit' JavaScript Act'n</h4>
 <p>If yer JavaScript act'n does not change th' focus afterwards, make sure t' call <code>this.blur()</code> 'n th' end t' unselect th' button.</p>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;primary&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;bullhorn&#34;</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;javascript:alert(&#39;Hello world!&#39;);this.blur();&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Shout</span> <span class="nx">it</span> <span class="nx">out</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<span class="btn cstyle primary">
-  <button onclick="alert(&#39;Hello world!&#39;);this.blur();" type="button">
-    <i class="fa-fw fas fa-bullhorn"></i>
-    Shout it out
-  </button>
-</span>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;primary&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;bullhorn&#34;</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;javascript:alert(&#39;Hello world!&#39;);this.blur();&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Shout</span> <span class="nx">it</span> <span class="nx">out</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><span class="btn cstyle interactive primary"><button onclick="alert(&#39;Hello world!&#39;);this.blur();" type="button"><i class="fa-fw fas fa-bullhorn"></i> <span class="title">Shout it out</span></button></span>
 <h4 id="button-within-a-form-element">Button within a <code>form</code> Element</h4>
-<p>T' use native HTML elements 'n yer Marrrkdown, add this 'n yer <code>config.toml</code></p>
+<p>T' use native HTML elements 'n yer Marrrkdown, add this 'n yer <code>hugo.toml</code></p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">marrrkup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div><div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">act'n</span><span class="o">=</span><span class="s">&#34;../../search.html&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;get&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;search-by-detail&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-by&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;search&#34;</span><span class="p">&gt;</span>
@@ -907,13 +759,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div><form action="../../search.html" method="get">
   <div class="searchform" style="width: 20vw;">
     <input name="search-by-detail" class="search-by" type="search" placeholder="Search...">
-    
-<span class="btn cstyle secondary">
-  <button type="submit">
-    <i class="fa-fw fas fa-search"></i>
-    Search
-  </button>
-</span>
+    <span class="btn cstyle interactive secondary"><button onclick="" type="submit"><i class="fa-fw fas fa-search"></i> <span class="title">Search</span></button></span>
   </div>
 </form>
 
@@ -932,10 +778,10 @@
 
 <ul class="children children-li children-sort-weight">
 	
-<li><a href="../../shortcodes/children/test/index.html">plank X</a></li>
-<li><a href="../../shortcodes/children/children-1/index.html">plank 1</a></li>
-<li><a href="../../shortcodes/children/children-2/index.html">plank 2</a></li>
-<li><a href="../../shortcodes/children/children-3/index.html">plank 3</a></li>
+<li><a href="../../pir/shortcodes/children/test/index.html">plank X</a></li>
+<li><a href="../../pir/shortcodes/children/children-1/index.html">plank 1</a></li>
+<li><a href="../../pir/shortcodes/children/children-2/index.html">plank 2</a></li>
+<li><a href="../../pir/shortcodes/children/children-3/index.html">plank 3</a></li>
 </ul>
 <h2 id="usage">Usage</h2>
 <p>While th' examples be us'n shorrrtcodes wit' named parameter ye be free t' also call this shortcode from yer own partials.</p>
@@ -1016,7 +862,7 @@
 <tr>
 <td><strong>sort</strong></td>
 <td><code>auto</code></td>
-<td>Th' sort criteria o' th' displayed list.<br><br>- <code>auto</code> defaults t' <a href="../../cont/pages/index.html#frontmatter-configuration"><code>ordersectionsby</code> o' th' planks frontmatter</a><br>    or t' <a href="../../basics/configuration/index.html"><code>ordersectionsby</code> o' th' ship configurat'n</a><br>    or t' <code>weight</code><br>- <code>weight</code><br>- <code>title</code><br>- <code>linktitle</code><br>- <code>modifieddate</code><br>- <code>expirydate</code><br>- <code>publishdate</code><br>- <code>date</code><br>- <code>length</code><br>- <code>default</code> adher'n t' Hugo&rsquo;s default sort criteria</td>
+<td>Th' sort criteria o' th' displayed list.<br><br>- <code>auto</code> defaults t' <a href="../../pir/cont/frontmatter/index.html"><code>ordersectionsby</code> o' th' planks frontmatter</a><br>    or t' <a href="../../pir/basics/configuration/index.html"><code>ordersectionsby</code> o' th' ship configurat'n</a><br>    or t' <code>weight</code><br>- <code>weight</code><br>- <code>title</code><br>- <code>linktitle</code><br>- <code>modifieddate</code><br>- <code>expirydate</code><br>- <code>publishdate</code><br>- <code>date</code><br>- <code>length</code><br>- <code>default</code> adher'n t' Hugo&rsquo;s default sort criteria</td>
 </tr>
 </tbody>
 </table>
@@ -1025,95 +871,95 @@
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">children</span>  <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <ul class="children children-li children-sort-">
 	
-<li><a href="../../shortcodes/children/test/index.html">plank X</a></li>
-<li><a href="../../shortcodes/children/children-1/index.html">plank 1</a></li>
-<li><a href="../../shortcodes/children/children-2/index.html">plank 2</a></li>
-<li><a href="../../shortcodes/children/children-3/index.html">plank 3</a></li>
+<li><a href="../../pir/shortcodes/children/test/index.html">plank X</a></li>
+<li><a href="../../pir/shortcodes/children/children-1/index.html">plank 1</a></li>
+<li><a href="../../pir/shortcodes/children/children-2/index.html">plank 2</a></li>
+<li><a href="../../pir/shortcodes/children/children-3/index.html">plank 3</a></li>
 </ul>
 <h3 id="with-description">Wit' Descript'n</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">children</span> <span class="nx">descript'n</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <ul class="children children-li children-sort-">
 	
-<li><a href="../../shortcodes/children/test/index.html">plank X</a><p>This be a plain plank test, an' th' beginn'n o' a YAML multiline descript'n...
+<li><a href="../../pir/shortcodes/children/test/index.html">plank X</a><p>This be a plain plank test, an' th' beginn'n o' a YAML multiline descript'n...
 </p></li>
-<li><a href="../../shortcodes/children/children-1/index.html">plank 1</a><p>This be a demo child plank</p></li>
-<li><a href="../../shortcodes/children/children-2/index.html">plank 2</a><p>This be a demo child plank wit' no descript'n.
+<li><a href="../../pir/shortcodes/children/children-1/index.html">plank 1</a><p>This be a demo child plank</p></li>
+<li><a href="../../pir/shortcodes/children/children-2/index.html">plank 2</a><p>This be a demo child plank wit' no descript'n.
 So its rrrambl'n be used as descript'n.</p></li>
-<li><a href="../../shortcodes/children/children-3/index.html">plank 3</a><p>This be a demo child plank</p></li>
+<li><a href="../../pir/shortcodes/children/children-3/index.html">plank 3</a><p>This be a demo child plank</p></li>
 </ul>
 <h3 id="infinite-depth-and-hidden-pages">Infinite Depth an' Hidden Planks</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">children</span> <span class="nx">depth</span><span class="p">=</span><span class="s">&#34;999&#34;</span> <span class="nx">showhidden</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <ul class="children children-li children-sort-">
 	
-<li><a href="../../shortcodes/children/test/index.html">plank X</a><ul>
+<li><a href="../../pir/shortcodes/children/test/index.html">plank X</a><ul>
 	</ul></li>
-<li><a href="../../shortcodes/children/children-1/index.html">plank 1</a><ul>
+<li><a href="../../pir/shortcodes/children/children-1/index.html">plank 1</a><ul>
 	
-<li><a href="../../shortcodes/children/children-1/children-1-1/index.html">plank 1-1</a><ul>
+<li><a href="../../pir/shortcodes/children/children-1/children-1-1/index.html">plank 1-1</a><ul>
 	
-<li><a href="../../shortcodes/children/children-1/children-1-1/children-1-1-1/index.html">plank 1-1-1 (hidden)</a><ul>
+<li><a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-1/index.html">plank 1-1-1 (hidden)</a><ul>
 	
-<li><a href="../../shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/index.html">plank 1-1-1-1</a><ul>
+<li><a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/index.html">plank 1-1-1-1</a><ul>
 	
-<li><a href="../../shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/index.html">plank 1-1-1-1-1 (hidden)</a><ul>
+<li><a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/index.html">plank 1-1-1-1-1 (hidden)</a><ul>
 	
-<li><a href="../../shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/children-1-1-1-1-1-1/index.html">plank 1-1-1-1-1-1</a><ul>
+<li><a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/children-1-1-1-1-1-1/index.html">plank 1-1-1-1-1-1</a><ul>
 	</ul></li></ul></li></ul></li></ul></li>
 <li><span>plank 1-1-2 (headless)</span><ul>
 	
-<li><a href="../../shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/index.html">plank 1-1-2-1</a><ul>
+<li><a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/index.html">plank 1-1-2-1</a><ul>
 	</ul></li>
-<li><a href="../../shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/index.html">plank 1-1-2-2</a><ul>
+<li><a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/index.html">plank 1-1-2-2</a><ul>
 	</ul></li></ul></li>
-<li><a href="../../shortcodes/children/children-1/children-1-1/children-1-1-3/index.html">plank 1-1-3</a><ul>
+<li><a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-3/index.html">plank 1-1-3</a><ul>
 	</ul></li></ul></li></ul></li>
-<li><a href="../../shortcodes/children/children-2/index.html">plank 2</a><ul>
+<li><a href="../../pir/shortcodes/children/children-2/index.html">plank 2</a><ul>
 	</ul></li>
-<li><a href="../../shortcodes/children/children-3/index.html">plank 3</a><ul>
+<li><a href="../../pir/shortcodes/children/children-3/index.html">plank 3</a><ul>
 	
-<li><a href="../../shortcodes/children/children-3/test3/index.html">plank 3-1</a><ul>
+<li><a href="../../pir/shortcodes/children/children-3/test3/index.html">plank 3-1</a><ul>
 	</ul></li></ul></li>
-<li><a href="../../shortcodes/children/children-4/index.html">plank 4 (hidden)</a><ul>
+<li><a href="../../pir/shortcodes/children/children-4/index.html">plank 4 (hidden)</a><ul>
 	</ul></li>
 </ul>
 <h3 id="heading-styles-for-container-and-elements">Head'n Styles fer Container an' Elements</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">children</span> <span class="nx">containerstyle</span><span class="p">=</span><span class="s">&#34;div&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;h2&#34;</span> <span class="nx">depth</span><span class="p">=</span><span class="s">&#34;3&#34;</span> <span class="nx">descript'n</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="children children-h2 children-sort-">
 	
-<h2><a href="../../shortcodes/children/test/index.html">plank X</a></h2><p>This be a plain plank test, an' th' beginn'n o' a YAML multiline descript'n...
+<h2><a href="../../pir/shortcodes/children/test/index.html">plank X</a></h2><p>This be a plain plank test, an' th' beginn'n o' a YAML multiline descript'n...
 </p>
 	
-<h2><a href="../../shortcodes/children/children-1/index.html">plank 1</a></h2><p>This be a demo child plank</p>
+<h2><a href="../../pir/shortcodes/children/children-1/index.html">plank 1</a></h2><p>This be a demo child plank</p>
 	
-<h3><a href="../../shortcodes/children/children-1/children-1-1/index.html">plank 1-1</a></h3><p>This be a demo child plank</p>
+<h3><a href="../../pir/shortcodes/children/children-1/children-1-1/index.html">plank 1-1</a></h3><p>This be a demo child plank</p>
 	
 <h4><span>plank 1-1-2 (headless)</span></h4><p>This be a demo child plank</p>
-<h4><a href="../../shortcodes/children/children-1/children-1-1/children-1-1-3/index.html">plank 1-1-3</a></h4><p>This be a demo child plank</p>
-<h2><a href="../../shortcodes/children/children-2/index.html">plank 2</a></h2><p>This be a demo child plank wit' no descript'n.
+<h4><a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-3/index.html">plank 1-1-3</a></h4><p>This be a demo child plank</p>
+<h2><a href="../../pir/shortcodes/children/children-2/index.html">plank 2</a></h2><p>This be a demo child plank wit' no descript'n.
 So its rrrambl'n be used as descript'n.</p>
 	
-<h2><a href="../../shortcodes/children/children-3/index.html">plank 3</a></h2><p>This be a demo child plank</p>
+<h2><a href="../../pir/shortcodes/children/children-3/index.html">plank 3</a></h2><p>This be a demo child plank</p>
 	
-<h3><a href="../../shortcodes/children/children-3/test3/index.html">plank 3-1</a></h3><p>This be a plain plank test nested 'n a parent</p>
+<h3><a href="../../pir/shortcodes/children/children-3/test3/index.html">plank 3-1</a></h3><p>This be a plain plank test nested 'n a parent</p>
 	
 </div>
 <h3 id="divs-for-group-and-element-styles">Divs fer Group an' Element Styles</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">children</span> <span class="nx">containerstyle</span><span class="p">=</span><span class="s">&#34;div&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;div&#34;</span> <span class="nx">depth</span><span class="p">=</span><span class="s">&#34;3&#34;</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="children children-div children-sort-">
 	
-<div><a href="../../shortcodes/children/test/index.html">plank X</a></div>
+<div><a href="../../pir/shortcodes/children/test/index.html">plank X</a></div>
 	
-<div><a href="../../shortcodes/children/children-1/index.html">plank 1</a></div>
+<div><a href="../../pir/shortcodes/children/children-1/index.html">plank 1</a></div>
 	
-<div><a href="../../shortcodes/children/children-1/children-1-1/index.html">plank 1-1</a></div>
+<div><a href="../../pir/shortcodes/children/children-1/children-1-1/index.html">plank 1-1</a></div>
 	
 <div><span>plank 1-1-2 (headless)</span></div>
-<div><a href="../../shortcodes/children/children-1/children-1-1/children-1-1-3/index.html">plank 1-1-3</a></div>
-<div><a href="../../shortcodes/children/children-2/index.html">plank 2</a></div>
+<div><a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-3/index.html">plank 1-1-3</a></div>
+<div><a href="../../pir/shortcodes/children/children-2/index.html">plank 2</a></div>
 	
-<div><a href="../../shortcodes/children/children-3/index.html">plank 3</a></div>
+<div><a href="../../pir/shortcodes/children/children-3/index.html">plank 3</a></div>
 	
-<div><a href="../../shortcodes/children/children-3/test3/index.html">plank 3-1</a></div>
+<div><a href="../../pir/shortcodes/children/children-3/test3/index.html">plank 3-1</a></div>
 	
 </div>
 
@@ -1147,7 +993,7 @@ So its rrrambl'n be used as descript'n.</p>
 <div class=" taxonomy-tags term-list cstyle  tags" title="Tag-a-taggs" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
     <li><a class="term-link" href="../../pir/tags/children/index.html">Children</a></li>
-    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">non-hidden</a></li>
+    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">Non-Hidden</a></li>
   </ul>
 </div>
             </header>
@@ -1159,7 +1005,7 @@ So its rrrambl'n be used as descript'n.</p>
 
 <ul class="children children-li children-sort-">
 	
-<li><a href="../../shortcodes/children/children-1/children-1-1/index.html">plank 1-1</a></li>
+<li><a href="../../pir/shortcodes/children/children-1/children-1-1/index.html">plank 1-1</a></li>
 </ul>
 
 
@@ -1174,21 +1020,21 @@ So its rrrambl'n be used as descript'n.</p>
 <div class=" taxonomy-tags term-list cstyle  tags" title="Tag-a-taggs" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
     <li><a class="term-link" href="../../pir/tags/children/index.html">Children</a></li>
-    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">non-hidden</a></li>
+    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">Non-Hidden</a></li>
   </ul>
 </div>
             </header>
 <h1 id="plank-1-1">plank 1-1</h1>
 
 
-<p>This be a demo child plank wit' a hidden child. Ye can still access th' hidden child <a href="../../shortcodes/children/children-1/children-1-1/children-1-1-1/index.html">directly</a> or via th' search.</p>
+<p>This be a demo child plank wit' a hidden child. Ye can still access th' hidden child <a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-1/index.html">directly</a> or via th' search.</p>
 <h2 id="subpages-of-this-page">Subpages o' this plank</h2>
 
 <ul class="children children-li children-sort-">
 	
-<li><a href="../../shortcodes/children/children-1/children-1-1/children-1-1-1/index.html">plank 1-1-1 (hidden)</a></li>
+<li><a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-1/index.html">plank 1-1-1 (hidden)</a></li>
 <li><span>plank 1-1-2 (headless)</span></li>
-<li><a href="../../shortcodes/children/children-1/children-1-1/children-1-1-3/index.html">plank 1-1-3</a></li>
+<li><a href="../../pir/shortcodes/children/children-1/children-1-1/children-1-1-3/index.html">plank 1-1-3</a></li>
 </ul>
 
 
@@ -1203,8 +1049,7 @@ So its rrrambl'n be used as descript'n.</p>
 <div class=" taxonomy-tags term-list cstyle  tags" title="Tag-a-taggs" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
     <li><a class="term-link" href="../../pir/tags/children/index.html">Children</a></li>
-    <li><a class="term-link" href="../../pir/tags/headless/index.html">headless</a></li>
-    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">non-hidden</a></li>
+    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">Non-Hidden</a></li>
   </ul>
 </div>
             </header>
@@ -1222,7 +1067,7 @@ So its rrrambl'n be used as descript'n.</p>
 <div class=" taxonomy-tags term-list cstyle  tags" title="Tag-a-taggs" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
     <li><a class="term-link" href="../../pir/tags/children/index.html">Children</a></li>
-    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">non-hidden</a></li>
+    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">Non-Hidden</a></li>
   </ul>
 </div>
             </header>
@@ -1241,7 +1086,7 @@ So its rrrambl'n be used as descript'n.</p>
 <div class=" taxonomy-tags term-list cstyle  tags" title="Tag-a-taggs" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
     <li><a class="term-link" href="../../pir/tags/children/index.html">Children</a></li>
-    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">non-hidden</a></li>
+    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">Non-Hidden</a></li>
   </ul>
 </div>
             </header>
@@ -1261,7 +1106,7 @@ So its rrrambl'n be used as descript'n.</p>
 <div class=" taxonomy-tags term-list cstyle  tags" title="Tag-a-taggs" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
     <li><a class="term-link" href="../../pir/tags/children/index.html">Children</a></li>
-    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">non-hidden</a></li>
+    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">Non-Hidden</a></li>
   </ul>
 </div>
             </header>
@@ -1282,7 +1127,7 @@ So its rrrambl'n be used as descript'n.</p>
 <div class=" taxonomy-tags term-list cstyle  tags" title="Tag-a-taggs" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
     <li><a class="term-link" href="../../pir/tags/children/index.html">Children</a></li>
-    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">non-hidden</a></li>
+    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">Non-Hidden</a></li>
   </ul>
 </div>
             </header>
@@ -1302,7 +1147,7 @@ So its rrrambl'n be used as descript'n.</p>
 <div class=" taxonomy-tags term-list cstyle  tags" title="Tag-a-taggs" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
     <li><a class="term-link" href="../../pir/tags/children/index.html">Children</a></li>
-    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">non-hidden</a></li>
+    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">Non-Hidden</a></li>
   </ul>
 </div>
             </header>
@@ -1314,7 +1159,7 @@ So its rrrambl'n be used as descript'n.</p>
 
 <ul class="children children-li children-sort-">
 	
-<li><a href="../../shortcodes/children/children-3/test3/index.html">plank 3-1</a></li>
+<li><a href="../../pir/shortcodes/children/children-3/test3/index.html">plank 3-1</a></li>
 </ul>
 
 
@@ -1329,7 +1174,7 @@ So its rrrambl'n be used as descript'n.</p>
 <div class=" taxonomy-tags term-list cstyle  tags" title="Tag-a-taggs" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
     <li><a class="term-link" href="../../pir/tags/children/index.html">Children</a></li>
-    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">non-hidden</a></li>
+    <li><a class="term-link" href="../../pir/tags/non-hidden/index.html">Non-Hidden</a></li>
   </ul>
 </div>
             </header>
@@ -1354,13 +1199,13 @@ So its rrrambl'n be used as descript'n.</p>
 <p>Th' <code>expand</code> shortcode displays an expandable/collaps'ble section o' text.</p>
 
 <div class="expand">
-    <input type="checkbox" id="R-expand-51c043bc27deb63111c91f620845c708" aria-controls="R-expandcontent-51c043bc27deb63111c91f620845c708" >
-    <label class="expand-label" for="R-expand-51c043bc27deb63111c91f620845c708" >
+    <input type="checkbox" id="R-expand-66c12e110b3ce41737d8be597c82e414" aria-controls="R-expandcontent-66c12e110b3ce41737d8be597c82e414" >
+    <label class="expand-label" for="R-expand-66c12e110b3ce41737d8be597c82e414" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-51c043bc27deb63111c91f620845c708" class="expand-content">
+    <div id="R-expandcontent-66c12e110b3ce41737d8be597c82e414" class="expand-content">
 
 <p>Thank ye!</p>
 <p>That&rsquo;s some text wit' a footnote<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
@@ -1478,26 +1323,26 @@ So its rrrambl'n be used as descript'n.</p>
 <h3 id="all-defaults">All Defaults</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Yes</span><span class="p">,</span> <span class="nx">ye</span> <span class="nx">did</span> <span class="nx">it</span><span class="p">!{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-6a3c7a5e265d38cdf292a0e138205cdc" aria-controls="R-expandcontent-6a3c7a5e265d38cdf292a0e138205cdc" >
-    <label class="expand-label" for="R-expand-6a3c7a5e265d38cdf292a0e138205cdc" >
+    <input type="checkbox" id="R-expand-da283dc216748c082a7c444ec103c458" aria-controls="R-expandcontent-da283dc216748c082a7c444ec103c458" >
+    <label class="expand-label" for="R-expand-da283dc216748c082a7c444ec103c458" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-6a3c7a5e265d38cdf292a0e138205cdc" class="expand-content">
+    <div id="R-expandcontent-da283dc216748c082a7c444ec103c458" class="expand-content">
 <p>
 Yes, ye did it!</div>
 </div>
 <h3 id="initially-expanded">Initially Expanded</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="nx">title</span><span class="p">=</span><span class="s">&#34;Expand me...&#34;</span> <span class="nx">open</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">No</span> <span class="nx">need</span> <span class="nx">t'</span> <span class="nx">press</span> <span class="nx">ye</span><span class="p">!{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-8abe3105622d96d463004df1621926db" aria-controls="R-expandcontent-8abe3105622d96d463004df1621926db"  checked>
-    <label class="expand-label" for="R-expand-8abe3105622d96d463004df1621926db" >
+    <input type="checkbox" id="R-expand-1172896127b95eaeea367fc9bd49d570" aria-controls="R-expandcontent-1172896127b95eaeea367fc9bd49d570"  checked>
+    <label class="expand-label" for="R-expand-1172896127b95eaeea367fc9bd49d570" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Expand me&hellip;
     </label>
-    <div id="R-expandcontent-8abe3105622d96d463004df1621926db" class="expand-content">
+    <div id="R-expandcontent-1172896127b95eaeea367fc9bd49d570" class="expand-content">
 <p>
 No need t' press ye!</div>
 </div>
@@ -1518,13 +1363,13 @@ No need t' press ye!</div>
 </span></span><span class="line"><span class="cl"><span class="p">&gt;</span> <span class="nx">th'</span> <span class="nx">possibilities</span> <span class="nx">be</span> <span class="nf">endless</span> <span class="p">(</span><span class="nx">almost</span> <span class="o">-</span> <span class="nx">includ'n</span> <span class="nx">other</span> <span class="nx">shorrrtcodes</span> <span class="nx">may</span> <span class="nx">or</span> <span class="nx">may</span> <span class="nx">not</span> <span class="nx">work</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
 <div class="expand">
-    <input type="checkbox" id="R-expand-1819e3d60a67daa8e8871551ae34f473" aria-controls="R-expandcontent-1819e3d60a67daa8e8871551ae34f473" >
-    <label class="expand-label" for="R-expand-1819e3d60a67daa8e8871551ae34f473" >
+    <input type="checkbox" id="R-expand-c99bae7bfb49c1bc006f3682092073e7" aria-controls="R-expandcontent-c99bae7bfb49c1bc006f3682092073e7" >
+    <label class="expand-label" for="R-expand-c99bae7bfb49c1bc006f3682092073e7" >
         <i class="fas fa-chevron-down"></i>
         <i class="fas fa-chevron-right"></i>
         Show me almost <strong>endless</strong> possibilities
     </label>
-    <div id="R-expandcontent-1819e3d60a67daa8e8871551ae34f473" class="expand-content">
+    <div id="R-expandcontent-c99bae7bfb49c1bc006f3682092073e7" class="expand-content">
 
 <p>Ye can add standard markdown rules:</p>
 <ul>
@@ -1561,13 +1406,13 @@ No need t' press ye!</div>
 <p>Th' <code>highlight</code> shortcode renders yer code wit' a rules highlighter.</p>
 
   
-<div class="tab-panel" data-tab-group="56cc43a4582e81774ef3bb90a1048dee">
+<div class="tab-panel" data-tab-group="dfd26f01a5c2b0124e85c9b68a0ac85c">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="python"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('56cc43a4582e81774ef3bb90a1048dee','python')"
+      onclick="switchTab('dfd26f01a5c2b0124e85c9b68a0ac85c','python')"
     >
       <span class="tab-nav-text">python</span>
     </button>
@@ -1704,13 +1549,13 @@ No need t' press ye!</div>
 <td><strong>title</strong></td>
 <td></td>
 <td><em>&lt;empty&gt;</em></td>
-<td><strong>Extension</strong>. Arbitrary title fer code. This displays th' code like a <a href="../../shortcodes/tab/index.html">single tab</a> if <code>hl_inline=false</code> (which be Hugos default).</td>
+<td><strong>Extension</strong>. Arbitrary title fer code. This displays th' code like a <a href="../../pir/shortcodes/tab/index.html">single tab</a> if <code>hl_inline=false</code> (which be Hugos default).</td>
 </tr>
 <tr>
 <td><strong>wrap</strong></td>
 <td></td>
 <td>see notes</td>
-<td><strong>Extension</strong>. When <code>true</code> th' rrrambl'n may wrap on long lines otherwise it will be scroll'ble.<br><br>Th' default value can be set 'n yer <code>config.toml</code> an' overwritten via frontmatter. <a href="#configuration">See below</a>.</td>
+<td><strong>Extension</strong>. When <code>true</code> th' rrrambl'n may wrap on long lines otherwise it will be scroll'ble.<br><br>Th' default value can be set 'n yer <code>hugo.toml</code> an' overwritten via frontmatter. <a href="../../pir/shortcodes/highlight/index.html#configuration">See below</a>.</td>
 </tr>
 <tr>
 <td><strong>opt'ns</strong></td>
@@ -1733,9 +1578,10 @@ No need t' press ye!</div>
 </tbody>
 </table>
 <h2 id="configuration">Configurat'n</h2>
-<p>Default values fer <a href="https://gohugo.io/functions/highlight/#options" target="_blank">Hugo&rsquo;s supported opt'ns</a> can be set via <a href="https://gohugo.io/getting-started/configuration-markup/#highlight" target="_blank">goldmark sett'ns</a> 'n yer <code>config.toml</code></p>
-<p>Default values fer extension opt'ns can be set via params sett'ns 'n yer <code>config.toml</code> or be overwritten by frontmatter fer each individual plank.</p>
+<p>Default values fer <a href="https://gohugo.io/functions/highlight/#options" target="_blank">Hugo&rsquo;s supported opt'ns</a> can be set via <a href="https://gohugo.io/getting-started/configuration-markup/#highlight" target="_blank">goldmark sett'ns</a> 'n yer <code>hugo.toml</code></p>
+<p>Default values fer extension opt'ns can be set via params sett'ns 'n yer <code>hugo.toml</code> or be overwritten by frontmatter fer each individual plank.</p>
 <h3 id="global-configuration-file">Global Configurat'n File</h3>
+<p>Ye can configure th' color style used fer code blocks 'n yer <a href="../../pir/basics/branding/index.html#syntax-highlightning">color variants stylesheet</a> file.</p>
 <h4 id="recommended-settings">Recommended Sett'ns</h4>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">marrrkup</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">marrrkup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
@@ -1743,16 +1589,15 @@ No need t' press ye!</div>
 </span></span><span class="line"><span class="cl">    <span class="c"># use inline; besides that visually both layouts have th' same look an' behavior</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">lineNumbersInT'ble</span> <span class="p">=</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c"># if `guessSyntax = true`, there will be no unstyled code even if no language</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># was given BUT Merrrmaid an' Math codefences will not work anymore! So this be a</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># mandatory sett'n fer yer ship if ye want t' use Merrrmaid or Math codefences</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">guessSyntax</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c"># th' shipped variants come wit' their own modified chroma rules highlightn'n</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># style which be imported 'n theme-relearn-light.css, theme-relearn-dark.css, etc.;</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># if ye want t' use a predefined style instead:</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># stylesheets which be linked 'n yer generated HTML planks; ye can use Cap'n Hugo t' generate</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># own stylesheets t' yer lik'n an' use them 'n yer variant;</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># if ye want t' use Hugo&#39;s internal styles instead o' th' shipped stylesheets:</span>
 </span></span><span class="line"><span class="cl">    <span class="c"># - remove `noClasses` or set `noClasses = true`</span>
 </span></span><span class="line"><span class="cl">    <span class="c"># - set `style` t' a predefined style name</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># note: wit' us'n th' internal styles, th' `--CODE-theme` sett'n 'n yer variant</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># stylesheet will be ignored an' th' internal style be used fer all variants an'</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># even print</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">noClasses</span> <span class="p">=</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">    <span class="c"># style = &#34;tango&#34;</span></span></span></code></pre></div><h4 id="optional-settings">Optional Sett'ns</h4>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
@@ -1761,7 +1606,7 @@ No need t' press ye!</div>
 </span></span><span class="line"><span class="cl"><span class="nx">highlightWrap</span> <span class="p">=</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><h2 id="examples">Examples</h2>
 <h3 id="line-numbers-with-starting-offset">Line Numbers wit' Start'n Offset</h3>
-<p>As mentioned above, line numbers 'n a <code>t'ble</code> layout will shift if code be wrapp'n, so better use <code>inline</code>. T' make th'ns easier fer ye, set <code>lineNumbersInT'ble = false</code> 'n yer <code>config.toml</code> an' add <code>lineNos = true</code> when call'n th' shortcode instead o' th' specific values <code>t'ble</code> or <code>inline</code>.</p>
+<p>As mentioned above, line numbers 'n a <code>t'ble</code> layout will shift if code be wrapp'n, so better use <code>inline</code>. T' make th'ns easier fer ye, set <code>lineNumbersInT'ble = false</code> 'n yer <code>hugo.toml</code> an' add <code>lineNos = true</code> when call'n th' shortcode instead o' th' specific values <code>t'ble</code> or <code>inline</code>.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">highlight</span> <span class="nx">lineNos</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="nx">lineNoStart</span><span class="p">=</span><span class="s">&#34;666&#34;</span> <span class="kd">type</span><span class="p">=</span><span class="s">&#34;py&#34;</span> <span class="p">&gt;}}</span>
 </span></span><span class="line"><span class="cl"><span class="err">#</span> <span class="nx">th'</span> <span class="nx">hardest</span> <span class="nx">part</span> <span class="nx">be</span> <span class="nx">t'</span> <span class="nx">start</span> <span class="nx">writ'n</span> <span class="nx">code</span><span class="p">;</span> <span class="nx">here</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">a</span> <span class="nx">kickstart</span><span class="p">;</span> <span class="nx">just</span> <span class="nx">copy</span> <span class="nx">an'</span> <span class="nx">paste</span> <span class="nx">this</span><span class="p">;</span> <span class="nx">it</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">free</span><span class="p">;</span> <span class="nx">th'</span> <span class="nx">next</span> <span class="nx">lines</span> <span class="nx">will</span> <span class="nx">cost</span> <span class="nx">ye</span> <span class="nx">serious</span> <span class="nx">credits</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">)</span>
@@ -1779,13 +1624,13 @@ No need t' press ye!</div>
 </span></span></span><span class="line"><span class="cl"><span class="gh"></span>print(&#34;Hello World!&#34;)
 </span></span><span class="line"><span class="cl">```</span></span></code></pre></div>
   
-<div class="tab-panel" data-tab-group="8e7808e2c2727269f0d14acc43ddf4b7">
+<div class="tab-panel" data-tab-group="f2e67cd4b75f76ca41c18ae23da5076d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="python"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('8e7808e2c2727269f0d14acc43ddf4b7','python')"
+      onclick="switchTab('f2e67cd4b75f76ca41c18ae23da5076d','python')"
     >
       <span class="tab-nav-text">python</span>
     </button>
@@ -1914,7 +1759,7 @@ No need t' press ye!</div>
 <td><strong>ay'con</strong></td>
 <td>1</td>
 <td><em>&lt;empty&gt;</em></td>
-<td><a href="#finding-an-icon">Font Awesome ay'con name</a> t' be displayed. It will be displayed 'n th' text color o' its accord'n context.</td>
+<td><a href="../../pir/shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> t' be displayed. It will be displayed 'n th' text color o' its accord'n context.</td>
 </tr>
 </tbody>
 </table>
@@ -1936,7 +1781,7 @@ No need t' press ye!</div>
 <h3 id="advanced-html-usage">Advanced HTML Usage</h3>
 <p>While th' shortcode simplifies us'n standard ay'cons, th' ay'con customizat'n an' other advanced features o' th' Font Awesome library require ye t' use HTML directly. Paste th' <code>&lt;i&gt;</code> HTML into marrrkup, an' Font Awesome will board th' relevant ay'con.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Built wit' <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-heart&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> by Relearrrn an' Cap'n Hugo</span></span></code></pre></div><p>Built wit' <i class="fas fa-heart"></i> by Relearrrn an' Cap'n Hugo</p>
-<p>T' use these native HTML elements 'n yer Marrrkdown, add this 'n yer <code>config.toml</code>:</p>
+<p>T' use these native HTML elements 'n yer Marrrkdown, add this 'n yer <code>hugo.toml</code>:</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">marrrkup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div>
 
@@ -2089,14 +1934,6 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
 <p>While th' examples be us'n shorrrtcodes wit' named parameter it be recommended t' use codefences instead. This be because more an' more other software supports Math codefences (eg. GitHub) an' so yer markdown becomes more port'ble.</p>
 <p>Ye be free t' also call this shortcode from yer own partials.</p>
 
-<div class="box notices cstyle note">
-  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Avast</div>
-  <div class="box-content">
-
-<p>T' use codefence rules ye have t' turn off <code>guessSyntax</code> fer th' <code>marrrkup.highlight</code> sett'n (<a href="#configuration">see th' configurat'n section</a>).</p>
-</div>
-</div>
-
 <div class="tab-panel" data-tab-group="shortcode-parameter">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
@@ -2177,27 +2014,12 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
 </tbody>
 </table>
 <h2 id="configuration">Configurat'n</h2>
-<p>MathJax be configured wit' default sett'ns. Ye can cust'mize MathJax&rsquo;s default sett'ns fer all o' yer files thru a JSON object 'n yer <code>config.toml</code> or override these sett'ns per plank thru yer planks frontmatter.</p>
-<p>Th' JSON object o' yer <code>config.toml</code> / frontmatter be forwarded into MathJax&rsquo;s configurat'n object.</p>
+<p>MathJax be configured wit' default sett'ns. Ye can cust'mize MathJax&rsquo;s default sett'ns fer all o' yer files thru a JSON object 'n yer <code>hugo.toml</code> or override these sett'ns per plank thru yer planks frontmatter.</p>
+<p>Th' JSON object o' yer <code>hugo.toml</code> / frontmatter be forwarded into MathJax&rsquo;s configurat'n object.</p>
 <p>See <a href="https://docs.mathjax.org/en/latest/options/index.html" target="_blank">MathJax documentat'n</a> fer all allowed sett'ns.</p>
-
-<div class="box notices cstyle note">
-  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Avast</div>
-  <div class="box-content">
-
-<p>T' use codefence rules ye have t' turn off <code>guessSyntax</code> fer th' <code>marrrkup.highlight</code> sett'n.</p>
-</div>
-</div>
 <h3 id="global-configuration-file">Global Configurat'n File</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">mathJaxInitialize</span> <span class="p">=</span> <span class="s2">&#34;{ \&#34;chtml\&#34;: { \&#34;displayAlign\&#34;: \&#34;left\&#34; } }&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">marrrkup</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">marrrkup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># if `guessSyntax = true`, there will be no unstyled code even if no language</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># was given BUT Merrrmaid an' Math codefences will not work anymore! So this be a</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># mandatory sett'n fer yer ship if ye want t' use Math codefences</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">guessSyntax</span> <span class="p">=</span> <span class="kc">false</span></span></span></code></pre></div><h3 id="pages-frontmatter">Page&rsquo;s Frontmatter</h3>
+</span></span><span class="line"><span class="cl">  <span class="nx">mathJaxInitialize</span> <span class="p">=</span> <span class="s2">&#34;{ \&#34;chtml\&#34;: { \&#34;displayAlign\&#34;: \&#34;left\&#34; } }&#34;</span></span></span></code></pre></div><h3 id="pages-frontmatter">Page&rsquo;s Frontmatter</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
 </span></span><span class="line"><span class="cl"><span class="nx">mathJaxInitialize</span> <span class="p">=</span> <span class="s2">&#34;{ \&#34;chtml\&#34;: { \&#34;displayAlign\&#34;: \&#34;left\&#34; } }&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><h2 id="examples">Examples</h2>
@@ -2263,14 +2085,6 @@ graph LR;
 <h2 id="usage">Usage</h2>
 <p>While th' examples be us'n shorrrtcodes wit' named parameter it be recommended t' use codefences instead. This be because more an' more other software supports Merrrmaid codefences (eg. GitHub) an' so yer markdown becomes more port'ble.</p>
 <p>Ye be free t' also call this shortcode from yer own partials.</p>
-
-<div class="box notices cstyle note">
-  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Avast</div>
-  <div class="box-content">
-
-<p>T' use codefence rules ye have t' turn off <code>guessSyntax</code> fer th' <code>marrrkup.highlight</code> sett'n (<a href="#configuration">see th' configurat'n section</a>).</p>
-</div>
-</div>
 
 <div class="tab-panel" data-tab-group="shortcode-parameter">
   <div class="tab-nav">
@@ -2353,7 +2167,7 @@ graph LR;
 <tr>
 <td><strong>zoom</strong></td>
 <td>see notes</td>
-<td>Whether th' graph be pan- an' zoom'ble.<br><br>If not set th' value be determined by th' <code>mermaidZoom</code> sett'n o' th' <a href="#global-configuration-file">ship</a> or th' <a href="#pages-frontmatter">planks frontmatter</a> or <code>false</code> if not set at all.<br><br>- <code>false</code>: no pan or zoom<br>- <code>true</code>: pan an' zoom active</td>
+<td>Whether th' graph be pan- an' zoom'ble.<br><br>If not set th' value be determined by th' <code>mermaidZoom</code> sett'n o' th' <a href="../../pir/shortcodes/mermaid/index.html#global-configuration-file">ship</a> or th' <a href="../../pir/shortcodes/mermaid/index.html#pages-frontmatter">planks frontmatter</a> or <code>false</code> if not set at all.<br><br>- <code>false</code>: no pan or zoom<br>- <code>true</code>: pan an' zoom active</td>
 </tr>
 <tr>
 <td><em><strong>&lt;content&gt;</strong></em></td>
@@ -2363,29 +2177,14 @@ graph LR;
 </tbody>
 </table>
 <h2 id="configuration">Configurat'n</h2>
-<p>Merrrmaid be configured wit' default sett'ns. Ye can cust'mize Mermaid&rsquo;s default sett'ns fer all o' yer files thru a JSON object 'n yer <code>config.toml</code>, override these sett'ns per plank thru yer planks frontmatter or override these sett'n per diagramm thru <a href="https://mermaid-js.github.io/mermaid/#/directives?id=directives" target="_blank">diagram directives</a>.</p>
-<p>Th' JSON object o' yer <code>config.toml</code> / frontmatter be forwarded into Mermaid&rsquo;s <code>mermaid.initialize()</code> funct'n.</p>
+<p>Merrrmaid be configured wit' default sett'ns. Ye can cust'mize Mermaid&rsquo;s default sett'ns fer all o' yer files thru a JSON object 'n yer <code>hugo.toml</code>, override these sett'ns per plank thru yer planks frontmatter or override these sett'n per diagramm thru <a href="https://mermaid-js.github.io/mermaid/#/directives?id=directives" target="_blank">diagram directives</a>.</p>
+<p>Th' JSON object o' yer <code>hugo.toml</code> / frontmatter be forwarded into Mermaid&rsquo;s <code>mermaid.initialize()</code> funct'n.</p>
 <p>See <a href="https://mermaid-js.github.io/mermaid/#/Setup?id=mermaidapi-configuration-defaults" target="_blank">Merrrmaid documentat'n</a> fer all allowed sett'ns.</p>
-<p>Th' <code>theme</code> sett'n can also be set by yer used color variant. This will be th' sitewide default an' can - again - be overridden by yer sett'ns 'n <code>config.toml</code>, frontmatter or diagram directives.</p>
-
-<div class="box notices cstyle note">
-  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Avast</div>
-  <div class="box-content">
-
-<p>T' use codefence rules ye have t' turn off <code>guessSyntax</code> fer th' <code>marrrkup.highlight</code> sett'n.</p>
-</div>
-</div>
+<p>Th' <code>theme</code> sett'n can also be set by yer used color variant. This will be th' sitewide default an' can - again - be overridden by yer sett'ns 'n <code>hugo.toml</code>, frontmatter or diagram directives.</p>
 <h3 id="global-configuration-file">Global Configurat'n File</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">mermaidInitialize</span> <span class="p">=</span> <span class="s2">&#34;{ \&#34;theme\&#34;: \&#34;dark\&#34; }&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">mermaidZoom</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">marrrkup</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">marrrkup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># if `guessSyntax = true`, there will be no unstyled code even if no language</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># was given BUT Merrrmaid an' Math codefences will not work anymore! So this be a</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># mandatory sett'n fer yer ship if ye want t' use Merrrmaid codefences</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">guessSyntax</span> <span class="p">=</span> <span class="kc">false</span></span></span></code></pre></div><h3 id="pages-frontmatter">Page&rsquo;s Frontmatter</h3>
+</span></span><span class="line"><span class="cl">  <span class="nx">mermaidZoom</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div><h3 id="pages-frontmatter">Page&rsquo;s Frontmatter</h3>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
 </span></span><span class="line"><span class="cl"><span class="nx">mermaidInitialize</span> <span class="p">=</span> <span class="s2">&#34;{ \&#34;theme\&#34;: \&#34;dark\&#34; }&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">mermaidZoom</span> <span class="p">=</span> <span class="kc">true</span>
@@ -2987,7 +2786,7 @@ xychart-beta
 <td><strong>ay'con</strong></td>
 <td>3</td>
 <td>see notes</td>
-<td><a href="../../shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title. Depend'n on th' <strong>style</strong> there may be a default ay'con. Any given value will overwrite th' default.<br><br>- fer severity styles: a nice match'n ay'con fer th' severity<br>- fer all other styles: <em>&lt;empty&gt;</em><br><br>If ye want no ay'con fer a severity style, ye have t' set this parameter t' <code>&quot; &quot;</code> (a non empty str'n filled wit' spaces)</td>
+<td><a href="../../pir/shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title. Depend'n on th' <strong>style</strong> there may be a default ay'con. Any given value will overwrite th' default.<br><br>- fer severity styles: a nice match'n ay'con fer th' severity<br>- fer all other styles: <em>&lt;empty&gt;</em><br><br>If ye want no ay'con fer a severity style, ye have t' set this parameter t' <code>&quot; &quot;</code> (a non empty str'n filled wit' spaces)</td>
 </tr>
 <tr>
 <td><em><strong>&lt;content&gt;</strong></em></td>
@@ -3298,7 +3097,7 @@ xychart-beta
   <div class="box-content">
 
 <p>If ye want t' print out (or generate a PDF) from yer OpenAPI documentat'n, don&rsquo;t initiate print'n directly from th' plank because th' elements be optimized fer interactive usage 'n a browser.</p>
-<p>Instead, open th' <a href="../../basics/customization/index.html#activate-print-support">print preview</a> 'n yer browser an' initiate print'n from that plank. This plank be optimized fer read'n an' expands most o' th' avail'ble sections.</p>
+<p>Instead, open th' <a href="../../pir/basics/customization/index.html#activate-print-support">print preview</a> 'n yer browser an' initiate print'n from that plank. This plank be optimized fer read'n an' expands most o' th' avail'ble sections.</p>
 </div>
 </div>
 <h2 id="example">Example</h2>
@@ -3307,8 +3106,8 @@ xychart-beta
 <div class="sc-openapi-wrapper is-load'n helper-loading-container">
   <div
     class="sc-openapi-container"
-    id="R-openapi-cfdccbdf52be8b78e5bfacc7c6d90454"
-    data-openapi-url="../../shortcodes/openapi/petstore.json"
+    id="R-openapi-1e77fcbd56638d80dcc48cabe41901da"
+    data-openapi-url="../../hugo-theme-relearn/shortcodes/openapi/petstore.json"
   ></div>
 </div>
 
@@ -3399,26 +3198,26 @@ xychart-beta
 </tbody>
 </table>
 <h2 id="examples">Examples</h2>
-<h3 id="editurl-from-configtoml"><code>editURL</code> from <code>config.toml</code></h3>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="s">`editURL`</span> <span class="nx">value</span><span class="p">:</span> <span class="p">{{</span><span class="o">%</span> <span class="nx">siteparam</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;editURL&#34;</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p><code>editURL</code> value: <a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/" target="_blank">https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/</a></p>
+<h3 id="editurl-from-hugotoml"><code>editURL</code> from <code>hugo.toml</code></h3>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="s">`editURL`</span> <span class="nx">value</span><span class="p">:</span> <span class="p">{{</span><span class="o">%</span> <span class="nx">siteparam</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;editURL&#34;</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p><code>editURL</code> value: <a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/$%7BFilePath%7D" target="_blank">https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/${FilePath}</a></p>
 <h3 id="nested-parameter-with-markdown-and-html-formatting">Nested parameter wit' Marrrkdown an' HTML formatt'n</h3>
-<p>T' use formatted parameter, add this 'n yer <code>config.toml</code>:</p>
+<p>T' use formatted parameter, add this 'n yer <code>hugo.toml</code>:</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">marrrkup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div>
-<div class="tab-panel" data-tab-group="43cbbbd7abb7d51c92cb3a5a771ac224">
+<div class="tab-panel" data-tab-group="17a5ec3a6e25331d86db62aac7c87e40">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      data-tab-item="configtoml"
+      data-tab-item="hugotoml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('43cbbbd7abb7d51c92cb3a5a771ac224','configtoml')"
+      onclick="switchTab('17a5ec3a6e25331d86db62aac7c87e40','hugotoml')"
     >
-      <span class="tab-nav-text">config.toml</span>
+      <span class="tab-nav-text">hugo.toml</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      data-tab-item="configtoml"
+      data-tab-item="hugotoml"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
 
@@ -3443,15 +3242,15 @@ xychart-beta
 
 <p>Ye can use a <code>tab</code> shortcode t' display a single tab.</p>
 <p>This be especially useful if ye want t' flag yer code example wit' an explicit language.</p>
-<p>If ye want multiple tabs grouped together ye can wrap yer tabs into th' <a href="../../shortcodes/tabs/index.html"><code>tabs</code> shortcode</a>.</p>
+<p>If ye want multiple tabs grouped together ye can wrap yer tabs into th' <a href="../../pir/shortcodes/tabs/index.html"><code>tabs</code> shortcode</a>.</p>
 
-<div class="tab-panel" data-tab-group="89f467a2747c96ee1e9ee1ee8e000510">
+<div class="tab-panel" data-tab-group="dbdebde19b595d8f0d8dbcc494cfa170">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="c"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('89f467a2747c96ee1e9ee1ee8e000510','c')"
+      onclick="switchTab('dbdebde19b595d8f0d8dbcc494cfa170','c')"
     >
       <span class="tab-nav-text">c</span>
     </button>
@@ -3540,7 +3339,7 @@ xychart-beta
 <tr>
 <td><strong>ay'con</strong></td>
 <td>see notes</td>
-<td><a href="../../shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title. Depend'n on th' <strong>style</strong> there may be a default ay'con. Any given value will overwrite th' default.<br><br>- fer severity styles: a nice match'n ay'con fer th' severity<br>- fer all other styles: <em>&lt;empty&gt;</em><br><br>If ye want no ay'con fer a severity style, ye have t' set this parameter t' <code>&quot; &quot;</code> (a non empty str'n filled wit' spaces)</td>
+<td><a href="../../pir/shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title. Depend'n on th' <strong>style</strong> there may be a default ay'con. Any given value will overwrite th' default.<br><br>- fer severity styles: a nice match'n ay'con fer th' severity<br>- fer all other styles: <em>&lt;empty&gt;</em><br><br>If ye want no ay'con fer a severity style, ye have t' set this parameter t' <code>&quot; &quot;</code> (a non empty str'n filled wit' spaces)</td>
 </tr>
 <tr>
 <td><em><strong>&lt;content&gt;</strong></em></td>
@@ -3556,13 +3355,13 @@ xychart-beta
 </span></span></span><span class="line"><span class="cl"><span class="s">printf(&#34;Hello World!&#34;);
 </span></span></span><span class="line"><span class="cl"><span class="s">```</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<div class="tab-panel" data-tab-group="3e9ea3f8e139190e55f6402c28c542d0">
+<div class="tab-panel" data-tab-group="e6fd31c7ceb8ad07512089ddc3253642">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="code"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('3e9ea3f8e139190e55f6402c28c542d0','code')"
+      onclick="switchTab('e6fd31c7ceb8ad07512089ddc3253642','code')"
     >
       <span class="tab-nav-text">Code</span>
     </button>
@@ -3584,13 +3383,13 @@ xychart-beta
 </span></span></span><span class="line"><span class="cl"><span class="s">printf(&#34;Hello World!&#34;);
 </span></span></span><span class="line"><span class="cl"><span class="s">```</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div>
-<div class="tab-panel" data-tab-group="ede165b2fd50847376e6e9ffcca67550">
+<div class="tab-panel" data-tab-group="9760b084553e85969ebdcfec0c556201">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="mixed"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('ede165b2fd50847376e6e9ffcca67550','mixed')"
+      onclick="switchTab('9760b084553e85969ebdcfec0c556201','mixed')"
     >
       <span class="tab-nav-text"><em><strong>Mixed</strong></em></span>
     </button>
@@ -3635,41 +3434,41 @@ xychart-beta
 </span></span><span class="line"><span class="cl"><span class="nx">This</span> <span class="nx">will</span> <span class="nx">set</span> <span class="nx">th'</span> <span class="nx">background</span> <span class="nx">t'</span> <span class="nx">a</span> <span class="nx">lighter</span> <span class="nx">version</span> <span class="nx">o'</span> <span class="nx">th'</span> <span class="nx">chosen</span> <span class="nx">CSS</span> <span class="nx">color</span> <span class="nx">value</span> <span class="nx">an'</span> <span class="nx">also</span> <span class="nx">affects</span> <span class="nx">th'</span> <span class="nx">chosen</span> <span class="nx">ay'con</span><span class="p">.</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">tabs</span> <span class="p">&gt;}}</span></span></span></code></pre></div>
-<div class="tab-panel" data-tab-group="3e8aaf720f845ca2249d1424287243fd">
+<div class="tab-panel" data-tab-group="7253e435bf5aeaf0a57803d5bca56adc">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="just-colored-style"
       class="tab-nav-button tab-panel-style cstyle blue active" tabindex="-1"
-      onclick="switchTab('3e8aaf720f845ca2249d1424287243fd','just-colored-style')"
+      onclick="switchTab('7253e435bf5aeaf0a57803d5bca56adc','just-colored-style')"
     >
       <span class="tab-nav-text">just colored style</span>
     </button>
     <button
       data-tab-item="just-color"
       class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('3e8aaf720f845ca2249d1424287243fd','just-color')"
+      onclick="switchTab('7253e435bf5aeaf0a57803d5bca56adc','just-color')"
     >
       <span class="tab-nav-text">just color</span>
     </button>
     <button
       data-tab-item="default-style-and-color"
       class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('3e8aaf720f845ca2249d1424287243fd','default-style-and-color')"
+      onclick="switchTab('7253e435bf5aeaf0a57803d5bca56adc','default-style-and-color')"
     >
       <span class="tab-nav-text">default style an' color</span>
     </button>
     <button
       data-tab-item="just-severity-stylefa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info"
-      onclick="switchTab('3e8aaf720f845ca2249d1424287243fd','just-severity-stylefa-fw-fas-fa-info-circle')"
+      onclick="switchTab('7253e435bf5aeaf0a57803d5bca56adc','just-severity-stylefa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> just severity style</span>
     </button>
     <button
       data-tab-item="severity-style-and-colorfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('3e8aaf720f845ca2249d1424287243fd','severity-style-and-colorfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('7253e435bf5aeaf0a57803d5bca56adc','severity-style-and-colorfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> severity style an' color</span>
     </button>
@@ -3736,29 +3535,29 @@ xychart-beta
 
 <p>Th' <code>tabs</code> shortcode displays arbitrary rrrambl'n 'n an unlimited number o' tabs.</p>
 <p>This comes 'n handy eg. fer provid'n code snippets fer multiple languages.</p>
-<p>If ye just want a single tab ye can instead call th' <a href="../../shortcodes/tab/index.html"><code>tab</code> shortcode</a> standalone.</p>
+<p>If ye just want a single tab ye can instead call th' <a href="../../pir/shortcodes/tab/index.html"><code>tab</code> shortcode</a> standalone.</p>
 
-<div class="tab-panel" data-tab-group="242e8576a3fc3e4cc487e24cd5182ade">
+<div class="tab-panel" data-tab-group="624dd5b7c7e5c2409a4e6545f21e40c9">
   <div class="tab-nav">
     <div class="tab-nav-title">hello.</div>
     <button
       data-tab-item="py"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('242e8576a3fc3e4cc487e24cd5182ade','py')"
+      onclick="switchTab('624dd5b7c7e5c2409a4e6545f21e40c9','py')"
     >
       <span class="tab-nav-text">py</span>
     </button>
     <button
       data-tab-item="sh"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('242e8576a3fc3e4cc487e24cd5182ade','sh')"
+      onclick="switchTab('624dd5b7c7e5c2409a4e6545f21e40c9','sh')"
     >
       <span class="tab-nav-text">sh</span>
     </button>
     <button
       data-tab-item="c"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('242e8576a3fc3e4cc487e24cd5182ade','c')"
+      onclick="switchTab('624dd5b7c7e5c2409a4e6545f21e40c9','c')"
     >
       <span class="tab-nav-text">c</span>
     </button>
@@ -3789,7 +3588,7 @@ xychart-beta
 </div>
 <h2 id="usage">Usage</h2>
 <p>While th' examples be us'n shorrrtcodes wit' named parameter ye be free t' also call this shortcode from yer own partials.</p>
-<p>See th' <a href="../../shortcodes/tab/index.html"><code>tab</code> shortcode</a> fer a descript'n o' th' parameter fer nested tabs.</p>
+<p>See th' <a href="../../pir/shortcodes/tab/index.html"><code>tab</code> shortcode</a> fer a descript'n o' th' parameter fer nested tabs.</p>
 
 <div class="tab-panel" data-tab-group="shortcode-parameter">
   <div class="tab-nav">
@@ -3877,12 +3676,12 @@ xychart-beta
 <tr>
 <td><strong>style</strong></td>
 <td><em>&lt;empty&gt;</em></td>
-<td>Sets a default value fer every contained tab. Can be overridden by each tab. See th' <a href="../../shortcodes/tab/index.html#parameter"><code>tab</code> shortcode</a> fer poss'ble values.</td>
+<td>Sets a default value fer every contained tab. Can be overridden by each tab. See th' <a href="../../pir/shortcodes/tab/index.html#parameter"><code>tab</code> shortcode</a> fer poss'ble values.</td>
 </tr>
 <tr>
 <td><strong>color</strong></td>
 <td><em>&lt;empty&gt;</em></td>
-<td>Sets a default value fer every contained tab. Can be overridden by each tab. See th' <a href="../../shortcodes/tab/index.html#parameter"><code>tab</code> shortcode</a> fer poss'ble values.</td>
+<td>Sets a default value fer every contained tab. Can be overridden by each tab. See th' <a href="../../pir/shortcodes/tab/index.html#parameter"><code>tab</code> shortcode</a> fer poss'ble values.</td>
 </tr>
 <tr>
 <td><strong>title</strong></td>
@@ -3892,7 +3691,7 @@ xychart-beta
 <tr>
 <td><strong>ay'con</strong></td>
 <td><em>&lt;empty&gt;</em></td>
-<td><a href="../../shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title.</td>
+<td><a href="../../pir/shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title.</td>
 </tr>
 <tr>
 <td><em><strong>&lt;content&gt;</strong></em></td>
@@ -3906,27 +3705,27 @@ xychart-beta
 <p>See what happens t' th' tab views while ye select different tabs.</p>
 <p>While press'n a tab o' Group A switches all tab views o' Group A 'n sync (if th' tab be available), th' tabs o' Group B be left untouched.</p>
 
-<div class="tab-panel" data-tab-group="f94b9ed5af22c00ca3ecdb6dd0df2023">
+<div class="tab-panel" data-tab-group="11e82fb70dbfe4eb2b54cf59236922a7">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="group-a-tab-view-1"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('f94b9ed5af22c00ca3ecdb6dd0df2023','group-a-tab-view-1')"
+      onclick="switchTab('11e82fb70dbfe4eb2b54cf59236922a7','group-a-tab-view-1')"
     >
       <span class="tab-nav-text">Group A, Tab View 1</span>
     </button>
     <button
       data-tab-item="group-a-tab-view-2"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('f94b9ed5af22c00ca3ecdb6dd0df2023','group-a-tab-view-2')"
+      onclick="switchTab('11e82fb70dbfe4eb2b54cf59236922a7','group-a-tab-view-2')"
     >
       <span class="tab-nav-text">Group A, Tab View 2</span>
     </button>
     <button
       data-tab-item="group-b"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('f94b9ed5af22c00ca3ecdb6dd0df2023','group-b')"
+      onclick="switchTab('11e82fb70dbfe4eb2b54cf59236922a7','group-b')"
     >
       <span class="tab-nav-text">Group B</span>
     </button>
@@ -4123,7 +3922,7 @@ xychart-beta
 </div>
 <h3 id="nested-tab-views-and-color">Nested Tab Views an' Color</h3>
 <p>In case ye want t' nest tab views, th' parent tab that contains nested tab views needs t' be declared wit' <code>{{&lt; tab &gt;}}</code> instead o' <code>{{% tab %}}</code>. Avast, that 'n this case it be not poss'ble t' put markdown 'n th' parent tab.</p>
-<p>Ye can also set style an' color parameter fer all tabs an' overwrite them on tab level. See th' <a href="../../shortcodes/tab/index.html#parameter"><code>tab</code> shortcode</a> fer poss'ble values.</p>
+<p>Ye can also set style an' color parameter fer all tabs an' overwrite them on tab level. See th' <a href="../../pir/shortcodes/tab/index.html#parameter"><code>tab</code> shortcode</a> fer poss'ble values.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">tabs</span> <span class="nx">groupid</span><span class="p">=</span><span class="s">&#34;main&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;primary&#34;</span> <span class="nx">title</span><span class="p">=</span><span class="s">&#34;Rationale&#34;</span> <span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;thumbtack&#34;</span> <span class="p">&gt;}}</span>
 </span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">tab</span> <span class="nx">title</span><span class="p">=</span><span class="s">&#34;Text&#34;</span> <span class="p">&gt;}}</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">Simple</span> <span class="nx">text</span> <span class="nx">be</span> <span class="nx">poss'ble</span> <span class="nx">here</span><span class="o">...</span>
@@ -4283,8 +4082,8 @@ xychart-beta
         </div>
       </main>
     </div>
-    <script src="../../js/clipboard.min.js?1700601387" defer></script>
-    <script src="../../js/perfect-scrollbar.min.js?1700601387" defer></script>
+    <script src="../../js/clipboard.min.js?1708639396" defer></script>
+    <script src="../../js/perfect-scrollbar.min.js?1708639396" defer></script>
     <script>
       function useMathJax( config ){
         if( !Object.assign ){
@@ -4313,27 +4112,27 @@ xychart-beta
       }
       useMathJax( JSON.parse("{}") );
     </script>
-    <script id="MathJax-script" async src="../../js/mathjax/tex-mml-chtml.js?1700601387"></script>
-    <script src="../../js/d3/d3-color.min.js?1700601387" defer></script>
-    <script src="../../js/d3/d3-dispatch.min.js?1700601387" defer></script>
-    <script src="../../js/d3/d3-drag.min.js?1700601387" defer></script>
-    <script src="../../js/d3/d3-ease.min.js?1700601387" defer></script>
-    <script src="../../js/d3/d3-interpolate.min.js?1700601387" defer></script>
-    <script src="../../js/d3/d3-selection.min.js?1700601387" defer></script>
-    <script src="../../js/d3/d3-timer.min.js?1700601387" defer></script>
-    <script src="../../js/d3/d3-transition.min.js?1700601387" defer></script>
-    <script src="../../js/d3/d3-zoom.min.js?1700601387" defer></script>
-    <script src="../../js/js-yaml.min.js?1700601387" defer></script>
-    <script src="../../js/mermaid.min.js?1700601387" defer></script>
+    <script id="MathJax-script" async src="../../js/mathjax/tex-mml-chtml.js?1708639396"></script>
+    <script src="../../js/d3/d3-color.min.js?1708639396" defer></script>
+    <script src="../../js/d3/d3-dispatch.min.js?1708639396" defer></script>
+    <script src="../../js/d3/d3-drag.min.js?1708639396" defer></script>
+    <script src="../../js/d3/d3-ease.min.js?1708639396" defer></script>
+    <script src="../../js/d3/d3-interpolate.min.js?1708639396" defer></script>
+    <script src="../../js/d3/d3-selection.min.js?1708639396" defer></script>
+    <script src="../../js/d3/d3-timer.min.js?1708639396" defer></script>
+    <script src="../../js/d3/d3-transition.min.js?1708639396" defer></script>
+    <script src="../../js/d3/d3-zoom.min.js?1708639396" defer></script>
+    <script src="../../js/js-yaml.min.js?1708639396" defer></script>
+    <script src="../../js/mermaid.min.js?1708639396" defer></script>
     <script>
       window.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
     </script>
     <script>window.noZensmooth = true;</script>
-    <script src="../../js/swagger-ui/swagger-ui-bundle.js?1700601387" defer></script>
-    <script src="../../js/swagger-ui/swagger-ui-standalone-preset.js?1700601387" defer></script>
+    <script src="../../js/swagger-ui/swagger-ui-bundle.js?1708639396" defer></script>
+    <script src="../../js/swagger-ui/swagger-ui-standalone-preset.js?1708639396" defer></script>
     <script>
-      window.themeUseOpenapi = { css: "/js/swagger-ui/swagger-ui.css?1700601387", assetsBuster:  1700601387  };
+      window.themeUseOpenapi = { css: "/js/swagger-ui/swagger-ui.css?1708639396", assetsBuster:  1708639396  };
     </script>
-    <script src="../../js/theme.js?1700601387" defer></script>
+    <script src="../../js/theme.js?1708639396" defer></script>
   </body>
 </html>

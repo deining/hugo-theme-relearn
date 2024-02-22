@@ -13,7 +13,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/basics/migration/index.html</guid>
       <description>This document shows you what&amp;rsquo;s new in the latest release and flags it with one of the following badges. For a detailed list of changes, see the history page.
-0.95.0 The minimum required Hugo version.
+0.112.4 The minimum required Hugo version.
 Breaking A change that requires action by you after upgrading to assure the site is still functional.
 Change A change in default behavior that may requires action by you if you want to revert it.</description>
     </item>
@@ -23,7 +23,8 @@ Change A change in default behavior that may requires action by you if you want 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/basics/requirements/index.html</guid>
       <description>Thanks to the simplicity of Hugo, this page is as empty as this theme needs requirements.
-Just download at least version 0.95.0 of the Hugo binary for your OS (Windows, Linux, Mac).</description>
+Just download at least version 0.112.4 of the Hugo binary for your OS (Windows, Linux, Mac).
+It&amp;rsquo;s a kind of magic</description>
     </item>
     <item>
       <title>Installation</title>
@@ -40,9 +41,9 @@ This theme&amp;rsquo;s repository is: https://github.com/McShelby/hugo-theme-rel
       <link>https://deining.github.io/hugo-theme-relearn/basics/configuration/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/basics/configuration/index.html</guid>
-      <description>On top of Hugo&amp;rsquo;s global configuration options, the Relearn theme lets you define further options unique to the theme in your config.toml. The defaults are written in the comments of each option.
+      <description>On top of Hugo&amp;rsquo;s global configuration options, the Relearn theme lets you define further options unique to the theme in your hugo.toml. The defaults are written in the comments of each option.
 Note that some of these options are explained in detail in other sections of this documentation.
-&amp;#8203; config.toml [params] # If an option value is said to be not set, you can achieve the same behavior # by given it an empty string value.</description>
+&amp;#8203; hugo.toml [params] # If an option value is said to be not set, you can achieve the same behavior # by given it an empty string value.</description>
     </item>
     <item>
       <title>Branding</title>
@@ -50,16 +51,16 @@ Note that some of these options are explained in detail in other sections of thi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/basics/branding/index.html</guid>
       <description>The Relearn theme provides configuration options to change your your site&amp;rsquo;s colors, favicon and logo. This allows you to easily align your site visuals to your desired style. Most of these options are exposed thru so called color variants.
-A color variant lets you customize various visual effects of your site like almost any color, used fonts, color schemes of print, syntax highligtning, Mermaid and the OpenAPI shortcode, etc. It contains of a CSS file and optional configuration options in your config.</description>
+A color variant lets you customize various visual effects of your site like almost any color, used fonts, color schemes of print, syntax highligtning, Mermaid and the OpenAPI shortcode, etc. It contains of a CSS file and optional configuration options in your hugo.</description>
     </item>
     <item>
       <title>Customization</title>
       <link>https://deining.github.io/hugo-theme-relearn/basics/customization/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/basics/customization/index.html</guid>
-      <description>Serving your page from a subfolder If your site is served from a subfolder, eg. https://example.com/mysite/, you have to set the following lines to your config.toml
+      <description>Serving your page from a subfolder If your site is served from a subfolder, eg. https://example.com/mysite/, you have to set the following lines to your hugo.toml
 baseURL = &amp;#34;https://example.com/mysite/&amp;#34; canonifyURLs = true relativeURLs = trueWithout canonifyURLs=true URLs in sublemental pages (like sitemap.xml, rss.xml) will be generated falsly while your HTML files will still work. See https://github.com/gohugoio/hugo/issues/5226.
-Serving your page from the filesystem If you want your page served from the filesystem by using URLs starting with file:// you&amp;rsquo;ll need the following configuration in your config.</description>
+Serving your page from the filesystem If you want your page served from the filesystem by using URLs starting with file:// you&amp;rsquo;ll need the following configuration in your hugo.</description>
     </item>
     <item>
       <title>Stylesheet generator</title>
@@ -85,7 +86,7 @@ Areas The default configuration comes with three predefined areas that may conta
       <link>https://deining.github.io/hugo-theme-relearn/basics/history/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/basics/history/index.html</guid>
-      <description>Changelog 5.23.2 (2023-11-03) Enhancements [feature] taxonomy: improve taxonomy page #712 [feature] taxonomy: warn on missing term title #709 Fixes [bug] taxonomy: fix sorting of terms on content pages #710 5.23.1 (2023-10-30) Enhancements [feature] taxonomy: improve term page #705 Fixes [bug] variant: fix typo in chroma-learn.css #708 [bug] links: ignore local markdown links linking to files with extension #707 5.23.0 (2023-10-29) Enhancements [feature] taxonomy: allow for content on term pages #701 [feature] theme: write full file path on warnings #699 [feature] theme: show anchor link and copy to clipboard button on mobile #697 [feature][change] config: adjust to changes in Hugo 0.</description>
+      <description>Changelog 5.24.1 (2024-02-17) Enhancements [feature] link: make resolution reporting configurable #774 5.24.0 (2024-02-17) Enhancements [feature] theme: compatiblity with Hugo 0.123 #771 [feature] topbar: support editURL in frontmatter #764 [feature] menu: use &amp;ndash;MENU-WIDTH-S to adjust mobile flyout #761 [feature] figure: support built-in shortcode #746 [feature] theme: make heading a template #744 [feature] taxonomy: make arrow nav browse thru terms #742 [feature] theme: switch from config.toml to hugo.toml #741 [feature] button: make non-interactive if used as mock #740 [feature][change] topbar: allow text for button #739 [feature] theme: run hugo demo site without warning #736 [feature] menu: make swipe handler passive #735 [feature] i18n: support standard Hugo options #733 [feature] a11y: show tab focus on images #730 [feature] a11y: improve discovering links on keyboard navigation #726 [feature][change] variant: increase contrast for light themes #722 [feature] theme: break build if minimum Hugo version is not matched #719 [feature] taxonomy: humanize term on missing term title #713 Fixes [bug] taxonomy: display translated title #772 [bug] highlight: fix codefence syntax in Hugo &amp;gt;= 0.</description>
     </item>
   </channel>
 </rss>

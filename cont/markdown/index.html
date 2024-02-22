@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.120.4">
-    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="generator" content="Hugo 0.123.2">
+    <meta name="generator" content="Relearn 5.24.1+tip">
     <meta name="description" content="Documentation for Hugo Relearn Theme">
     <meta name="author" content="Sören Weber">
     <meta name="twitter:card" content="summary_large_image">
@@ -27,23 +27,24 @@ Markdown is simple to learn, with minimal extra characters so it&rsquo;s also qu
     <title>Markdown syntax :: Hugo Relearn Theme</title>
     <link href="https://deining.github.io/hugo-theme-relearn/cont/markdown/index.html" rel="alternate" hreflang="x-default">
     <link href="https://deining.github.io/hugo-theme-relearn/cont/markdown/index.html" rel="alternate" hreflang="en">
-    <link href="https://deining.github.io/hugo-theme-relearn/pir/cont/markdown/index.html" rel="alternate" hreflang="pir">
+    <link href="https://deining.github.io/hugo-theme-relearn/pir/cont/markdown/index.html" rel="alternate" hreflang="art-pir">
     <link href="../../cont/markdown/index.xml" rel="alternate" type="application/rss+xml" title="Markdown syntax :: Hugo Relearn Theme">
     <link href="../../cont/markdown/index.print.html" rel="alternate" type="text/html" title="Markdown syntax :: Hugo Relearn Theme">
-    <link href="../../images/logo.svg?1700601384" rel="icon" type="image/svg+xml">
+    <link href="../../images/logo.svg?1708639393" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../css/fontawesome-all.min.css?1700601384" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1700601384" rel="stylesheet"></noscript>
-    <link href="../../css/nucleus.css?1700601384" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1700601384" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1700601384" rel="stylesheet"></noscript>
-    <link href="../../css/perfect-scrollbar.min.css?1700601384" rel="stylesheet">
-    <link href="../../css/fonts.css?1700601384" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1700601384" rel="stylesheet"></noscript>
-    <link href="../../css/theme.css?1700601384" rel="stylesheet">
-    <link href="../../css/theme-auto.css?1700601384" rel="stylesheet" id="R-variant-style">
-    <link href="../../css/variant.css?1700601384" rel="stylesheet">
-    <link href="../../css/print.css?1700601384" rel="stylesheet" media="print">
-    <link href="../../css/ie.css?1700601384" rel="stylesheet">
-    <script src="../../js/url.js?1700601384"></script>
-    <script src="../../js/variant.js?1700601384"></script>
+    <link href="../../css/fontawesome-all.min.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../../css/nucleus.css?1708639393" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar.min.css?1708639393" rel="stylesheet">
+    <link href="../../css/fonts.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../../css/theme.css?1708639393" rel="stylesheet">
+    <link href="../../css/theme-relearn-auto.css?1708639393" rel="stylesheet" id="R-variant-style">
+    <link href="../../css/chroma-relearn-auto.css?1708639393" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="../../css/variant.css?1708639393" rel="stylesheet">
+    <link href="../../css/print.css?1708639393" rel="stylesheet" media="print">
+    <link href="../../css/ie.css?1708639393" rel="stylesheet">
+    <script src="../../js/url.js?1708639393"></script>
+    <script src="../../js/variant.js?1708639393"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -53,7 +54,8 @@ Markdown is simple to learn, with minimal extra characters so it&rsquo;s also qu
       window.relearn = window.relearn || {};
       window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
       // variant stuff
-      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
       window.T_Copy_to_clipboard = `Copy to clipboard`;
       window.T_Copied_to_clipboard = `Copied to clipboard!`;
@@ -77,15 +79,9 @@ Markdown is simple to learn, with minimal extra characters so it&rsquo;s also qu
         <div class="topbar-wrapper">
           <div class="topbar-sidebar-divider"></div>
           <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
-              <button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)">
-                <i class="fa-fw fas fa-bars"></i>
-              </button>
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
             </div>
-            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
-              <button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)">
-                <i class="fa-fw fas fa-list-alt"></i>
-              </button>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
               <div class="topbar-content">
                 <div class="topbar-content-wrapper">
 <nav class="TableOfContents">
@@ -150,30 +146,15 @@ Markdown is simple to learn, with minimal extra characters so it&rsquo;s also qu
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Markdown syntax</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/cont/markdown.en.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)">
-                <i class="fa-fw fas fa-pen"></i>
-              </a>
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/cont/markdown.en.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
             </div>
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="../../cont/markdown/index.print.html" title="Print whole chapter (CTRL&#43;ALT&#43;p)">
-                <i class="fa-fw fas fa-print"></i>
-              </a>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../cont/markdown/index.print.html" title="Print whole chapter (CTRL&#43;ALT&#43;p)"><i class="fa-fw fas fa-print"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="../../cont/archetypes/index.html" title="Archetypes (🡐)">
-                <i class="fa-fw fas fa-chevron-left"></i>
-              </a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../cont/archetypes/index.html" title="Archetypes (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-              <a class="topbar-control" href="../../cont/imageeffects/index.html" title="Image Effects (🡒)">
-                <i class="fa-fw fas fa-chevron-right"></i>
-              </a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../cont/imageeffects/index.html" title="Image Effects (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
-            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
-              <button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More">
-                <i class="fa-fw fas fa-ellipsis-v"></i>
-              </button>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
                 <div class="topbar-content-wrapper">
                   <div class="topbar-area topbar-area-more" data-area="more">
@@ -654,7 +635,7 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="https://github.com/upstage/" title="Visit Upstage!" target="_blank">Upstage</a></p>
+<p><a href="https://github.com/upstage/" target="_blank" title="Visit Upstage!">Upstage</a></p>
 </div>
 </div>
 <h3 id="link-references">Link References</h3>
@@ -666,7 +647,7 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="https://example.com" title="Go to example domain" target="_blank">Example</a></p>
+<p><a href="https://example.com" target="_blank" title="Go to example domain">Example</a></p>
 </div>
 </div>
 <h3 id="footnotes">Footnotes</h3>
@@ -711,8 +692,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-784e007291432c171fd421435cdc3e71" class="lightbox-link"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-784e007291432c171fd421435cdc3e71"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-c7c20bb5f1e12b84097028252239e817" class="lightbox-link"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c7c20bb5f1e12b84097028252239e817"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-with-tooltip">Image with Tooltip</h3>
@@ -722,8 +703,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-e84d6637ff389f24a7472a07e74a5d25" class="lightbox-link"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e84d6637ff389f24a7472a07e74a5d25"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-7c1d77564a21d6392b1535392f5e86e4" class="lightbox-link"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7c1d77564a21d6392b1535392f5e86e4"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-references">Image References</h3>
@@ -735,12 +716,12 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-665054a91299f7515494b158eb98ac21" class="lightbox-link"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-665054a91299f7515494b158eb98ac21"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-762e05abfc09cd1e5546e4c648a72a69" class="lightbox-link"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-762e05abfc09cd1e5546e4c648a72a69"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-effects">Image Effects</h3>
-<p>This theme allows additional non-standard formatting by setting query parameter at the end of the image URL. The default <a href="../../cont/imageeffects/index.html">behavior is configurable</a> thru your <code>config.toml</code> or frontmatter parameter.</p>
+<p>This theme allows additional non-standard formatting by setting query parameter at the end of the image URL. The default <a href="../../cont/imageeffects/index.html">behavior is configurable</a> thru your <code>hugo.toml</code> or frontmatter parameter.</p>
 <h4 id="resizing">Resizing</h4>
 <p>Add query parameter <code>width</code> and/or <code>height</code> to the link image to resize the image. Values are CSS values (default is <code>auto</code>).</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?width=20vw</span>)</span></span></code></pre></div>
@@ -748,8 +729,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-3a9351eb28a3118a0534a88874f74254" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a9351eb28a3118a0534a88874f74254"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-edbf5e55dcada61890167fb67a4cbf62" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-edbf5e55dcada61890167fb67a4cbf62"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?height=50px</span>)</span></span></code></pre></div>
@@ -757,8 +738,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-f1b1ce83f56c6729a6e5a3563cc08f47" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f1b1ce83f56c6729a6e5a3563cc08f47"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-bd518e918bf458845cfc014f1d2b3937" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bd518e918bf458845cfc014f1d2b3937"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw</span>)</span></span></code></pre></div>
@@ -766,8 +747,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-5b4668c2882a855aae0bdda7b4c2d74b" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: 40vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5b4668c2882a855aae0bdda7b4c2d74b"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-4dd8e9b76fb3a9cb6b8e3cec317b1b1d" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4dd8e9b76fb3a9cb6b8e3cec317b1b1d"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h4 id="css-classes">CSS Classes</h4>
@@ -778,8 +759,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-022c508f17873ca8cb10105713e307e3" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="figure-image bg-white border lightbox noborder shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-022c508f17873ca8cb10105713e307e3"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="lightbox-image bg-white border lightbox noborder shadow" loading="lazy"></a></p>
+<p><a href="#R-image-75bf1cb896b9fcf388cec459878f3ffc" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="figure-image bg-white border lightbox noborder shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-75bf1cb896b9fcf388cec459878f3ffc"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="lightbox-image bg-white border lightbox noborder shadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="border">Border</h5>
@@ -788,8 +769,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-c6c6a9a17313265e0739fbcb510f61e1" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="figure-image bg-white border lightbox noshadow noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c6c6a9a17313265e0739fbcb510f61e1"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="lightbox-image bg-white border lightbox noshadow noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-a6b85acb85d60346f3271310f925b42e" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="figure-image bg-white border lightbox noshadow noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a6b85acb85d60346f3271310f925b42e"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="lightbox-image bg-white border lightbox noshadow noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="left">Left</h5>
@@ -798,8 +779,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-cb416637418d189f636e400854e62e9e" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="figure-image bg-white border left lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb416637418d189f636e400854e62e9e"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="lightbox-image bg-white border left lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-94a60a7cd81f46cb3078d72bd0b709c6" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="figure-image bg-white border left lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-94a60a7cd81f46cb3078d72bd0b709c6"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="lightbox-image bg-white border left lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="right">Right</h5>
@@ -808,8 +789,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-7b5e5aba56b23684023270db9b39a529" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="figure-image bg-white border lightbox right noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7b5e5aba56b23684023270db9b39a529"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="lightbox-image bg-white border lightbox right noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-fabc883a9054d54cac9eeb7b3b375c09" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="figure-image bg-white border lightbox right noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fabc883a9054d54cac9eeb7b3b375c09"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="lightbox-image bg-white border lightbox right noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="inline">Inline</h5>
@@ -821,14 +802,14 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-646ee80f6356a8c7a3e59fd3a23bccd7" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-646ee80f6356a8c7a3e59fd3a23bccd7"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-52d306ef30e3ff3494f4d5b770e002f8" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-52d306ef30e3ff3494f4d5b770e002f8"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-982d063f796cac29774afe6f1f5b1e30" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-982d063f796cac29774afe6f1f5b1e30"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-ca69e9299f41a228c1d195a12d554db0" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ca69e9299f41a228c1d195a12d554db0"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-0c318104bd58bfa4c5f98c1da8a834ed" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0c318104bd58bfa4c5f98c1da8a834ed"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-a75634c5bb177f4f39cac65cdd9a7873" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a75634c5bb177f4f39cac65cdd9a7873"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-04c03e81090296f2da6ca1a855481a9d" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-04c03e81090296f2da6ca1a855481a9d"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-c412955a4f0b316b20cebd6ae25313f4" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c412955a4f0b316b20cebd6ae25313f4"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="combination">Combination</h5>
@@ -837,8 +818,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-440f5943b572c12146298fb7f7866543" class="lightbox-link"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="figure-image bg-white border left lightbox shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-440f5943b572c12146298fb7f7866543"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="lightbox-image bg-white border left lightbox shadow" loading="lazy"></a></p>
+<p><a href="#R-image-e24142b79c9a293639273cf2c57d76c1" class="lightbox-link"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="figure-image bg-white border left lightbox shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e24142b79c9a293639273cf2c57d76c1"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="lightbox-image bg-white border left lightbox shadow" loading="lazy"></a></p>
 </div>
 </div>
 <h4 id="lightbox">Lightbox</h4>
@@ -949,12 +930,12 @@ line 3 of code
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="../../js/auto-complete.js?1700601384" defer></script>
-        <script src="../../js/lunr/lunr.min.js?1700601384" defer></script>
-        <script src="../../js/lunr/lunr.stemmer.support.min.js?1700601384" defer></script>
-        <script src="../../js/lunr/lunr.multi.min.js?1700601384" defer></script>
-        <script src="../../js/lunr/lunr.en.min.js?1700601384" defer></script>
-        <script src="../../js/search.js?1700601384" defer></script>
+        <script src="../../js/auto-complete.js?1708639393" defer></script>
+        <script src="../../js/lunr/lunr.min.js?1708639393" defer></script>
+        <script src="../../js/lunr/lunr.stemmer.support.min.js?1708639393" defer></script>
+        <script src="../../js/lunr/lunr.multi.min.js?1708639393" defer></script>
+        <script src="../../js/lunr/lunr.en.min.js?1708639393" defer></script>
+        <script src="../../js/search.js?1708639393" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation">
         <hr class="padding">
@@ -962,7 +943,7 @@ line 3 of code
       <div id="R-content-wrapper" class="highlightable">
         <div id="R-topics">
           <ul class="enlarge morespace collapsible-menu">
-          <li data-nav-id="/basics/index.html" class=""><input type="checkbox" id="R-section-df6aa773bd1fbc430ade79f1764e4ce7" aria-controls="R-subsections-df6aa773bd1fbc430ade79f1764e4ce7"><label for="R-section-df6aa773bd1fbc430ade79f1764e4ce7"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Basics</span></label><a class="padding" href="../../basics/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-df6aa773bd1fbc430ade79f1764e4ce7" class="morespace collapsible-menu">
+          <li data-nav-id="/basics/index.html" class=""><input type="checkbox" id="R-section-a6deabe447afe1b2e1405bfc57ca61ff" aria-controls="R-subsections-a6deabe447afe1b2e1405bfc57ca61ff"><label for="R-section-a6deabe447afe1b2e1405bfc57ca61ff"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Basics</span></label><a class="padding" href="../../basics/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-a6deabe447afe1b2e1405bfc57ca61ff" class="morespace collapsible-menu">
           <li data-nav-id="/basics/migration/index.html" class=""><a class="padding" href="../../basics/migration/index.html">What&#39;s New<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/basics/requirements/index.html" class=""><a class="padding" href="../../basics/requirements/index.html">Requirements<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/basics/installation/index.html" class=""><a class="padding" href="../../basics/installation/index.html">Installation<i class="fas fa-check read-icon"></i></a></li>
@@ -972,28 +953,29 @@ line 3 of code
           <li data-nav-id="/basics/generator/index.html" class=""><a class="padding" href="../../basics/generator/index.html">Stylesheet generator<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/basics/topbar/index.html" class=""><a class="padding" href="../../basics/topbar/index.html">Topbar Modification<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/basics/history/index.html" class=""><a class="padding" href="../../basics/history/index.html">History<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/cont/index.html" class="parent "><input type="checkbox" id="R-section-2291d2894a4301fd505172f85eca0c0a" aria-controls="R-subsections-2291d2894a4301fd505172f85eca0c0a" checked><label for="R-section-2291d2894a4301fd505172f85eca0c0a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Content</span></label><a class="padding" href="../../cont/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">2.</b> Content<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-2291d2894a4301fd505172f85eca0c0a" class="morespace collapsible-menu">
+          <li data-nav-id="/cont/index.html" class="parent "><input type="checkbox" id="R-section-fa8195cb3a7fa53d39f9adae98977ba1" aria-controls="R-subsections-fa8195cb3a7fa53d39f9adae98977ba1" checked><label for="R-section-fa8195cb3a7fa53d39f9adae98977ba1"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Content</span></label><a class="padding" href="../../cont/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">2.</b> Content<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-fa8195cb3a7fa53d39f9adae98977ba1" class="morespace collapsible-menu">
           <li data-nav-id="/cont/pages/index.html" class=""><a class="padding" href="../../cont/pages/index.html">Pages organization<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/cont/frontmatter/index.html" class=""><a class="padding" href="../../cont/frontmatter/index.html">Frontmatter<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/archetypes/index.html" class=""><a class="padding" href="../../cont/archetypes/index.html">Archetypes<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/markdown/index.html" class="active"><a class="padding" href="../../cont/markdown/index.html">Markdown syntax<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/imageeffects/index.html" class=""><a class="padding" href="../../cont/imageeffects/index.html">Image Effects<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/menushortcuts/index.html" class=""><a class="padding" href="../../cont/menushortcuts/index.html">Menu extra shortcuts<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/i18n/index.html" class=""><a class="padding" href="../../cont/i18n/index.html">Multilingual and i18n<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/cont/taxonomy/index.html" class=""><a class="padding" href="../../cont/taxonomy/index.html">Taxonomy<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/shortcodes/index.html" class=""><input type="checkbox" id="R-section-c0549379138a5c256f6c0600d532453f" aria-controls="R-subsections-c0549379138a5c256f6c0600d532453f"><label for="R-section-c0549379138a5c256f6c0600d532453f"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Shortcodes</span></label><a class="padding" href="../../shortcodes/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">3.</b> Shortcodes<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-c0549379138a5c256f6c0600d532453f" class="morespace collapsible-menu">
+          <li data-nav-id="/shortcodes/index.html" class=""><input type="checkbox" id="R-section-3fd53efe5229f2c1a55795ee597d09d8" aria-controls="R-subsections-3fd53efe5229f2c1a55795ee597d09d8"><label for="R-section-3fd53efe5229f2c1a55795ee597d09d8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Shortcodes</span></label><a class="padding" href="../../shortcodes/index.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">3.</b> Shortcodes<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-3fd53efe5229f2c1a55795ee597d09d8" class="morespace collapsible-menu">
           <li data-nav-id="/shortcodes/attachments/index.html" class=""><a class="padding" href="../../shortcodes/attachments/index.html">Attachments<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/shortcodes/badge/index.html" class=""><a class="padding" href="../../shortcodes/badge/index.html">Badge<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/shortcodes/button/index.html" class=""><a class="padding" href="../../shortcodes/button/index.html">Button<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/shortcodes/children/index.html" class=""><input type="checkbox" id="R-section-efce957ff9dad000e250ff868aa3291d" aria-controls="R-subsections-efce957ff9dad000e250ff868aa3291d"><label for="R-section-efce957ff9dad000e250ff868aa3291d"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Children</span></label><a class="padding" href="../../shortcodes/children/index.html">Children<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-efce957ff9dad000e250ff868aa3291d" class="morespace collapsible-menu">
+          <li data-nav-id="/shortcodes/children/index.html" class=""><input type="checkbox" id="R-section-d7ecedf0d1b5486d6a0c132e8a234d06" aria-controls="R-subsections-d7ecedf0d1b5486d6a0c132e8a234d06"><label for="R-section-d7ecedf0d1b5486d6a0c132e8a234d06"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Children</span></label><a class="padding" href="../../shortcodes/children/index.html">Children<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d7ecedf0d1b5486d6a0c132e8a234d06" class="morespace collapsible-menu">
           <li data-nav-id="/shortcodes/children/test/index.html" class=""><a class="padding" href="../../shortcodes/children/test/index.html">page X<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/shortcodes/children/children-1/index.html" class=""><input type="checkbox" id="R-section-c27b80e9c4c5ceb911093893f4f00a2b" aria-controls="R-subsections-c27b80e9c4c5ceb911093893f4f00a2b"><label for="R-section-c27b80e9c4c5ceb911093893f4f00a2b"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1</span></label><a class="padding" href="../../shortcodes/children/children-1/index.html">page 1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-c27b80e9c4c5ceb911093893f4f00a2b" class="morespace collapsible-menu">
-          <li data-nav-id="/shortcodes/children/children-1/children-1-1/index.html" class="alwaysopen"><input type="checkbox" id="R-section-bc0c0185f32af18e77e51e4a5f0a3ba4" aria-controls="R-subsections-bc0c0185f32af18e77e51e4a5f0a3ba4" checked><label for="R-section-bc0c0185f32af18e77e51e4a5f0a3ba4"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1-1</span></label><a class="padding" href="../../shortcodes/children/children-1/children-1-1/index.html">page 1-1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-bc0c0185f32af18e77e51e4a5f0a3ba4" class="morespace collapsible-menu">
-          <li data-nav-id="" class="alwaysopen"><input type="checkbox" id="R-section-9c0a5b93d94f133c09f9cec9eec310a6" aria-controls="R-subsections-9c0a5b93d94f133c09f9cec9eec310a6" checked><label for="R-section-9c0a5b93d94f133c09f9cec9eec310a6"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1-1-2 (headless)</span></label><span class="padding">page 1-1-2 (headless)</span><ul id="R-subsections-9c0a5b93d94f133c09f9cec9eec310a6" class="morespace collapsible-menu">
+          <li data-nav-id="/shortcodes/children/children-1/index.html" class=""><input type="checkbox" id="R-section-d3cff5da0d8420d4871c516833b2f97d" aria-controls="R-subsections-d3cff5da0d8420d4871c516833b2f97d"><label for="R-section-d3cff5da0d8420d4871c516833b2f97d"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1</span></label><a class="padding" href="../../shortcodes/children/children-1/index.html">page 1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d3cff5da0d8420d4871c516833b2f97d" class="morespace collapsible-menu">
+          <li data-nav-id="/shortcodes/children/children-1/children-1-1/index.html" class="alwaysopen"><input type="checkbox" id="R-section-8c27e33b2765b18da99f6c8dc40400b8" aria-controls="R-subsections-8c27e33b2765b18da99f6c8dc40400b8" checked><label for="R-section-8c27e33b2765b18da99f6c8dc40400b8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1-1</span></label><a class="padding" href="../../shortcodes/children/children-1/children-1-1/index.html">page 1-1<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-8c27e33b2765b18da99f6c8dc40400b8" class="morespace collapsible-menu">
+          <li data-nav-id="" class="alwaysopen"><input type="checkbox" id="R-section-51e1e8deb580f78714eca799da517f1d" aria-controls="R-subsections-51e1e8deb580f78714eca799da517f1d" checked><label for="R-section-51e1e8deb580f78714eca799da517f1d"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 1-1-2 (headless)</span></label><span class="padding">page 1-1-2 (headless)</span><ul id="R-subsections-51e1e8deb580f78714eca799da517f1d" class="morespace collapsible-menu">
           <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/index.html" class=""><a class="padding" href="../../shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/index.html">page 1-1-2-1<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/index.html" class=""><a class="padding" href="../../shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/index.html">page 1-1-2-2<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-3/index.html" class=""><a class="padding" href="../../shortcodes/children/children-1/children-1-1/children-1-1-3/index.html">page 1-1-3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/shortcodes/children/children-2/index.html" class=""><a class="padding" href="../../shortcodes/children/children-2/index.html">page 2<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/shortcodes/children/children-3/index.html" class=""><input type="checkbox" id="R-section-801eeaaa0748a0846cc1e95f3a734fb7" aria-controls="R-subsections-801eeaaa0748a0846cc1e95f3a734fb7"><label for="R-section-801eeaaa0748a0846cc1e95f3a734fb7"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 3</span></label><a class="padding" href="../../shortcodes/children/children-3/index.html">page 3<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-801eeaaa0748a0846cc1e95f3a734fb7" class="morespace collapsible-menu">
+          <li data-nav-id="/shortcodes/children/children-3/index.html" class=""><input type="checkbox" id="R-section-c4351ae325c16fd2130d6c815bffc83f" aria-controls="R-subsections-c4351ae325c16fd2130d6c815bffc83f"><label for="R-section-c4351ae325c16fd2130d6c815bffc83f"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu page 3</span></label><a class="padding" href="../../shortcodes/children/children-3/index.html">page 3<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-c4351ae325c16fd2130d6c815bffc83f" class="morespace collapsible-menu">
           <li data-nav-id="/shortcodes/children/children-3/test3/index.html" class=""><a class="padding" href="../../shortcodes/children/children-3/test3/index.html">page 3-1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/shortcodes/expand/index.html" class=""><a class="padding" href="../../shortcodes/expand/index.html">Expand<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/shortcodes/highlight/index.html" class=""><a class="padding" href="../../shortcodes/highlight/index.html">Highlight<i class="fas fa-check read-icon"></i></a></li>
@@ -1031,7 +1013,7 @@ line 3 of code
                     <label class="a11y-only" for="R-select-language">Language</label>
                     <select id="R-select-language" onchange="location = baseUri + this.value;">
                       <option id="R-en" value="/cont/markdown/index.html" lang="en" selected>English</option>
-                      <option id="R-pir" value="/pir/cont/markdown/index.html" lang="pir">Arrr! ☠ Pirrrates ☠</option>
+                      <option id="R-pir" value="/pir/cont/markdown/index.html" lang="art-pir">Arrr! ☠ Pirrrates ☠</option>
                     </select>
                   </div>
                   <div class="clear"></div>
@@ -1044,9 +1026,11 @@ line 3 of code
                   <div class="control-style">
                     <label class="a11y-only" for="R-select-variant">Theme</label>
                     <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
-                      <option id="R-auto" value="auto" selected>Auto</option>
+                      <option id="R-relearn-auto" value="relearn-auto" selected>Relearn Light/Dark</option>
                       <option id="R-relearn-light" value="relearn-light">Relearn Light</option>
                       <option id="R-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                      <option id="R-relearn-bright" value="relearn-bright">Relearn Bright</option>
+                      <option id="R-zen-auto" value="zen-auto">Zen Light/Dark</option>
                       <option id="R-zen-light" value="zen-light">Zen Light</option>
                       <option id="R-zen-dark" value="zen-dark">Zen Dark</option>
                       <option id="R-neon" value="neon">Neon</option>
@@ -1110,14 +1094,17 @@ line 3 of code
               
               setTimeout( githubButtonsInit, 400 );
             });
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+              setTimeout( githubButtonsInit, 400 );
+            });
           </script>
-          <script async src="../../js/github-buttons.js?1700601384"></script>
+          <script async src="../../js/github-buttons.js?1708639393"></script>
           </div>
         </div>
       </div>
     </aside>
-    <script src="../../js/clipboard.min.js?1700601384" defer></script>
-    <script src="../../js/perfect-scrollbar.min.js?1700601384" defer></script>
-    <script src="../../js/theme.js?1700601384" defer></script>
+    <script src="../../js/clipboard.min.js?1708639393" defer></script>
+    <script src="../../js/perfect-scrollbar.min.js?1708639393" defer></script>
+    <script src="../../js/theme.js?1708639393" defer></script>
   </body>
 </html>

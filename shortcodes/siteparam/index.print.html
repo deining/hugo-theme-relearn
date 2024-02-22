@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.120.4">
-    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="generator" content="Hugo 0.123.2">
+    <meta name="generator" content="Relearn 5.24.1+tip">
     <meta name="description" content="Get value of site params">
     <meta name="author" content="Sören Weber">
     <meta name="twitter:card" content="summary_large_image">
@@ -21,24 +21,25 @@
     <title>SiteParam :: Hugo Relearn Theme</title>
     <link href="https://deining.github.io/hugo-theme-relearn/shortcodes/siteparam/index.html" rel="alternate" hreflang="x-default">
     <link href="https://deining.github.io/hugo-theme-relearn/shortcodes/siteparam/index.html" rel="alternate" hreflang="en">
-    <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/siteparam/index.html" rel="alternate" hreflang="pir">
+    <link href="https://deining.github.io/hugo-theme-relearn/pir/shortcodes/siteparam/index.html" rel="alternate" hreflang="art-pir">
     <link href="https://deining.github.io/hugo-theme-relearn/shortcodes/siteparam/index.html" rel="canonical" type="text/html" title="SiteParam :: Hugo Relearn Theme">
     <link href="../../shortcodes/siteparam/index.xml" rel="alternate" type="application/rss+xml" title="SiteParam :: Hugo Relearn Theme">
-    <link href="../../images/logo.svg?1700601384" rel="icon" type="image/svg+xml">
+    <link href="../../images/logo.svg?1708639393" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../../css/fontawesome-all.min.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1700601385" rel="stylesheet"></noscript>
-    <link href="../../css/nucleus.css?1700601385" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1700601385" rel="stylesheet"></noscript>
-    <link href="../../css/perfect-scrollbar.min.css?1700601385" rel="stylesheet">
-    <link href="../../css/fonts.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1700601385" rel="stylesheet"></noscript>
-    <link href="../../css/theme.css?1700601385" rel="stylesheet">
-    <link href="../../css/theme-auto.css?1700601385" rel="stylesheet" id="R-variant-style">
-    <link href="../../css/variant.css?1700601385" rel="stylesheet">
-    <link href="../../css/print.css?1700601385" rel="stylesheet" media="print">
-    <link href="../../css/format-print.css?1700601385" rel="stylesheet">
-    <link href="../../css/ie.css?1700601385" rel="stylesheet">
-    <script src="../../js/url.js?1700601385"></script>
-    <script src="../../js/variant.js?1700601385"></script>
+    <link href="../../css/fontawesome-all.min.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../../css/nucleus.css?1708639393" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar.min.css?1708639393" rel="stylesheet">
+    <link href="../../css/fonts.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../../css/theme.css?1708639393" rel="stylesheet">
+    <link href="../../css/theme-relearn-auto.css?1708639393" rel="stylesheet" id="R-variant-style">
+    <link href="../../css/chroma-relearn-auto.css?1708639393" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="../../css/variant.css?1708639393" rel="stylesheet">
+    <link href="../../css/print.css?1708639393" rel="stylesheet" media="print">
+    <link href="../../css/format-print.css?1708639393" rel="stylesheet">
+    <link href="../../css/ie.css?1708639393" rel="stylesheet">
+    <script src="../../js/url.js?1708639393"></script>
+    <script src="../../js/variant.js?1708639393"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -48,7 +49,8 @@
       window.relearn = window.relearn || {};
       window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
       // variant stuff
-      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
       window.T_Copy_to_clipboard = `Copy to clipboard`;
       window.T_Copied_to_clipboard = `Copied to clipboard!`;
@@ -72,10 +74,7 @@
         <div class="topbar-wrapper">
           <div class="topbar-sidebar-divider"></div>
           <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
-              <button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)">
-                <i class="fa-fw fas fa-bars"></i>
-              </button>
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
@@ -170,26 +169,26 @@
 </tbody>
 </table>
 <h2 id="examples">Examples</h2>
-<h3 id="editurl-from-configtoml"><code>editURL</code> from <code>config.toml</code></h3>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="s">`editURL`</span> <span class="nx">value</span><span class="p">:</span> <span class="p">{{</span><span class="o">%</span> <span class="nx">siteparam</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;editURL&#34;</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p><code>editURL</code> value: <a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/" target="_blank">https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/</a></p>
+<h3 id="editurl-from-hugotoml"><code>editURL</code> from <code>hugo.toml</code></h3>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="s">`editURL`</span> <span class="nx">value</span><span class="p">:</span> <span class="p">{{</span><span class="o">%</span> <span class="nx">siteparam</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;editURL&#34;</span> <span class="o">%</span><span class="p">}}</span></span></span></code></pre></div><p><code>editURL</code> value: <a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/$%7BFilePath%7D" target="_blank">https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/${FilePath}</a></p>
 <h3 id="nested-parameter-with-markdown-and-html-formatting">Nested parameter with Markdown and HTML formatting</h3>
-<p>To use formatted parameter, add this in your <code>config.toml</code>:</p>
+<p>To use formatted parameter, add this in your <code>hugo.toml</code>:</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div>
-<div class="tab-panel" data-tab-group="5fb5259622098de4581e08f239c60972">
+<div class="tab-panel" data-tab-group="17a5ec3a6e25331d86db62aac7c87e40">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      data-tab-item="configtoml"
+      data-tab-item="hugotoml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('5fb5259622098de4581e08f239c60972','configtoml')"
+      onclick="switchTab('17a5ec3a6e25331d86db62aac7c87e40','hugotoml')"
     >
-      <span class="tab-nav-text">config.toml</span>
+      <span class="tab-nav-text">hugo.toml</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      data-tab-item="configtoml"
+      data-tab-item="hugotoml"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
 
@@ -208,8 +207,8 @@
         </div>
       </main>
     </div>
-    <script src="../../js/clipboard.min.js?1700601385" defer></script>
-    <script src="../../js/perfect-scrollbar.min.js?1700601385" defer></script>
-    <script src="../../js/theme.js?1700601385" defer></script>
+    <script src="../../js/clipboard.min.js?1708639393" defer></script>
+    <script src="../../js/perfect-scrollbar.min.js?1708639393" defer></script>
+    <script src="../../js/theme.js?1708639393" defer></script>
   </body>
 </html>

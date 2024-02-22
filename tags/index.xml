@@ -9,9 +9,9 @@
     <atom:link href="https://deining.github.io/hugo-theme-relearn/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>a secret</title>
-      <link>https://deining.github.io/hugo-theme-relearn/tags/its-hidden/index.html</link>
+      <link>https://deining.github.io/hugo-theme-relearn/tags/the-hidden/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://deining.github.io/hugo-theme-relearn/tags/its-hidden/index.html</guid>
+      <guid>https://deining.github.io/hugo-theme-relearn/tags/the-hidden/index.html</guid>
       <description>This lists all pages that are hidden from the home page. This includes pages that define hidden=true in their frontmatter as well as descendents of hidden pages.
 When giving term pages, you should give it a title. Otherwise it will print out a warning and will use the urlized title, which may looks weird.
 While internally this term is called hidden, it is referenced in the resulting english pages as a secret and as hush, matey in the piratish translation.</description>
@@ -24,7 +24,7 @@ While internally this term is called hidden, it is referenced in the resulting e
       <description></description>
     </item>
     <item>
-      <title>config</title>
+      <title>Config</title>
       <link>https://deining.github.io/hugo-theme-relearn/tags/config/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/tags/config/index.html</guid>
@@ -38,28 +38,21 @@ While internally this term is called hidden, it is referenced in the resulting e
       <description></description>
     </item>
     <item>
-      <title>documentation</title>
+      <title>Documentation</title>
       <link>https://deining.github.io/hugo-theme-relearn/tags/documentation/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/tags/documentation/index.html</guid>
       <description></description>
     </item>
     <item>
-      <title>headless</title>
-      <link>https://deining.github.io/hugo-theme-relearn/tags/headless/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://deining.github.io/hugo-theme-relearn/tags/headless/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>non-hidden</title>
+      <title>Non-Hidden</title>
       <link>https://deining.github.io/hugo-theme-relearn/tags/non-hidden/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/tags/non-hidden/index.html</guid>
       <description></description>
     </item>
     <item>
-      <title>tutorial</title>
+      <title>Tutorial</title>
       <link>https://deining.github.io/hugo-theme-relearn/tags/tutorial/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://deining.github.io/hugo-theme-relearn/tags/tutorial/index.html</guid>

@@ -38,8 +38,8 @@ social.twitter = ""
 # These options are specific to the Relearn theme.
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# Variants
-# These options set your color variant.
+# Branding
+# These options set your overall visual apperance.
 
 # Used color variants.
 # Default: "auto"
@@ -54,32 +54,37 @@ social.twitter = ""
 # If the array has more than one entry, a variant selector
 # is shown in the lower part of the menu. The first entry in the array is the
 # default variant, used for first time visitors.
-# The theme ships with the following variants: "auto", "relearn-bright",
+# The theme ships with the following variants: "relearn-bright",
 # "relearn-light", "relearn-dark", "zen-light", "zen-dark", "neon", "learn",
-# "blue", "green", "red". The auto variant is somewhat special. See the
-# option for themeVariantAuto below.
+# "blue", "green", "red". In addition you can use auto mode variants. See the
+# docs for a detailed explaination.
 # You can also define your own variants. See the docs how this works. Also,
 # the docs provide an interactive theme generator to help you with this task.
 themeVariant = [
-	{ identifier = "auto"          },
-	{ identifier = "relearn-light" },
-	{ identifier = "relearn-dark"  },
-	{ identifier = "zen-light"     },
-	{ identifier = "zen-dark"      },
-	{ identifier = "neon"          },
-	{ identifier = "learn"         },
-	{ identifier = "blue"          },
-	{ identifier = "green"         },
-	{ identifier = "red"           }
+	{ identifier = "relearn-auto",  name = "Relearn Light/Dark", auto = [] },
+	{ identifier = "relearn-light"  },
+	{ identifier = "relearn-dark"   },
+	{ identifier = "relearn-bright" },
+	{ identifier = "zen-auto",      name = "Zen Light/Dark", auto = [ "zen-light", "zen-dark" ] },
+	{ identifier = "zen-light"      },
+	{ identifier = "zen-dark"       },
+	{ identifier = "neon"           },
+	{ identifier = "learn"          },
+	{ identifier = "blue"           },
+	{ identifier = "green"          },
+	{ identifier = "red"            }
 ]
 
-# The color variants used for auto mode.
-# Default: [ "relearn-light", "relearn-dark" ], overwritten by the first
-# two non-auto options of your `themeVariant` option if present.
-# The auto variant defines how your site adjusts to your selected OS settings
-# for light/dark mode. The first array element is the variant for light mode,
-# the second for dark mode.
-themeVariantAuto = [ "relearn-light", "relearn-dark" ]
+# Filename suffix for variant files.
+# Default: not set
+# The theme modifies the variant stylesheets during build and tries to store
+# them with the same file name. In certain installations it was observed, that
+# Hugo could not overwrite these files due to permission issues. If you
+# experience this, you can first try to set the `--noChmod` option for Hugo.
+# If this still doesn't help you can set this option to eg. ".gen". This will
+# be used as a suffix for these generated files, causing them to be newly
+# created instead of overwriting the existing ones.
+themeVariantModifier = ""
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # General
@@ -120,7 +125,7 @@ disableRandomIds = false
 additionalContentLanguage = [ "en" ]
 
 # Additional code dependencies.
-# Default: See config.toml of the theme
+# Default: See hugo.toml of the theme
 # The theme provides a mechanism to load further JavaScript and CSS
 # dependencies on demand only if they are needed. This comes in handy if you
 # want to add own shortcodes that depend on additional code to be loaded.
@@ -152,11 +157,13 @@ disableNextPrev = false
 # The URL prefix to edit a page.
 # Default: not set
 # If set, an edit button will be shown in the topbar. If the button is hidden,
-# also the keyboard shortcuts are disabled. The given URL is prepended to the
-# relative file path of a the displayed page. The URL must end with a `/`.
-# This is useful if you wnat to give the opportunity for people to create merge
-#  request for your content.
-editURL = "https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/"
+# also the keyboard shortcuts are disabled. The value can contain the macro
+# `${FilePath}` which will be replaced by the file path of your displayed page.
+# If no `${FilePath}` is given in the value, the value is treated as if the
+# `${FilePath}` was appended at the end of the value. This can be overridden
+# in the pages frontmatter. This is useful if you want to give the opportunity
+# for people to create merge request for your content.
+editURL = "https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/${FilePath}"
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Menu
@@ -195,6 +202,7 @@ alwaysopen = ""
 # Default: false
 # If set to true, a submenu in the sidebar will be displayed in a collapsible
 # tree view and a clickable expander is set in front of the entry.
+# This can be overridden in the page's frontmatter.
 collapsibleMenu = true
 
 # Shows checkmarks for visited pages of the main menu.
@@ -220,8 +228,10 @@ disableLanguageSwitchingButton = false
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Hidden pages
 # These options configure how hidden pages are treated.
-# A page flagged as hidden, is only removed from the main menu but behaves
-# like any other page for all other functionality in Hugo.
+# A page flagged as hidden, is only removed from the main menu if you are
+# currently not on this page or the hidden page is not part of current page's
+# ancestors. For all other functionality in Hugo a hidden page behaves like any
+# other page if not otherwise configured.
 
 # Hide hidden pages from search.
 # Default: false
@@ -302,6 +312,16 @@ highlightWrap = true
 # Images
 # These options configure how images are displayed.
 
+# What to do when local image link is not resolved.
+# Default: ""
+# You can control what should happen if a local image can not be resolved to as
+# a resource. If not set, the unresolved link is written as given into the resulting
+# output. If set to `warning` the same happens and an additional warning is
+# printed. If set to `error` an error message is printed and the build is
+# aborted.
+# Please note that this can not resolve files inside of your `static` directory.
+image.errorlevel = ""
+
 # Image effects.
 # See the documentation for how you can even add your own arbitrary effects to
 # the list.
@@ -319,6 +339,17 @@ imageEffects.shadow = false
 # Links
 # These options configure how links are displayed.
 
+# What to do when local page link is not resolved.
+# Default: ""
+# You can control what should happen if a local link can not be resolved to a
+# page. If not set, the unresolved link is written as given into the resulting
+# output. If set to `warning` the same happens and an additional warning is
+# printed. If set to `error` an error message is printed and the build is
+# aborted.
+# Please note that with Hugo < 0.123.0 + `uglyURLs=true` this can lead to false
+# negatives.
+link.errorlevel = "warning"
+
 # How to open external links.
 # Default: "_blank"
 # For external links you can define how they are opened in your browser. All
@@ -333,6 +364,34 @@ externalLinkTarget = "_blank"
 # appends no index.html to prettyURLs. As a trade off, your build project will
 # not be servable from the file system.
 disableExplicitIndexURLs = false
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# MathJax
+# These options configure how math formulae are displayed.
+
+# Initialization options for MathJax.
+# Default: not set
+# A JSON value. See the MathJaxdocumentation for possible parameter.
+# This can be overridden in the page's frontmatter.
+mathJaxInitialize = "{}"
+
+# Only load MathJax if needed.
+# Default: true
+# If a Math shortcode is found, the option will be ignored and
+# MathJax will be loaded regardlessly. The option is still useful in case you
+# are using scripting to set up your graph. In this case no shortcode or
+# codefence is involved and the library is not loaded by default. In this case
+# you can set `disableMathJax=false` in your frontmatter to force the library to
+# be loaded.
+# This can be overridden in the page's frontmatter.
+disableMathJax = true
+
+# URL for external MathJax library.
+# Default: not set
+# Specifies the remote location of the MathJax library. By default the shipped
+# version will be used.
+# This can be overridden in the page's frontmatter.
+customMathJaxURL = "" # "https://unpkg.com/mathjax/es5/tex-mml-chtml.js"
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Mermaid
@@ -369,34 +428,6 @@ disableMermaid = true
 # version will be used.
 # This can be overridden in the page's frontmatter.
 customMermaidURL = "" # "https://unpkg.com/mermaid/dist/mermaid.min.js"
-
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# MathJax
-# These options configure how math formulae are displayed.
-
-# Initialization options for MathJax.
-# Default: not set
-# A JSON value. See the MathJaxdocumentation for possible parameter.
-# This can be overridden in the page's frontmatter.
-mathJaxInitialize = "{}"
-
-# Only load MathJax if needed.
-# Default: true
-# If a Math shortcode is found, the option will be ignored and
-# MathJax will be loaded regardlessly. The option is still useful in case you
-# are using scripting to set up your graph. In this case no shortcode or
-# codefence is involved and the library is not loaded by default. In this case
-# you can set `disableMathJax=false` in your frontmatter to force the library to
-# be loaded.
-# This can be overridden in the page's frontmatter.
-disableMathJax = true
-
-# URL for external MathJax library.
-# Default: not set
-# Specifies the remote location of the MathJax library. By default the shipped
-# version will be used.
-# This can be overridden in the page's frontmatter.
-customMathJaxURL = "" # "https://unpkg.com/mathjax/es5/tex-mml-chtml.js"
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # OpenApi

@@ -319,11 +319,6 @@
 		color: rgba( 255, 255, 255, 1 ); /* var(--MENU-SECTIONS-LINK-HOVER-color) */
 	}
 
-	#R-sidebar .menu-control button,
-	#R-sidebar .menu-control select{
-		outline-color: rgba( 255, 255, 255, 1 ); /* var(--MENU-SECTIONS-LINK-HOVER-color) */
-	}
-
 	#R-sidebar ul.enlarge > li.parent,
 	#R-sidebar ul.enlarge > li.active {
 		background-color: rgba( 0, 0, 0, .166 ); /* var(--MENU-SECTIONS-ACTIVE-BG-color) */
@@ -628,9 +623,9 @@
 		color: rgba( 255, 255, 255, 1 ); /* var(--BOX-CAPTION-color) */
 	}
 
-	.btn > *:hover,
-	.btn > *:active,
-	.btn > *:focus {
+	.btn.interactive > *:hover,
+	.btn.interactive > *:active,
+	.btn.interactive > *:focus {
 		background-color: rgba( 255, 255, 255, .833 ); /* var(--BOX-BG-color) */
 		color: rgba( 16, 16, 16, 1 ); /* var(--BOX-NEUTRAL-TEXT-color) */
 	}
@@ -736,9 +731,9 @@
 		color: rgba( 0, 0, 0, 1 ); /* var(--MAIN-TEXT-color) */
 	}
 
-	.btn.cstyle.transparent:hover,
-	.btn.cstyle.transparent:focus,
-	.btn.cstyle.transparent:active {
+	.btn.cstyle.interactive.transparent:hover,
+	.btn.cstyle.interactive.transparent:focus,
+	.btn.cstyle.interactive.transparent:active {
 		background-color: rgba( 128, 128, 128, 1 ); /* var(--BOX-NEUTRAL-color) */
 	}
 

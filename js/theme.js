@@ -292,10 +292,10 @@ function initMermaid( update, attrs ) {
             initMermaid( true, {
                 'theme': variants.getColorValue( 'PRINT-MERMAID-theme' ),
             });
-		}.bind( this ) );
-		window.addEventListener( 'afterprint', function(){
+        }.bind( this ) );
+        window.addEventListener( 'afterprint', function(){
             initMermaid( true );
-		}.bind( this ) );
+        }.bind( this ) );
     }
 
     attrs = attrs || {
@@ -395,9 +395,10 @@ function initOpenapi( update, attrs ){
 
     }
     function renderOpenAPI(oc) {
+        var mod = window.relearn.themeVariantModifier;
         var buster = window.themeUseOpenapi.assetsBuster ? '?' + window.themeUseOpenapi.assetsBuster : '';
         var print = isPrint || attrs.isPrintPreview ? "PRINT-" : "";
-		var theme = print ? `${baseUri}/css/theme-relearn-light.css` : document.querySelector( '#R-variant-style' ).attributes.href.value
+        var theme = print ? `${baseUri}/css/theme-relearn-light${mod}.css${buster}` : document.querySelector( '#R-variant-style' ).attributes.href.value
         var swagger_theme = variants.getColorValue( print + 'OPENAPI-theme' );
         var swagger_code_theme = variants.getColorValue( print + 'OPENAPI-CODE-theme' );
 
@@ -588,7 +589,7 @@ function initCodeClipboard(){
     }
 
     var codeElements = document.querySelectorAll( 'code' );
-	for( var i = 0; i < codeElements.length; i++ ){
+    for( var i = 0; i < codeElements.length; i++ ){
         var code = codeElements[i];
         var text = getCodeText( code );
         var inPre = code.parentNode.tagName.toLowerCase() == 'pre';
@@ -599,38 +600,6 @@ function initCodeClipboard(){
             code.parentNode.parentNode.parentNode.querySelector( 'td:first-child > pre > code' ) == code;
 
         if( !isFirstLineCell && ( inPre || text.length > 5 ) ){
-            var clip = new ClipboardJS( '.copy-to-clipboard-button', {
-                text: function( trigger ){
-                    if( !trigger.previousElementSibling ){
-                        return '';
-                    }
-                    return trigger.previousElementSibling.dataset.code || '';
-                }
-            });
-
-            clip.on( 'success', function( e ){
-                e.clearSelection();
-                var inPre = e.trigger.previousElementSibling && e.trigger.previousElementSibling.tagName.toLowerCase() == 'pre';
-                var isCodeRtl = !inPre ? isRtl : false;
-                var doBeside = inPre || (e.trigger.previousElementSibling && e.trigger.previousElementSibling.tagName.toLowerCase() == 'table' );
-                e.trigger.setAttribute( 'aria-label', window.T_Copied_to_clipboard );
-                e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (doBeside ? 'w' : 's'+(isCodeRtl?'e':'w')) );
-            });
-
-            clip.on( 'error', function( e ){
-                var inPre = e.trigger.previousElementSibling && e.trigger.previousElementSibling.tagName.toLowerCase() == 'pre';
-                var isCodeRtl = !inPre ? isRtl : false;
-                var doBeside = inPre || (e.trigger.previousElementSibling && e.trigger.previousElementSibling.tagName.toLowerCase() == 'table' );
-                e.trigger.setAttribute( 'aria-label', fallbackMessage(e.action) );
-                e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (doBeside ? 'w' : 's'+(isCodeRtl?'e':'w')) );
-                var f = function(){
-                    e.trigger.setAttribute( 'aria-label', window.T_Copied_to_clipboard );
-                    e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (doBeside ? 'w' : 's'+(isCodeRtl?'e':'w')) );
-                    document.removeEventListener( 'copy', f );
-                };
-                document.addEventListener( 'copy', f );
-            });
-
             code.classList.add( 'copy-to-clipboard-code' );
             if( inPre ){
                 code.classList.add( 'copy-to-clipboard' );
@@ -681,6 +650,46 @@ function initCodeClipboard(){
             }
         }
     }
+
+    var clip = new ClipboardJS( '.copy-to-clipboard-button', {
+        text: function( trigger ){
+            if( !trigger.previousElementSibling ){
+                return '';
+            }
+            return trigger.previousElementSibling.dataset.code || '';
+        }
+    });
+
+    clip.on( 'success', function( e ){
+        e.clearSelection();
+        var inPre = e.trigger.previousElementSibling && e.trigger.previousElementSibling.tagName.toLowerCase() == 'pre';
+        var isCodeRtl = !inPre ? isRtl : false;
+        var doBeside = inPre || (e.trigger.previousElementSibling && e.trigger.previousElementSibling.tagName.toLowerCase() == 'table' );
+        e.trigger.setAttribute( 'aria-label', window.T_Copied_to_clipboard );
+        e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (doBeside ? 'w' : 's'+(isCodeRtl?'e':'w')) );
+    });
+
+    clip.on( 'error', function( e ){
+        var inPre = e.trigger.previousElementSibling && e.trigger.previousElementSibling.tagName.toLowerCase() == 'pre';
+        var isCodeRtl = !inPre ? isRtl : false;
+        var doBeside = inPre || (e.trigger.previousElementSibling && e.trigger.previousElementSibling.tagName.toLowerCase() == 'table' );
+        e.trigger.setAttribute( 'aria-label', fallbackMessage(e.action) );
+        e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (doBeside ? 'w' : 's'+(isCodeRtl?'e':'w')) );
+        var f = function(){
+            e.trigger.setAttribute( 'aria-label', window.T_Copied_to_clipboard );
+            e.trigger.classList.add( 'tooltipped', 'tooltipped-' + (doBeside ? 'w' : 's'+(isCodeRtl?'e':'w')) );
+            document.removeEventListener( 'copy', f );
+        };
+        document.addEventListener( 'copy', f );
+    });
+}
+
+function initChroma( update ){
+    var chroma = variants.getColorValue( 'CODE-theme' );
+    var link = document.querySelector( '#R-variant-chroma-style' );
+    var old_path = link.getAttribute( 'href' );
+    var new_path = old_path.replace( /^(.*\/chroma-).*?(\.css.*)$/, '$1' + chroma + '$2' );
+    link.setAttribute( 'href', new_path );
 }
 
 function initArrowNav(){
@@ -1079,7 +1088,6 @@ function initSwipeHandler(){
     var handleStartX = function(evt) {
         startx = evt.touches[0].clientX;
         starty = evt.touches[0].clientY;
-        return false;
     };
     var handleMoveX = function(evt) {
         if( startx !== null ){
@@ -1096,24 +1104,22 @@ function initSwipeHandler(){
                 closeNav();
             }
         }
-        return false;
     };
     var handleEndX = function(evt) {
         startx = null;
         starty = null;
-        return false;
     };
 
     var s = document.querySelector( '#R-body-overlay' );
-    s && s.addEventListener("touchstart", handleStartX, false);
-    document.querySelector( '#R-sidebar' ).addEventListener("touchstart", handleStartX, false);
-    document.querySelectorAll( '#R-sidebar *' ).forEach( function(e){ e.addEventListener("touchstart", handleStartX); }, false);
-    s && s.addEventListener("touchmove", handleMoveX, false);
-    document.querySelector( '#R-sidebar' ).addEventListener("touchmove", handleMoveX, false);
-    document.querySelectorAll( '#R-sidebar *' ).forEach( function(e){ e.addEventListener("touchmove", handleMoveX); }, false);
-    s && s.addEventListener("touchend", handleEndX, false);
-    document.querySelector( '#R-sidebar' ).addEventListener("touchend", handleEndX, false);
-    document.querySelectorAll( '#R-sidebar *' ).forEach( function(e){ e.addEventListener("touchend", handleEndX); }, false);
+    s && s.addEventListener("touchstart", handleStartX, { capture: false, passive: true});
+    document.querySelector( '#R-sidebar' ).addEventListener("touchstart", handleStartX, { capture: false, passive: true});
+    document.querySelectorAll( '#R-sidebar *' ).forEach( function(e){ e.addEventListener("touchstart", handleStartX, { capture: false, passive: true}) });
+    s && s.addEventListener("touchmove", handleMoveX, { capture: false, passive: true});
+    document.querySelector( '#R-sidebar' ).addEventListener("touchmove", handleMoveX, { capture: false, passive: true});
+    document.querySelectorAll( '#R-sidebar *' ).forEach( function(e){ e.addEventListener("touchmove", handleMoveX, { capture: false, passive: true}) });
+    s && s.addEventListener("touchend", handleEndX, { capture: false, passive: true});
+    document.querySelector( '#R-sidebar' ).addEventListener("touchend", handleEndX, { capture: false, passive: true});
+    document.querySelectorAll( '#R-sidebar *' ).forEach( function(e){ e.addEventListener("touchend", handleEndX, { capture: false, passive: true}) });
 }
 
 function initImage(){
@@ -1227,39 +1233,39 @@ function scrollToPositions() {
 }
 
 function mark() {
-	// mark some additional stuff as searchable
-	var bodyInnerLinks = document.querySelectorAll( '#R-body-inner a:not(.lightbox-link):not(.btn):not(.lightbox-back)' );
-	for( var i = 0; i < bodyInnerLinks.length; i++ ){
-		bodyInnerLinks[i].classList.add( 'highlight' );
-	}
+    // mark some additional stuff as searchable
+    var bodyInnerLinks = document.querySelectorAll( '#R-body-inner a:not(.lightbox-link):not(.btn):not(.lightbox-back)' );
+    for( var i = 0; i < bodyInnerLinks.length; i++ ){
+        bodyInnerLinks[i].classList.add( 'highlight' );
+    }
 
-	var value = sessionStorage.getItem( window.relearn.baseUriFull + 'search-value' );
+    var value = sessionStorage.getItem( window.relearn.baseUriFull + 'search-value' );
     var highlightableElements = document.querySelectorAll( '.highlightable' );
     highlight( highlightableElements, value, { element: 'mark' } );
 
-	var markedElements = document.querySelectorAll( 'mark' );
-	for( var i = 0; i < markedElements.length; i++ ){
-		var parent = markedElements[i].parentNode;
-		while( parent && parent.classList ){
-			if( parent.classList.contains( 'expand' ) ){
-				var expandInputs = parent.querySelectorAll( 'input:not(.expand-marked)' );
-				if( expandInputs.length ){
-					expandInputs[0].classList.add( 'expand-marked' );
-					expandInputs[0].dataset.checked = expandInputs[0].checked ? 'true' : 'false';
-					expandInputs[0].checked = true;
-				}
-			}
-			if( parent.tagName.toLowerCase() === 'li' && parent.parentNode && parent.parentNode.tagName.toLowerCase() === 'ul' && parent.parentNode.classList.contains( 'collapsible-menu' )){
-				var toggleInputs = parent.querySelectorAll( 'input:not(.menu-marked)' );
-				if( toggleInputs.length ){
-					toggleInputs[0].classList.add( 'menu-marked' );
-					toggleInputs[0].dataset.checked = toggleInputs[0].checked ? 'true' : 'false';
-					toggleInputs[0].checked = true;
-				}
-			}
-			parent = parent.parentNode;
-		}
-	}
+    var markedElements = document.querySelectorAll( 'mark' );
+    for( var i = 0; i < markedElements.length; i++ ){
+        var parent = markedElements[i].parentNode;
+        while( parent && parent.classList ){
+            if( parent.classList.contains( 'expand' ) ){
+                var expandInputs = parent.querySelectorAll( 'input:not(.expand-marked)' );
+                if( expandInputs.length ){
+                    expandInputs[0].classList.add( 'expand-marked' );
+                    expandInputs[0].dataset.checked = expandInputs[0].checked ? 'true' : 'false';
+                    expandInputs[0].checked = true;
+                }
+            }
+            if( parent.tagName.toLowerCase() === 'li' && parent.parentNode && parent.parentNode.tagName.toLowerCase() === 'ul' && parent.parentNode.classList.contains( 'collapsible-menu' )){
+                var toggleInputs = parent.querySelectorAll( 'input:not(.menu-marked)' );
+                if( toggleInputs.length ){
+                    toggleInputs[0].classList.add( 'menu-marked' );
+                    toggleInputs[0].dataset.checked = toggleInputs[0].checked ? 'true' : 'false';
+                    toggleInputs[0].checked = true;
+                }
+            }
+            parent = parent.parentNode;
+        }
+    }
     psm && setTimeout( function(){ psm.update(); }, 10 );
 }
 window.relearn.markSearch = mark;
@@ -1292,9 +1298,9 @@ function highlight( es, words, options ){
     }
     var re = new RegExp( pattern, flag );
 
-	for( var i = 0; i < es.length; i++ ){
+    for( var i = 0; i < es.length; i++ ){
         highlightNode( es[i], re, settings.element, settings.className );
-	}
+    }
 };
 
 function highlightNode( node, re, nodeName, className ){
@@ -1321,32 +1327,32 @@ function highlightNode( node, re, nodeName, className ){
 };
 
 function unmark() {
-	sessionStorage.removeItem( window.relearn.baseUriFull + 'search-value' );
-	var markedElements = document.querySelectorAll( 'mark' );
-	for( var i = 0; i < markedElements.length; i++ ){
-		var parent = markedElements[i].parentNode;
-		while( parent && parent.classList ){
-			if( parent.tagName.toLowerCase() === 'li' && parent.parentNode && parent.parentNode.tagName.toLowerCase() === 'ul' && parent.parentNode.classList.contains( 'collapsible-menu' )){
-				var toggleInputs = parent.querySelectorAll( 'input.menu-marked' );
-				if( toggleInputs.length ){
-					toggleInputs[0].checked = toggleInputs[0].dataset.checked === 'true';
-					toggleInputs[0].dataset.checked = null;
-					toggleInputs[0].classList.remove( 'menu-marked' );
-				}
-			}
-			if( parent.classList.contains( 'expand' ) ){
-				var expandInputs = parent.querySelectorAll( 'input.expand-marked' );
-				if( expandInputs.length ){
-					expandInputs[0].checked = expandInputs[0].dataset.checked === 'true';
-					expandInputs[0].dataset.checked = null;
-					expandInputs[0].classList.remove( 'expand-marked' );
-				}
-			}
-			parent = parent.parentNode;
-		}
-	}
+    sessionStorage.removeItem( window.relearn.baseUriFull + 'search-value' );
+    var markedElements = document.querySelectorAll( 'mark' );
+    for( var i = 0; i < markedElements.length; i++ ){
+        var parent = markedElements[i].parentNode;
+        while( parent && parent.classList ){
+            if( parent.tagName.toLowerCase() === 'li' && parent.parentNode && parent.parentNode.tagName.toLowerCase() === 'ul' && parent.parentNode.classList.contains( 'collapsible-menu' )){
+                var toggleInputs = parent.querySelectorAll( 'input.menu-marked' );
+                if( toggleInputs.length ){
+                    toggleInputs[0].checked = toggleInputs[0].dataset.checked === 'true';
+                    toggleInputs[0].dataset.checked = null;
+                    toggleInputs[0].classList.remove( 'menu-marked' );
+                }
+            }
+            if( parent.classList.contains( 'expand' ) ){
+                var expandInputs = parent.querySelectorAll( 'input.expand-marked' );
+                if( expandInputs.length ){
+                    expandInputs[0].checked = expandInputs[0].dataset.checked === 'true';
+                    expandInputs[0].dataset.checked = null;
+                    expandInputs[0].classList.remove( 'expand-marked' );
+                }
+            }
+            parent = parent.parentNode;
+        }
+    }
 
-	var highlighted = document.querySelectorAll( '.highlightable' );
+    var highlighted = document.querySelectorAll( '.highlightable' );
     unhighlight( highlighted, { element: 'mark' } );
     psm && setTimeout( function(){ psm.update(); }, 10 );
 }
@@ -1358,14 +1364,14 @@ function unhighlight( es, options ){
     };
     Object.assign( settings, options );
 
-	for( var i = 0; i < es.length; i++ ){
+    for( var i = 0; i < es.length; i++ ){
         var highlightedElements = es[i].querySelectorAll( settings.element + '.' + settings.className );
         for( var j = 0; j < highlightedElements.length; j++ ){
             var parent = highlightedElements[j].parentNode;
             parent.replaceChild( highlightedElements[j].firstChild, highlightedElements[j] );
             parent.normalize();
         }
-	}
+    }
 };
 
 // replace jQuery.createPseudo with https://stackoverflow.com/a/66318392
@@ -1464,12 +1470,21 @@ function updateTheme( detail ){
     }
     window.relearn.lastVariant = detail.variant;
 
+    initChroma( true );
     initMermaid( true );
     initOpenapi( true );
     document.dispatchEvent( new CustomEvent( 'themeVariantLoaded', {
         detail: detail
     }));
 }
+
+(function(){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        initChroma( true );
+        initMermaid( true );
+        initOpenapi( true );
+    });
+})();
 
 function useMermaid( config ){
     if( !Object.assign ){

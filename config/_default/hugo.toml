@@ -24,9 +24,6 @@ themesdir = "../.."
 # use this theme ;-)
 theme = "hugo-theme-relearn"
 
-# the main language of this site; also an automatic pirrrate translation is
-# available in this showcase
-languageCode = "en"
 # make sure your defaultContentLanguage is the first one in the [languages]
 # array below, as the theme needs to make assumptions on it
 defaultContentLanguage = "en"
@@ -37,13 +34,13 @@ defaultContentLanguage = "en"
 title = "Hugo Relearn Theme"
 
 [outputs]
-  # add JSON to the home to support Lunr search; This is a mandatory setting
+  # add `json` to the home to support Lunr search; This is a mandatory setting
   # for the search functionality
-  # add PRINT to home, section and page to activate the feature to print whole
+  # add `print` to home, section and page to activate the feature to print whole
   # chapters
-  home = ["HTML", "RSS", "PRINT", "SEARCH", "SEARCHPAGE"]
-  section = ["HTML", "RSS", "PRINT"]
-  page = ["HTML", "RSS", "PRINT"]
+  home = ["html", "rss", "print", "search", "searchpage"]
+  section = ["html", "rss", "print"]
+  page = ["html", "rss", "print"]
 
 [markup]
   [markup.highlight]
@@ -51,23 +48,25 @@ title = "Hugo Relearn Theme"
     # not use it; visually both layouts have the same look and behavior
     lineNumbersInTable = false
 
-    # if `guessSyntax = true`, there will be no unstyled code even if no language
-    # was given BUT Mermaid and Math codefences will not work anymore! So this is a
-    # mandatory setting for your site if you want to use Mermaid or Math codefences
-    guessSyntax = false
-
     # the shipped variants come with their own modified chroma syntax highlightning
-    # style which is imported in theme-relearn-light.css, theme-relearn-dark.css, etc.;
-    # if you want to use a predefined style instead:
+    # stylesheets which are linked in your generated HTML pages; you can use Hugo to generate
+    # own stylesheets to your liking and use them in your variant;
+    # if you want to use Hugo's internal styles instead of the shipped stylesheets:
     # - remove `noClasses` or set `noClasses = true`
     # - set `style` to a predefined style name
+    # note: with using the internal styles, the `--CODE-theme` setting in your variant
+    # stylesheet will be ignored and the internal style is used for all variants and
+    # even print
     noClasses = false
     # style = "tango"
 
-  [markup.goldmark.renderer]
+  [markup.goldmark]
+    # this is required for the themes exampleSite to make the piratify shortcode work
+    duplicateResourceFiles = true
+
     # activated for this showcase to use HTML and JavaScript; decide on your own needs;
     # if in doubt, remove this line
-    unsafe = true
+    renderer.unsafe = true
 
 # allows `hugo server` to display this showcase in IE11; this is used for testing, as we
 # are still supporting IE11 - although with degraded experience; if you don't care about
@@ -127,6 +126,8 @@ title = "Hugo Relearn Theme"
   [languages.pir]
     title = "Cap'n Hugo Relearrrn Theme"
     weight = 2
+    languageCode = "art-pir"
+    languageDirection = "rtl"
     languageName = "Arrr! ☠ Pirrrates ☠"
     # Language dependend settings:
     # Use case https://gohugo.io/content-management/multilingual/#translation-by-content-directory
@@ -191,13 +192,6 @@ title = "Hugo Relearn Theme"
   [[module.mounts]]
     source = 'i18n'
     target = 'i18n'
-  # just for this documentation to expose the GitHub hero image in the docs
-  [[module.mounts]]
-    source = '../images'
-    target = 'static/images'
-  [[module.mounts]]
-    source = 'static/images'
-    target = 'static/images'
   [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
@@ -208,6 +202,10 @@ title = "Hugo Relearn Theme"
   [[module.mounts]]
     source = 'config'
     target = 'static/config'
+  # just for this documentation to expose the GitHub hero image in the docs
+  [[module.mounts]]
+    source = '../images'
+    target = 'static/images'
 
 [params]
   # Demo setting for displaying the siteparam shortcode the docs.

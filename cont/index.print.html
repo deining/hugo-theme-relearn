@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.120.4">
-    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="generator" content="Hugo 0.123.2">
+    <meta name="generator" content="Relearn 5.24.1+tip">
     <meta name="description" content="Documentation for Hugo Relearn Theme">
     <meta name="author" content="Sören Weber">
     <meta name="twitter:card" content="summary_large_image">
@@ -20,24 +20,25 @@
     <title>Content :: Hugo Relearn Theme</title>
     <link href="https://deining.github.io/hugo-theme-relearn/cont/index.html" rel="alternate" hreflang="x-default">
     <link href="https://deining.github.io/hugo-theme-relearn/cont/index.html" rel="alternate" hreflang="en">
-    <link href="https://deining.github.io/hugo-theme-relearn/pir/cont/index.html" rel="alternate" hreflang="pir">
+    <link href="https://deining.github.io/hugo-theme-relearn/pir/cont/index.html" rel="alternate" hreflang="art-pir">
     <link href="https://deining.github.io/hugo-theme-relearn/cont/index.html" rel="canonical" type="text/html" title="Content :: Hugo Relearn Theme">
     <link href="../cont/index.xml" rel="alternate" type="application/rss+xml" title="Content :: Hugo Relearn Theme">
-    <link href="../images/logo.svg?1700601384" rel="icon" type="image/svg+xml">
+    <link href="../images/logo.svg?1708639393" rel="icon" type="image/svg+xml">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="../css/fontawesome-all.min.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fontawesome-all.min.css?1700601385" rel="stylesheet"></noscript>
-    <link href="../css/nucleus.css?1700601385" rel="stylesheet">
-    <link href="../css/auto-complete.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/auto-complete.css?1700601385" rel="stylesheet"></noscript>
-    <link href="../css/perfect-scrollbar.min.css?1700601385" rel="stylesheet">
-    <link href="../css/fonts.css?1700601385" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fonts.css?1700601385" rel="stylesheet"></noscript>
-    <link href="../css/theme.css?1700601385" rel="stylesheet">
-    <link href="../css/theme-auto.css?1700601385" rel="stylesheet" id="R-variant-style">
-    <link href="../css/variant.css?1700601385" rel="stylesheet">
-    <link href="../css/print.css?1700601385" rel="stylesheet" media="print">
-    <link href="../css/format-print.css?1700601385" rel="stylesheet">
-    <link href="../css/ie.css?1700601385" rel="stylesheet">
-    <script src="../js/url.js?1700601385"></script>
-    <script src="../js/variant.js?1700601385"></script>
+    <link href="../css/fontawesome-all.min.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fontawesome-all.min.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../css/nucleus.css?1708639393" rel="stylesheet">
+    <link href="../css/auto-complete.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/auto-complete.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../css/perfect-scrollbar.min.css?1708639393" rel="stylesheet">
+    <link href="../css/fonts.css?1708639393" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../css/fonts.css?1708639393" rel="stylesheet"></noscript>
+    <link href="../css/theme.css?1708639393" rel="stylesheet">
+    <link href="../css/theme-relearn-auto.css?1708639393" rel="stylesheet" id="R-variant-style">
+    <link href="../css/chroma-relearn-auto.css?1708639393" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="../css/variant.css?1708639393" rel="stylesheet">
+    <link href="../css/print.css?1708639393" rel="stylesheet" media="print">
+    <link href="../css/format-print.css?1708639393" rel="stylesheet">
+    <link href="../css/ie.css?1708639393" rel="stylesheet">
+    <script src="../js/url.js?1708639393"></script>
+    <script src="../js/variant.js?1708639393"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -47,7 +48,8 @@
       window.relearn = window.relearn || {};
       window.relearn.baseUriFull='https:\/\/deining.github.io\/hugo-theme-relearn/';
       // variant stuff
-      window.variants && variants.init( [ 'auto', 'relearn-light', 'relearn-dark', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
       window.T_Copy_to_clipboard = `Copy to clipboard`;
       window.T_Copied_to_clipboard = `Copied to clipboard!`;
@@ -71,10 +73,7 @@
         <div class="topbar-wrapper">
           <div class="topbar-sidebar-divider"></div>
           <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
-              <button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)">
-                <i class="fa-fw fas fa-bars"></i>
-              </button>
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
@@ -143,62 +142,300 @@
 <p>The following steps are here to help you initialize your new website. If you don&rsquo;t know Hugo at all, we strongly suggest you to train by following <a href="https://gohugo.io/overview/quickstart/" target="_blank">great documentation for beginners</a>.</p>
 <p>Hugo provides a <code>new</code> command to create a new website.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new site &lt;new_project&gt;</span></span></code></pre></div><p>The Relearn theme provides <a href="../cont/archetypes/index.html">archetypes</a> to help you create this kind of pages.</p>
-<h2 id="frontmatter-configuration">Frontmatter Configuration</h2>
-<p>Each Hugo page has to define a <a href="https://gohugo.io/content/front-matter/" target="_blank">frontmatter</a> in <em>toml</em>, <em>yaml</em> or <em>json</em>. This site will use <em>toml</em> in all cases.</p>
-<p>The Relearn theme uses the following parameters on top of Hugo ones:</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="frontmatter">Frontmatter</h1>
+
+<p>Each Hugo page has to define a <a href="https://gohugo.io/content/front-matter/" target="_blank">frontmatter</a> in <em>toml</em>, <em>yaml</em> or <em>json</em>. This site will use <em>toml</em> for documentation in all cases.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
-</span></span><span class="line"><span class="cl"><span class="c"># Table of contents (toc) is enabled by default. Set this parameter to true to disable it.</span>
-</span></span><span class="line"><span class="cl"><span class="c"># Note: Toc is always disabled for chapter pages</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If an option value is said to be not set, you can achieve the same behavior</span>
+</span></span><span class="line"><span class="cl"><span class="c"># by given it an empty string value.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">###############################################################################</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Hugo</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options usually apply to other themes aswell.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># The social media image of your page.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># This is used for generating social media meta information for the opengraph</span>
+</span></span><span class="line"><span class="cl"><span class="c"># protocol and twitter cards.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">images</span> <span class="p">=</span> <span class="p">[</span> <span class="s2">&#34;images/hero.png&#34;</span> <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># The title of your page.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># A page without a title is treated as a hidden page.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Example Page&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># The description of your page.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># This is used for generating HTML meta tags, social media meta information</span>
+</span></span><span class="line"><span class="cl"><span class="c"># for the opengraph protocol and twitter cards.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used for the html</span>
+</span></span><span class="line"><span class="cl"><span class="c"># meta tag, social media meta information for the opengraph protocol and</span>
+</span></span><span class="line"><span class="cl"><span class="c"># twitter cards.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">###############################################################################</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Relearn Theme</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options are specific to the Relearn theme.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Topbar</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options modify the topbar appearance.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Hide the table of contents button.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: false</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If the TOC button is hidden, also the keyboard shortcut is disabled.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used.</span>
 </span></span><span class="line"><span class="cl"><span class="nx">disableToc</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="c"># If set, this will be used for the page&#39;s menu entry (instead of the `title` attribute)</span>
-</span></span><span class="line"><span class="cl"><span class="nx">menuTitle</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c"># If set to true, the menu in the sidebar will be displayed in a collapsible tree view. Although the functionality works with old browsers (IE11), the display of the expander icons is limited to modern browsers</span>
-</span></span><span class="line"><span class="cl"><span class="nx">collapsibleMenu</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="c"># If set, this will explicitly override common rules for the expand state of a page&#39;s menu entry</span>
-</span></span><span class="line"><span class="cl"><span class="nx">alwaysopen</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="c"># If set, this will explicitly override common rules for the sorting order of a page&#39;s submenu entries</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ordersectionsby</span> <span class="p">=</span> <span class="s2">&#34;weight&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c"># The title of the page heading will be prefixed by this HTML content</span>
-</span></span><span class="line"><span class="cl"><span class="nx">headingPre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c"># The title of the page heading will be postfixed by this HTML content</span>
-</span></span><span class="line"><span class="cl"><span class="nx">headingPost</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c"># The title of the page in menu will be prefixed by this HTML content</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Hide the breadcrumbs.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: false</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If the breadcrumbs are hidden, the title of the displayed page will still be</span>
+</span></span><span class="line"><span class="cl"><span class="c"># shown in the topbar.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disableBreadcrumb</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Hide Next and Previous navigation buttons.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: false</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If the navigation buttons are hidden, also the keyboard shortcuts are</span>
+</span></span><span class="line"><span class="cl"><span class="c"># disabled.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disableNextPrev</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># The URL prefix to edit a page.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If set, an edit button will be shown in the topbar. If the button is hidden,</span>
+</span></span><span class="line"><span class="cl"><span class="c"># also the keyboard shortcuts are disabled. The value can contain the macro</span>
+</span></span><span class="line"><span class="cl"><span class="c"># `${FilePath}` which will be replaced by the file path of your displayed page.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used. If the global</span>
+</span></span><span class="line"><span class="cl"><span class="c"># parameter is given but you want to hide the button for the displayed page,</span>
+</span></span><span class="line"><span class="cl"><span class="c"># you can set the value to an empty string. If instead of hiding you want to have</span>
+</span></span><span class="line"><span class="cl"><span class="c"># an disabled button, you can set the value to a string containing just spaces.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># This is useful if you want to give the opportunity for people to create merge</span>
+</span></span><span class="line"><span class="cl"><span class="c"># request for your content.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">editURL</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Menu</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options modify the menu apperance.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Prefix for the title in main menu.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># The title of the page in the menu will be prefixed by this HTML content.</span>
 </span></span><span class="line"><span class="cl"><span class="nx">menuPre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c"># The title of the page in menu will be postfixed by this HTML content</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Suffix for the title in main menu.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># The title of the page in the menu will be suffixed by this HTML content.</span>
 </span></span><span class="line"><span class="cl"><span class="nx">menuPost</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c"># Hide a menu entry by setting this to true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># The order of main menu submenus.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: &#34;weight&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Submenus can be ordered by &#34;weight&#34;, &#34;title&#34;, &#34;linktitle&#34;, &#34;modifieddate&#34;,</span>
+</span></span><span class="line"><span class="cl"><span class="c"># &#34;expirydate&#34;, &#34;publishdate&#34;, &#34;date&#34;, &#34;length&#34; or &#34;default&#34; (adhering to</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Hugo&#39;s default sort order).</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the value of the parent menu entry is used.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ordersectionsby</span> <span class="p">=</span> <span class="s2">&#34;weight&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># The initial expand state of submenus.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># This controls whether submenus will be expanded (true), or collapsed (false)</span>
+</span></span><span class="line"><span class="cl"><span class="c"># in the menu. If not set, the first menu level is set to false, all others</span>
+</span></span><span class="line"><span class="cl"><span class="c"># levels are set to true. If not set, the value of the parent menu entry is used.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If the displayed page has submenus, they will always been displayed expanded</span>
+</span></span><span class="line"><span class="cl"><span class="c"># regardless of this option.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">alwaysopen</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Shows expander for submenus.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: false</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If set to true, a submenu in the sidebar will be displayed in a collapsible</span>
+</span></span><span class="line"><span class="cl"><span class="c"># tree view and a clickable expander is set in front of the entry.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">collapsibleMenu</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Hidden pages</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options configure how hidden pages are treated.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># A page flagged as hidden, is only removed from the main menu if you are</span>
+</span></span><span class="line"><span class="cl"><span class="c"># currently not on this page or the hidden page is not part of current page&#39;s</span>
+</span></span><span class="line"><span class="cl"><span class="c"># ancestors. For all other functionality in Hugo a hidden page behaves like any</span>
+</span></span><span class="line"><span class="cl"><span class="c"># other page if not otherwise configured.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Hide a page&#39;s menu entry.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: false</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If this value is true, the page is hidden from the menu.</span>
 </span></span><span class="line"><span class="cl"><span class="nx">hidden</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="c"># Display name of this page modifier. If set, it will be displayed in the footer.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Content</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options modify how your content is displayed.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Prefix for the title in the content area.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># The title of the page heading will be prefixed by this HTML content.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">headingPre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Suffix for the title in the content area.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># The title of the page heading will be suffixed by this HTML content.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">headingPost</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Display name of the page&#39;s last editor.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If set, it will be displayed in the default footer.</span>
 </span></span><span class="line"><span class="cl"><span class="nx">LastModifierDisplayName</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c"># Email of this page modifier. If set with LastModifierDisplayName, it will be displayed in the footer</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Email address of the page&#39;s last editor.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If set together with LastModifierDisplayName, it will be displayed in the</span>
+</span></span><span class="line"><span class="cl"><span class="c"># default footer.</span>
 </span></span><span class="line"><span class="cl"><span class="nx">LastModifierEmail</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c"># Override default values for image effects, you can even add your own arbitrary effects to the list</span>
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">imageEffects</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">border</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">lightbox</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">shadow</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><h3 id="add-icon-to-a-menu-entry">Add icon to a menu entry</h3>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Highlight</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options configure how code is displayed.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Wrap for code blocks.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: true</span>
+</span></span><span class="line"><span class="cl"><span class="c"># By default lines of code blocks wrap around if the line is too long to be</span>
+</span></span><span class="line"><span class="cl"><span class="c"># displayed on screen. If you dislike this behavior, you can reconfigure it</span>
+</span></span><span class="line"><span class="cl"><span class="c"># here.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Note that lines always wrap in print mode regardless of this option.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used or given as a</span>
+</span></span><span class="line"><span class="cl"><span class="c"># parameter to individual code blocks.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">highlightWrap</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Images</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options configure how images are displayed.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Image effects.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># See the documentation for how you can even add your own arbitrary effects to</span>
+</span></span><span class="line"><span class="cl"><span class="c"># the list.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># All effect values default to the values of your site&#39;s hugo.toml and can be</span>
+</span></span><span class="line"><span class="cl"><span class="c"># overridden thru URL parameter given to the image. See the documentation for</span>
+</span></span><span class="line"><span class="cl"><span class="c"># details.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Default: false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">imageEffects</span><span class="p">.</span><span class="nx">border</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">imageEffects</span><span class="p">.</span><span class="nx">lightbox</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">imageEffects</span><span class="p">.</span><span class="nx">shadow</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+</span></span><span class="line"><span class="cl"><span class="c"># MathJax</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options configure how math formulae are displayed.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Initialization options for MathJax.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># A JSON value. See the MathJaxdocumentation for possible parameter.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mathJaxInitialize</span> <span class="p">=</span> <span class="s2">&#34;{}&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Only load MathJax if needed.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: true</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If a Math shortcode is found, the option will be ignored and</span>
+</span></span><span class="line"><span class="cl"><span class="c"># MathJax will be loaded regardlessly. The option is still useful in case you</span>
+</span></span><span class="line"><span class="cl"><span class="c"># are using scripting to set up your graph. In this case no shortcode or</span>
+</span></span><span class="line"><span class="cl"><span class="c"># codefence is involved and the library is not loaded by default. In this case</span>
+</span></span><span class="line"><span class="cl"><span class="c"># you can set `disableMathJax=false` in your frontmatter to force the library to</span>
+</span></span><span class="line"><span class="cl"><span class="c"># be loaded.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disableMathJax</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># URL for external MathJax library.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Specifies the remote location of the MathJax library. By default the shipped</span>
+</span></span><span class="line"><span class="cl"><span class="c"># version will be used.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">customMathJaxURL</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># &#34;https://unpkg.com/mathjax/es5/tex-mml-chtml.js&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Mermaid</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options configure how Mermaid graphs are displayed.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Make graphs panable and zoomable</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: false</span>
+</span></span><span class="line"><span class="cl"><span class="c"># For huge graphs it can be helpful to make them zoomable. Zoomable graphs come</span>
+</span></span><span class="line"><span class="cl"><span class="c"># with a reset button for the zoom.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used or given as a</span>
+</span></span><span class="line"><span class="cl"><span class="c"># parameter to individual graphs.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mermaidZoom</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Initialization options for Mermaid.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># A JSON value. See the Mermaid documentation for possible parameter.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mermaidInitialize</span> <span class="p">=</span> <span class="s2">&#34;{ \&#34;securityLevel\&#34;: \&#34;loose\&#34; }&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Only load Mermaid if needed.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: true</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If a Mermaid shortcode or codefence is found, the option will be ignored and</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Mermaid will be loaded regardlessly. The option is still useful in case you</span>
+</span></span><span class="line"><span class="cl"><span class="c"># are using scripting to set up your graph. In this case no shortcode or</span>
+</span></span><span class="line"><span class="cl"><span class="c"># codefence is involved and the library is not loaded by default. In this case</span>
+</span></span><span class="line"><span class="cl"><span class="c"># you can set `disableMermaid=false` in your frontmatter to force the library to</span>
+</span></span><span class="line"><span class="cl"><span class="c"># be loaded.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disableMermaid</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># URL for external Mermaid library.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Specifies the remote location of the Mermaid library. By default the shipped</span>
+</span></span><span class="line"><span class="cl"><span class="c"># version will be used.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">customMermaidURL</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># &#34;https://unpkg.com/mermaid/dist/mermaid.min.js&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+</span></span><span class="line"><span class="cl"><span class="c"># OpenApi</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options configure how OpenAPI specifications are displayed.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Only load OpenAPI if needed.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: true</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If a OpenAPI shortcode is found, the option will be ignored and</span>
+</span></span><span class="line"><span class="cl"><span class="c"># OpenAPI will be loaded regardlessly. The option is still useful in case you</span>
+</span></span><span class="line"><span class="cl"><span class="c"># are using scripting to set up your graph. In this case no shortcode or</span>
+</span></span><span class="line"><span class="cl"><span class="c"># codefence is involved and the library is not loaded by default. In this case</span>
+</span></span><span class="line"><span class="cl"><span class="c"># you can set `disableOpenapi=false` in your frontmatter to force the library to</span>
+</span></span><span class="line"><span class="cl"><span class="c"># be loaded.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disableOpenapi</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># URL for external OpenAPI library.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Default: not set</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Specifies the remote location of the OpenAPI library. By default the shipped</span>
+</span></span><span class="line"><span class="cl"><span class="c"># version will be used.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If not set, the set value of your site&#39;s hugo.toml is used.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">customOpenapiURL</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># &#34;https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><h2 id="some-detailed-examples">Some Detailed Examples</h2>
+<h3 id="add-icon-to-a-menu-entry">Add Icon to a Menu Entry</h3>
 <p>In the page frontmatter, add a <code>menuPre</code> param to insert any HTML code before the menu label. The example below uses the GitHub icon.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
 </span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;GitHub repo&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">menuPre</span> <span class="p">=</span> <span class="s2">&#34;&lt;i class=&#39;fab fa-github&#39;&gt;&lt;/i&gt; &#34;</span>
-</span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><p><a href="#R-image-f8e67737f0a90c98e6c2060e2965c6ac" class="lightbox-link"><img src="../cont/pages/frontmatter-icon.png?width=18.75rem" alt="Title with icon" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 18.75rem;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f8e67737f0a90c98e6c2060e2965c6ac"><img src="../cont/pages/frontmatter-icon.png?width=18.75rem" alt="Title with icon" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
-<h3 id="ordering-sibling-menupage-entries">Ordering sibling menu/page entries</h3>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><p><a href="#R-image-e9e092294ef1a2ae60d05e4f59f74b20" class="lightbox-link"><img src="../hugo-theme-relearn/cont/frontmatter/frontmatter-icon.png?width=18.75rem" alt="Title with icon" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 18.75rem;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e9e092294ef1a2ae60d05e4f59f74b20"><img src="../hugo-theme-relearn/cont/frontmatter/frontmatter-icon.png?width=18.75rem" alt="Title with icon" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<h3 id="ordering-sibling-menupage-entries">Ordering Sibling Menu/Page Entries</h3>
 <p>Hugo provides a <a href="https://gohugo.io/content/ordering/" target="_blank">flexible way</a> to handle order for your pages.</p>
 <p>The simplest way is to set <code>weight</code> parameter to a number.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
 </span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;My page&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">5</span>
-</span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><h3 id="using-a-custom-title-for-menu-entries">Using a custom title for menu entries</h3>
-<p>By default, the Relearn theme will use a page&rsquo;s <code>title</code> attribute for the menu item (or <code>linkTitle</code> if defined).</p>
-<p>But a page&rsquo;s title has to be descriptive on its own while the menu is a hierarchy.
-We&rsquo;ve added the <code>menuTitle</code> parameter for that purpose:</p>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><h3 id="using-a-custom-title-for-menu-entries">Using a Custom Title for Menu Entries</h3>
+<p>By default, the Relearn theme will use a page&rsquo;s <code>title</code> attribute for the menu item.</p>
+<p>But a page&rsquo;s title has to be descriptive on its own while the menu is a hierarchy. Hugo adds the <code>linkTitle</code> parameter for that purpose:</p>
 <p>For example (for a page named <code>content/install/linux.md</code>):</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
 </span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Install on Linux&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">menuTitle</span> <span class="p">=</span> <span class="s2">&#34;Linux&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><h3 id="override-expand-state-rules-for-menu-entries">Override expand state rules for menu entries</h3>
+</span></span><span class="line"><span class="cl"><span class="nx">linkTitle</span> <span class="p">=</span> <span class="s2">&#34;Linux&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div><h3 id="override-expand-state-rules-for-menu-entries">Override Expand State Rules for Menu Entries</h3>
 <p>You can change how the theme expands menu entries on the side of the content with the <code>alwaysopen</code> setting on a per page basis. If <code>alwaysopen=false</code> for any given entry, its children will not be shown in the menu as long as it is not necessary for the sake of navigation.</p>
 <p>The theme generates the menu based on the following rules:</p>
 <ul>
@@ -214,9 +451,11 @@ We&rsquo;ve added the <code>menuTitle</code> parameter for that purpose:</p>
 <p>You may want to structure your pages in a hierachical way but don&rsquo;t want to generate pages for those sections? The theme got you covered.</p>
 <p>To stay with the initial example: Suppose you want <code>level-one</code> appear in the sidebar but don&rsquo;t want to generate a page for it. So the entry in the sidebar should not be clickable but should show an expander.</p>
 <p>For this, open <code>content/level-one/_index.md</code> and add the following frontmatter</p>
-<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">collapsibleMenu</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># this adds the expander to the menu entry if not already set in your config.toml</span>
+<div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span><span class="line"><span class="cl"><span class="nx">collapsibleMenu</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># this adds the expander to the menu entry if not already set in your hugo.toml</span>
 </span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">_build</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">render</span> <span class="p">=</span> <span class="s2">&#34;never&#34;</span> <span class="c"># no page will be generated so the page does not have a url</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">  <span class="nx">render</span> <span class="p">=</span> <span class="s2">&#34;never&#34;</span> <span class="c"># no page will be generated so the page does not have a url</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span></span></span></code></pre></div>
             <footer class="footline">
             </footer>
           </article>
@@ -231,8 +470,8 @@ We&rsquo;ve added the <code>menuTitle</code> parameter for that purpose:</p>
 <h2 id="predefined-archetypes">Predefined Archetypes</h2>
 <h3 id="archetypes-home">Home</h3>
 <p>A <strong>Home</strong> page is the starting page of your project. It&rsquo;s best to have only one page of this kind in your project.</p>
-<p><a href="#R-image-1250afe9ed29ec45e548ced9fff7c7bf" class="lightbox-link"><img src="../cont/archetypes/pages-home.png?width=60pc" alt="Home page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1250afe9ed29ec45e548ced9fff7c7bf"><img src="../cont/archetypes/pages-home.png?width=60pc" alt="Home page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-61ba6aa3fb3cad92e088226cd23eb8e5" class="lightbox-link"><img src="../hugo-theme-relearn/cont/archetypes/pages-home.png?width=60pc" alt="Home page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-61ba6aa3fb3cad92e088226cd23eb8e5"><img src="../hugo-theme-relearn/cont/archetypes/pages-home.png?width=60pc" alt="Home page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 <p>To create a home page, run the following command</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new --kind home _index.md</span></span></code></pre></div><p>This leads to a file with the following content</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+++
@@ -242,8 +481,8 @@ We&rsquo;ve added the <code>menuTitle</code> parameter for that purpose:</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Lorem Ipsum.</span></span></code></pre></div><h3 id="archetypes-chapter">Chapter</h3>
 <p>A <strong>Chapter</strong> displays a page meant to be used as introduction for a set of child pages. Commonly, it contains a simple title and a catch line to define content that can be found below it.</p>
-<p><a href="#R-image-0a78fe909bff266281d8780fe514eb4b" class="lightbox-link"><img src="../cont/archetypes/pages-chapter.png?width=60pc" alt="Chapter page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a78fe909bff266281d8780fe514eb4b"><img src="../cont/archetypes/pages-chapter.png?width=60pc" alt="Chapter page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-4c64746d5ab78172978450e747999478" class="lightbox-link"><img src="../hugo-theme-relearn/cont/archetypes/pages-chapter.png?width=60pc" alt="Chapter page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4c64746d5ab78172978450e747999478"><img src="../hugo-theme-relearn/cont/archetypes/pages-chapter.png?width=60pc" alt="Chapter page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 <p>To create a chapter page, run the following command</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new --kind chapter &lt;name&gt;/_index.md</span></span></code></pre></div><p>This leads to a file with the following content</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+++
@@ -255,8 +494,8 @@ We&rsquo;ve added the <code>menuTitle</code> parameter for that purpose:</p>
 </span></span><span class="line"><span class="cl">Lorem Ipsum.</span></span></code></pre></div><p>Replace the <code>X</code> with a number. Because this number will be used to generate the subtitle of the chapter page, set the number to a consecutive value starting at 1 for each new chapter level.</p>
 <h3 id="archetypes-default">Default</h3>
 <p>A <strong>Default</strong> page is any other content page. If you set an unknown archetype in your frontmatter, this archetype will be used to generate the page.</p>
-<p><a href="#R-image-101c4479b11cbb72e7ba8a38b0c6b67c" class="lightbox-link"><img src="../cont/archetypes/pages-default.png?width=60pc" alt="Default page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-101c4479b11cbb72e7ba8a38b0c6b67c"><img src="../cont/archetypes/pages-default.png?width=60pc" alt="Default page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-808c9f11ff4172be226144b14370ca44" class="lightbox-link"><img src="../hugo-theme-relearn/cont/archetypes/pages-default.png?width=60pc" alt="Default page" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 60pc;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-808c9f11ff4172be226144b14370ca44"><img src="../hugo-theme-relearn/cont/archetypes/pages-default.png?width=60pc" alt="Default page" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 <p>To create a default page, run either one of the following commands</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new &lt;chapter&gt;/&lt;name&gt;/_index.md</span></span></code></pre></div><p>or</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new &lt;chapter&gt;/&lt;name&gt;.md</span></span></code></pre></div><p>This leads to a file with the following content</p>
@@ -298,7 +537,7 @@ We&rsquo;ve added the <code>menuTitle</code> parameter for that purpose:</p>
 </table>
 <p>Take a look at the existing archetypes of this theme to get an idea how to utilize it.</p>
 <h4 id="output-formats">Output formats</h4>
-<p>Each hook file can be overridden of a specific <a href="https://gohugo.io/templates/output-formats/" target="_blank">output format</a>. Eg. if you define a new output format <code>PLAINTEXT</code> in your <code>config.toml</code>, you can add a file <code>layouts/partials/archetypes/default.plaintext.html</code> to change the way how normal content is written for that output format.</p>
+<p>Each hook file can be overridden of a specific <a href="https://gohugo.io/templates/output-formats/" target="_blank">output format</a>. Eg. if you define a new output format <code>PLAINTEXT</code> in your <code>hugo.toml</code>, you can add a file <code>layouts/partials/archetypes/default.plaintext.html</code> to change the way how normal content is written for that output format.</p>
 
             <footer class="footline">
             </footer>
@@ -771,7 +1010,7 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="https://github.com/upstage/" title="Visit Upstage!" target="_blank">Upstage</a></p>
+<p><a href="https://github.com/upstage/" target="_blank" title="Visit Upstage!">Upstage</a></p>
 </div>
 </div>
 <h3 id="link-references">Link References</h3>
@@ -783,7 +1022,7 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="https://example.com" title="Go to example domain" target="_blank">Example</a></p>
+<p><a href="https://example.com" target="_blank" title="Go to example domain">Example</a></p>
 </div>
 </div>
 <h3 id="footnotes">Footnotes</h3>
@@ -828,8 +1067,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-784e007291432c171fd421435cdc3e71" class="lightbox-link"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-784e007291432c171fd421435cdc3e71"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-c7c20bb5f1e12b84097028252239e817" class="lightbox-link"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c7c20bb5f1e12b84097028252239e817"><img src="https://octodex.github.com/images/spocktocat.png?width=20vw" alt="Spock" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-with-tooltip">Image with Tooltip</h3>
@@ -839,8 +1078,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-e84d6637ff389f24a7472a07e74a5d25" class="lightbox-link"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e84d6637ff389f24a7472a07e74a5d25"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-7c1d77564a21d6392b1535392f5e86e4" class="lightbox-link"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7c1d77564a21d6392b1535392f5e86e4"><img src="https://octodex.github.com/images/jean-luc-picat.jpg?width=20vw" alt="Picard" title="Jean Luc Picard" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-references">Image References</h3>
@@ -852,12 +1091,12 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-665054a91299f7515494b158eb98ac21" class="lightbox-link"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-665054a91299f7515494b158eb98ac21"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-762e05abfc09cd1e5546e4c648a72a69" class="lightbox-link"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-762e05abfc09cd1e5546e4c648a72a69"><img src="https://octodex.github.com/images/trekkie.jpg?width=20vw" alt="La Forge" title="Geordi La Forge" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h3 id="image-effects">Image Effects</h3>
-<p>This theme allows additional non-standard formatting by setting query parameter at the end of the image URL. The default <a href="../cont/imageeffects/index.html">behavior is configurable</a> thru your <code>config.toml</code> or frontmatter parameter.</p>
+<p>This theme allows additional non-standard formatting by setting query parameter at the end of the image URL. The default <a href="../cont/imageeffects/index.html">behavior is configurable</a> thru your <code>hugo.toml</code> or frontmatter parameter.</p>
 <h4 id="resizing">Resizing</h4>
 <p>Add query parameter <code>width</code> and/or <code>height</code> to the link image to resize the image. Values are CSS values (default is <code>auto</code>).</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?width=20vw</span>)</span></span></code></pre></div>
@@ -865,8 +1104,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-3a9351eb28a3118a0534a88874f74254" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a9351eb28a3118a0534a88874f74254"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-edbf5e55dcada61890167fb67a4cbf62" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-edbf5e55dcada61890167fb67a4cbf62"><img src="https://octodex.github.com/images/minion.png?width=20vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?height=50px</span>)</span></span></code></pre></div>
@@ -874,8 +1113,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-f1b1ce83f56c6729a6e5a3563cc08f47" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f1b1ce83f56c6729a6e5a3563cc08f47"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-bd518e918bf458845cfc014f1d2b3937" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bd518e918bf458845cfc014f1d2b3937"><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw</span>)</span></span></code></pre></div>
@@ -883,8 +1122,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-5b4668c2882a855aae0bdda7b4c2d74b" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: 40vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5b4668c2882a855aae0bdda7b4c2d74b"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-4dd8e9b76fb3a9cb6b8e3cec317b1b1d" class="lightbox-link"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="figure-image bg-white border lightbox noshadow" style="height: 50px; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4dd8e9b76fb3a9cb6b8e3cec317b1b1d"><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=40vw" alt="Minion" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h4 id="css-classes">CSS Classes</h4>
@@ -895,8 +1134,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-022c508f17873ca8cb10105713e307e3" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="figure-image bg-white border lightbox noborder shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-022c508f17873ca8cb10105713e307e3"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="lightbox-image bg-white border lightbox noborder shadow" loading="lazy"></a></p>
+<p><a href="#R-image-75bf1cb896b9fcf388cec459878f3ffc" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="figure-image bg-white border lightbox noborder shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-75bf1cb896b9fcf388cec459878f3ffc"><img src="https://octodex.github.com/images/spidertocat.png?width=20vw&amp;classes=shadow,noborder" alt="Spidertocat" class="lightbox-image bg-white border lightbox noborder shadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="border">Border</h5>
@@ -905,8 +1144,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-c6c6a9a17313265e0739fbcb510f61e1" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="figure-image bg-white border lightbox noshadow noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c6c6a9a17313265e0739fbcb510f61e1"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="lightbox-image bg-white border lightbox noshadow noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-a6b85acb85d60346f3271310f925b42e" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="figure-image bg-white border lightbox noshadow noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a6b85acb85d60346f3271310f925b42e"><img src="https://octodex.github.com/images/droctocat.png?width=20vw&amp;classes=border,noshadow" alt="DrOctocat" class="lightbox-image bg-white border lightbox noshadow noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="left">Left</h5>
@@ -915,8 +1154,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-cb416637418d189f636e400854e62e9e" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="figure-image bg-white border left lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb416637418d189f636e400854e62e9e"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="lightbox-image bg-white border left lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-94a60a7cd81f46cb3078d72bd0b709c6" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="figure-image bg-white border left lightbox noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-94a60a7cd81f46cb3078d72bd0b709c6"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=20vw&amp;classes=left" alt="Supertocat" class="lightbox-image bg-white border left lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="right">Right</h5>
@@ -925,8 +1164,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-7b5e5aba56b23684023270db9b39a529" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="figure-image bg-white border lightbox right noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7b5e5aba56b23684023270db9b39a529"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="lightbox-image bg-white border lightbox right noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-fabc883a9054d54cac9eeb7b3b375c09" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="figure-image bg-white border lightbox right noshadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fabc883a9054d54cac9eeb7b3b375c09"><img src="https://octodex.github.com/images/riddlocat.jpg?width=20vw&amp;classes=right" alt="Riddlocat" class="lightbox-image bg-white border lightbox right noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="inline">Inline</h5>
@@ -938,14 +1177,14 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-646ee80f6356a8c7a3e59fd3a23bccd7" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-646ee80f6356a8c7a3e59fd3a23bccd7"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-52d306ef30e3ff3494f4d5b770e002f8" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-52d306ef30e3ff3494f4d5b770e002f8"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-982d063f796cac29774afe6f1f5b1e30" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-982d063f796cac29774afe6f1f5b1e30"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-ca69e9299f41a228c1d195a12d554db0" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ca69e9299f41a228c1d195a12d554db0"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-0c318104bd58bfa4c5f98c1da8a834ed" class="lightbox-link"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0c318104bd58bfa4c5f98c1da8a834ed"><img src="https://octodex.github.com/images/spidertocat.png?width=10vw&amp;classes=inline" alt="Spidertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-a75634c5bb177f4f39cac65cdd9a7873" class="lightbox-link"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a75634c5bb177f4f39cac65cdd9a7873"><img src="https://octodex.github.com/images/droctocat.png?width=10vw&amp;classes=inline" alt="DrOctocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-04c03e81090296f2da6ca1a855481a9d" class="lightbox-link"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-04c03e81090296f2da6ca1a855481a9d"><img src="https://octodex.github.com/images/okal-eltocat.jpg?width=10vw&amp;classes=inline" alt="Supertocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-c412955a4f0b316b20cebd6ae25313f4" class="lightbox-link"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="figure-image bg-white border inline lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c412955a4f0b316b20cebd6ae25313f4"><img src="https://octodex.github.com/images/riddlocat.jpg?width=10vw&amp;classes=inline" alt="Riddlocat" class="lightbox-image bg-white border inline lightbox noshadow" loading="lazy"></a></p>
 </div>
 </div>
 <h5 id="combination">Combination</h5>
@@ -954,8 +1193,8 @@ line 3 of code
   <div class="box-label"><i class="fa-fw fas fa-eye"></i> Result</div>
   <div class="box-content">
 
-<p><a href="#R-image-440f5943b572c12146298fb7f7866543" class="lightbox-link"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="figure-image bg-white border left lightbox shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-440f5943b572c12146298fb7f7866543"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="lightbox-image bg-white border left lightbox shadow" loading="lazy"></a></p>
+<p><a href="#R-image-e24142b79c9a293639273cf2c57d76c1" class="lightbox-link"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="figure-image bg-white border left lightbox shadow" style="height: auto; width: 20vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e24142b79c9a293639273cf2c57d76c1"><img src="https://octodex.github.com/images/xtocat.jpg?width=20vw&amp;classes=shadow,border,left" alt="X-tocat" class="lightbox-image bg-white border left lightbox shadow" loading="lazy"></a></p>
 </div>
 </div>
 <h4 id="lightbox">Lightbox</h4>
@@ -989,25 +1228,25 @@ line 3 of code
 
 <p>The theme supports non-standard <a href="../cont/markdown/index.html#image-effects">image effects</a>.</p>
 <p>As described, you can add this to the URL query parameter, but this may be cumbersome to do it consistently for the whole page.</p>
-<p>Instead, you can configure the defaults in your <code>config.toml</code> aswell as overriding these default in the pages frontmatter.</p>
+<p>Instead, you can configure the defaults in your <code>hugo.toml</code> aswell as overriding these default in the pages frontmatter.</p>
 <p>Explicitly set URL query parameter will override the defaults in effect for a page.</p>
-<p>Without any settings in your <code>config.toml</code> this defaults to</p>
+<p>Without any settings in your <code>hugo.toml</code> this defaults to</p>
 
   
-<div class="tab-panel" data-tab-group="02a0ce4988e764c1675e0ff27ae7fe64">
+<div class="tab-panel" data-tab-group="e1f4517eb13c675c69b320bb06d09e83">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
-      data-tab-item="configtoml"
+      data-tab-item="hugotoml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('02a0ce4988e764c1675e0ff27ae7fe64','configtoml')"
+      onclick="switchTab('e1f4517eb13c675c69b320bb06d09e83','hugotoml')"
     >
-      <span class="tab-nav-text">config.toml</span>
+      <span class="tab-nav-text">hugo.toml</span>
     </button>
   </div>
   <div class="tab-content-container">
     <div
-      data-tab-item="configtoml"
+      data-tab-item="hugotoml"
       class="tab-content tab-panel-style cstyle initial active">
       <div class="tab-content-text">
 
@@ -1021,13 +1260,13 @@ line 3 of code
 </div><p>This can be overridden in a pages frontmatter by eg.</p>
 
   
-<div class="tab-panel" data-tab-group="928213b4cf1d1c12d50bfd2c2c491f1a">
+<div class="tab-panel" data-tab-group="fa2d0011826c45a52ce7cd7225238a7c">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="frontmatter"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('928213b4cf1d1c12d50bfd2c2c491f1a','frontmatter')"
+      onclick="switchTab('fa2d0011826c45a52ce7cd7225238a7c','frontmatter')"
     >
       <span class="tab-nav-text">frontmatter</span>
     </button>
@@ -1047,13 +1286,13 @@ line 3 of code
 </div><p>Or by explicitly override settings by URL query parameter</p>
 
   
-<div class="tab-panel" data-tab-group="e34d9829a9c085ae60b6d59e787a9919">
+<div class="tab-panel" data-tab-group="771382d54426df3324e239ec1217f95e">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="url"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('e34d9829a9c085ae60b6d59e787a9919','url')"
+      onclick="switchTab('771382d54426df3324e239ec1217f95e','url')"
     >
       <span class="tab-nav-text">URL</span>
     </button>
@@ -1070,13 +1309,13 @@ line 3 of code
 </div><p>The settings applied to the above image would be</p>
 
   
-<div class="tab-panel" data-tab-group="2b0a3c912022f143bfc573cb87014d98">
+<div class="tab-panel" data-tab-group="f562e58aa175488b7d0c3dcf4741db9e">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="result"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('2b0a3c912022f143bfc573cb87014d98','result')"
+      onclick="switchTab('f562e58aa175488b7d0c3dcf4741db9e','result')"
     >
       <span class="tab-nav-text">Result</span>
     </button>
@@ -1096,13 +1335,13 @@ line 3 of code
 </div><p>This ends up in the following HTML where the parameter are converted to CSS classes.</p>
 
   
-<div class="tab-panel" data-tab-group="280cb13c3dfb90ec14f534e5fa4c9850">
+<div class="tab-panel" data-tab-group="4ba0431b5455236e0adffc42a8132220">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="html"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('280cb13c3dfb90ec14f534e5fa4c9850','html')"
+      onclick="switchTab('4ba0431b5455236e0adffc42a8132220','html')"
     >
       <span class="tab-nav-text">HTML</span>
     </button>
@@ -1117,13 +1356,13 @@ line 3 of code
     </div>
   </div>
 </div><h2 id="extending">Extending</h2>
-<p>As you can see in the above example, the <code>bg-white</code> parameter is not initially supported in the themes default settings. Nevertheless you are free to define arbitrary parameter by just adding them to the URL query parameter or set them in your <code>config.toml</code> or pages frontmatter.</p>
+<p>As you can see in the above example, the <code>bg-white</code> parameter is not initially supported in the themes default settings. Nevertheless you are free to define arbitrary parameter by just adding them to the URL query parameter or set them in your <code>hugo.toml</code> or pages frontmatter.</p>
 
 <div class="box notices cstyle note">
   <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
   <div class="box-content">
 
-<p>If no extended parameter like <code>bg-white</code> in the example is set on the URL, a <code>class=&quot;nobg-white&quot;</code> in the HTML will only be generated if a default value was set in the <code>config.toml</code> or pages frontmatter.</p>
+<p>If no extended parameter like <code>bg-white</code> in the example is set on the URL, a <code>class=&quot;nobg-white&quot;</code> in the HTML will only be generated if a default value was set in the <code>hugo.toml</code> or pages frontmatter.</p>
 </div>
 </div>
 
@@ -1138,7 +1377,7 @@ line 3 of code
 
 <p>You can define additional menu entries or shortcuts in the navigation menu without any link to content.</p>
 <h2 id="basic-configuration">Basic configuration</h2>
-<p>Edit the website configuration <code>config.toml</code> and add a <code>[[menu.shortcuts]]</code> entry for each link your want to add.</p>
+<p>Edit the website configuration <code>hugo.toml</code> and add a <code>[[menu.shortcuts]]</code> entry for each link your want to add.</p>
 <p>Example from the current website:</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">shortcuts</span><span class="p">]]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;&lt;i class=&#39;fab fa-fw fa-github&#39;&gt;&lt;/i&gt; GitHub repo&#34;</span>
@@ -1171,7 +1410,7 @@ However, if you want to keep the title but change its value, it can be overridde
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">Shortcuts-Title</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;&lt;Your value&gt;&#34;</span></span></span></code></pre></div><p>Read more about <a href="https://gohugo.io/extras/menus/" target="_blank">hugo menu</a> and <a href="https://gohugo.io/content-management/multilingual/#translation-of-strings" target="_blank">hugo i18n translation strings</a></p>
 <h2 id="i18n">Configuration for Multilingual mode</h2>
-<p>When using a multilingual website, you can set different menus for each language. In the <code>config.toml</code> file, prefix your menu configuration by <code>Languages.&lt;language-id&gt;</code>.</p>
+<p>When using a multilingual website, you can set different menus for each language. In the <code>hugo.toml</code> file, prefix your menu configuration by <code>Languages.&lt;language-id&gt;</code>.</p>
 <p>Example from the current website:</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
@@ -1277,10 +1516,10 @@ However, if you want to keep the title but change its value, it can be overridde
 <li>Automatic menu generation from multilingual content</li>
 <li>In-browser language switching</li>
 </ul>
-<p><a href="#R-image-ec4ff69678b49545fb09b850503abff0" class="lightbox-link"><img src="../cont/i18n/i18n-menu.gif?width=18.75rem" alt="I18n menu" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 18.75rem;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ec4ff69678b49545fb09b850503abff0"><img src="../cont/i18n/i18n-menu.gif?width=18.75rem" alt="I18n menu" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-68df056df9f64ac3e2cc27d482fc38ae" class="lightbox-link"><img src="../hugo-theme-relearn/cont/i18n/i18n-menu.gif?width=18.75rem" alt="I18n menu" class="figure-image bg-white border lightbox noshadow" style="height: auto; width: 18.75rem;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-68df056df9f64ac3e2cc27d482fc38ae"><img src="../hugo-theme-relearn/cont/i18n/i18n-menu.gif?width=18.75rem" alt="I18n menu" class="lightbox-image bg-white border lightbox noshadow" loading="lazy"></a></p>
 <h2 id="basic-configuration">Basic configuration</h2>
-<p>After learning <a href="https://gohugo.io/content-management/multilingual" target="_blank">how Hugo handle multilingual websites</a>, define your languages in your <code>config.toml</code> file.</p>
+<p>After learning <a href="https://gohugo.io/content-management/multilingual" target="_blank">how Hugo handle multilingual websites</a>, define your languages in your <code>hugo.toml</code> file.</p>
 <p>For example with current English and Piratized English website.</p>
 
 <div class="box notices cstyle note">
@@ -1351,7 +1590,7 @@ You&rsquo;ll see error reports in your browsers console log for each unsupported
 </div>
 </div>
 <h3 id="search-with-mixed-language-support">Search with mixed language support</h3>
-<p>In case your page&rsquo;s content contains text in multiple languages (e.g. you are writing a Russian documentation for your english API), you can add those languages to your <code>config.toml</code> to broaden search.</p>
+<p>In case your page&rsquo;s content contains text in multiple languages (e.g. you are writing a Russian documentation for your english API), you can add those languages to your <code>hugo.toml</code> to broaden search.</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">additionalContentLanguage</span> <span class="p">=</span> <span class="p">[</span> <span class="s2">&#34;en&#34;</span> <span class="p">]</span></span></span></code></pre></div><p>As this is an array, you can add multiple additional languages.</p>
 
@@ -1367,7 +1606,7 @@ You&rsquo;ll see error reports in your browsers console log for each unsupported
 <p>To override these values, create a new file in your local i18n folder <code>i18n/&lt;idlanguage&gt;.toml</code> and inspire yourself from the theme <code>themes/hugo-theme-relearn/i18n/en.toml</code></p>
 <h2 id="disable-language-switching">Disable language switching</h2>
 <p>Switching the language in the browser is a great feature, but for some reasons you may want to disable it.</p>
-<p>Just set <code>disableLanguageSwitchingButton=true</code> in your <code>config.toml</code></p>
+<p>Just set <code>disableLanguageSwitchingButton=true</code> in your <code>hugo.toml</code></p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="c"># When using multilingual website, disable the switch language button.</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">disableLanguageSwitchingButton</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div>
@@ -1379,7 +1618,7 @@ You&rsquo;ll see error reports in your browsers console log for each unsupported
             <header class="headline">
 <div class=" taxonomy-tags term-list cstyle  tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
-    <li><a class="term-link" href="../tags/tutorial/index.html">tutorial</a></li>
+    <li><a class="term-link" href="../tags/tutorial/index.html">Tutorial</a></li>
   </ul>
 </div>
             </header>
@@ -1397,7 +1636,7 @@ You&rsquo;ll see error reports in your browsers console log for each unsupported
 <p>The categories are displayed at the bottom of the page in alphabetical order in the default implementation of the theme but can be customized by providing your own <code>content-footer.html</code> partial.</p>
 <p>Each item is a link to a taxonomy page displaying all the articles with the given term.</p>
 <h2 id="list-all-the-tags">List all the tags</h2>
-<p>In the <code>config.toml</code>  file you can add a shortcut to display all the tags and categories</p>
+<p>In the <code>hugo.toml</code>  file you can add a shortcut to display all the tags and categories</p>
 <div class="wrap-code highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">shortcuts</span><span class="p">]]</span>
 </span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;&lt;i class=&#39;fas fa-tags&#39;&gt;&lt;/i&gt; Tags&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags&#34;</span>
@@ -1457,8 +1696,8 @@ You&rsquo;ll see error reports in your browsers console log for each unsupported
 <div class=" taxonomy-categories term-list cstyle  " title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
-    <li><a class="term-link" href="../categories/content/index.html">content</a></li>
-    <li><a class="term-link" href="../categories/taxonomy/index.html">taxonomy</a></li>
+    <li><a class="term-link" href="../categories/content/index.html">Content</a></li>
+    <li><a class="term-link" href="../categories/taxonomy/index.html">Taxonomy</a></li>
   </ul>
 </div>
             </footer>
@@ -1468,8 +1707,8 @@ You&rsquo;ll see error reports in your browsers console log for each unsupported
         </div>
       </main>
     </div>
-    <script src="../js/clipboard.min.js?1700601385" defer></script>
-    <script src="../js/perfect-scrollbar.min.js?1700601385" defer></script>
-    <script src="../js/theme.js?1700601385" defer></script>
+    <script src="../js/clipboard.min.js?1708639393" defer></script>
+    <script src="../js/perfect-scrollbar.min.js?1708639393" defer></script>
+    <script src="../js/theme.js?1708639393" defer></script>
   </body>
 </html>
