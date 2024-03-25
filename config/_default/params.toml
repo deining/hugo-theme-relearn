@@ -320,7 +320,7 @@ highlightWrap = true
 # printed. If set to `error` an error message is printed and the build is
 # aborted.
 # Please note that this can not resolve files inside of your `static` directory.
-image.errorlevel = ""
+image.errorlevel = "warning"
 
 # Image effects.
 # See the documentation for how you can even add your own arbitrary effects to
@@ -330,6 +330,8 @@ image.errorlevel = ""
 
 # Default: false
 imageEffects.border = true
+# Default: true
+imageEffects.lazy = true
 # Default: true
 imageEffects.lightbox = true
 # Default: false
